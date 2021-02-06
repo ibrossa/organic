@@ -94,7 +94,8 @@ class MainController extends Controller
 
     public function blog_details($id) {
         $blog = Blog::find($id);
-        return view('blogs.blogdetails',compact('blog'));
+        $comments = BlogComment::orderby('created_at','desc')->get();
+        return view('blogs.blogdetails',compact('blog','comments'));
     }
 
     public function blog_comment(Request $request){

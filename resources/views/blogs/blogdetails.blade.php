@@ -91,17 +91,18 @@
                         </div>
                         <div class="comment-box">
                             <div class="theme_title ">
-                                <h2>Comments (1)</h2>
+                                <h2>Comments ()</h2>
 
                             </div>
-                            <div class="single-comment-box">
+                            @foreach($comments as $comment)
+                                <div class="single-comment-box">
                                 <div class="text-box">
                                     <div class="clearfix">
                                         <div class="top-box float_left">
-                                            <h2>Michel Kong</h2>
+                                            <h2>{{$comment->name}}</h2>
                                         </div>
                                         <div class="float_right">
-                                            <span class="p_color">Posted on Aug 11.00am </span>
+                                            <span class="p_color">Posted on:{{$comment->created_at}}</span>
                                             <ul>
                                                 <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                                 <li><i class="fa fa-star" aria-hidden="true"></i></li>
@@ -113,10 +114,11 @@
                                     </div>
 
                                     <div class="content">
-                                        <p>Mistaken idea of denouncing pleasure and praising pain was borns and I will give you a seds complete account of that system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness No one rejects, dislikes, or avoids pleasure itself, because it is pleasure explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a completed</p>
+                                        <p>{{$comment->comment}}</p>
                                     </div>
                                 </div>
                             </div>
+                            @endforeach
                         </div>
 
                         @include('blogs._blogcomments')
