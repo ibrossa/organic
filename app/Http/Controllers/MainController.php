@@ -87,7 +87,7 @@ class MainController extends Controller
     }
 
     public function news() {
-        $blogs = Blog::all();
+        $blogs = Blog::orderby('created_at', 'desc')->get();
         return view('news',compact('blogs'));
     }
 
