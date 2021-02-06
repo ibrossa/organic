@@ -27,7 +27,7 @@
                     </div>
                     <div class="col-md-4 col-sm-5 col-xs-6 logo-responsive">
                         <div class="logo-area">
-                            <a href="{{route('index')}}" class="pull-left logo"><img src="images/logo/logo.png" alt="LOGO"></a>
+                            <a href="{{route('index')}}" class="pull-left logo"><img src="/images/logo/logo.png" alt="LOGO"></a>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-7 col-xs-6 pdt-14">
