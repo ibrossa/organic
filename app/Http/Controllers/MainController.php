@@ -13,6 +13,7 @@ use App\Models\AboutStory;
 use App\Models\Award;
 use App\Models\AwardImage;
 use App\Models\Blog;
+use App\Models\BlogComment;
 use App\Models\DeliveryProcess;
 use App\Models\Faq;
 use App\Models\Farmer;
@@ -94,6 +95,12 @@ class MainController extends Controller
     public function blog_details($id) {
         $blog = Blog::find($id);
         return view('blogs.blogdetails',compact('blog'));
+    }
+
+    public function blog_comment(Request $request){
+
+        BlogComment::create($request->all());
+        return redirect()->back();
     }
 
     public function product_details($id) {

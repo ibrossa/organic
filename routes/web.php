@@ -36,6 +36,9 @@ Route::get('/store',[
 Route::get('/news',[
     \App\Http\Controllers\MainController::class, 'news'
 ])->name('news');
+Route::post('/news/{news:id}',[
+    \App\Http\Controllers\MainController::class, 'blog_comment'
+]);
 
 
 Route::get('/faq',[
