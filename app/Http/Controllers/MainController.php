@@ -13,6 +13,7 @@ use App\Models\AboutStory;
 use App\Models\Award;
 use App\Models\AwardImage;
 use App\Models\Blog;
+use App\Models\BlogComment;
 use App\Models\DeliveryProcess;
 use App\Models\Faq;
 use App\Models\Farmer;
@@ -87,13 +88,20 @@ class MainController extends Controller
     }
 
     public function news() {
-        $blogs = Blog::all();
+        $blogs = Blog::orderby('created_at', 'desc')->get();
         return view('news',compact('blogs'));
     }
 
     public function blog_details($id) {
         $blog = Blog::find($id);
-        return view('blogs.blogdetails',compact('blog'));
+        $comments = BlogComment::orderby('created_at','desc')->get();
+        return view('blogs.blogdetails',compact('blog','comments'));
+    }
+
+    public function blog_comment(Request $request){
+
+        BlogComment::create($request->all());
+        return redirect()->back();
     }
 
     public function product_details($id) {

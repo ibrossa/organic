@@ -1,5 +1,5 @@
 
-<section class="gallery gallery-grid about-gallery" style="background-image:url(images/background/3.jpg);">
+<section class="gallery gallery-grid about-gallery" style="background-image:url(/images/background/3.jpg);">
     <div class="tab-links">
         <div class="container">
             <div class="iblock">
@@ -23,11 +23,13 @@
 
             <!--tab Details / Collapsed-->
                 <div class="item collapsed" id="">
+
                     <div class="row-10">
                     @foreach($products as $product)
                         <!--Default Item-->
                         <div class="col-md-2 column-2 col-sm-6 col-xs-12 default-item ">
                             <div class="inner-box">
+
                                 <div class="single-item center">
                                     <figure class="image-box"><img src=" {{$product->image}}" alt=""></figure>
                                     <div class="overlay-box">
@@ -45,12 +47,13 @@
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
-
+                        @endforeach
                     </div>
                 </div>
-            @endforeach
+
 
         </div>
 

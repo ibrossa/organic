@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<section class="breadcrumb-area" style="background-image:url(images/background/2.jpg);">
+<section class="breadcrumb-area" style="background-image:url(/images/background/2.jpg);">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -16,11 +16,11 @@
             <div class="row">
                 <div class="col-lg-8 col-md-5 col-sm-5">
                     <ul>
-                        <li><a href="#">Home</a></li>
+                        <li><a href="{{route('index')}}">Home</a></li>
                         <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                        <li><a href="#">Gallery</a></li>
+                        <li><a href="">Gallery</a></li>
                         <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                        <li>News single</li>
+                        <li>{{$blog->title}}</li>
                     </ul>
                 </div>
                 <div class="col-lg-4 col-md-7 col-sm-7">
@@ -52,7 +52,6 @@
                                 <h4><a href="blog-details.html">{{$blog->title}}</a></h4>
                                 <ul>
                                     <li><a href="blog-details.html" class="tran3s"><i class="fa fa-user" aria-hidden="true"></i> {{$blog->author_name}}</a></li>
-                                    <li><a href="blog-details.html" class="tran3s"><i class="fa fa-tag" aria-hidden="true"></i> Healthy</a></li>
                                     <li><a href="blog-details.html" class="tran3s"><i class="fa fa-clock-o" aria-hidden="true"></i>{{$blog->created_at}}</a></li>
                                     <li><a href="blog-details.html" class="tran3s"><i class="fa fa-comments" aria-hidden="true"></i> 26</a></li>
                                 </ul>
@@ -92,17 +91,18 @@
                         </div>
                         <div class="comment-box">
                             <div class="theme_title ">
-                                <h2>Comments (1)</h2>
+                                <h2>Comments ()</h2>
 
                             </div>
-                            <div class="single-comment-box">
+                            @foreach($comments as $comment)
+                                <div class="single-comment-box">
                                 <div class="text-box">
                                     <div class="clearfix">
                                         <div class="top-box float_left">
-                                            <h2>Michel Kong</h2>
+                                            <h2>{{$comment->name}}</h2>
                                         </div>
                                         <div class="float_right">
-                                            <span class="p_color">Posted on Aug 11.00am </span>
+                                            <span class="p_color">Posted on:{{$comment->created_at}}</span>
                                             <ul>
                                                 <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                                 <li><i class="fa fa-star" aria-hidden="true"></i></li>
@@ -114,39 +114,14 @@
                                     </div>
 
                                     <div class="content">
-                                        <p>Mistaken idea of denouncing pleasure and praising pain was borns and I will give you a seds complete account of that system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness No one rejects, dislikes, or avoids pleasure itself, because it is pleasure explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a completed</p>
+                                        <p>{{$comment->comment}}</p>
                                     </div>
                                 </div>
                             </div>
+                            @endforeach
                         </div>
-                        <div class="reply-box">
-                            <div class="theme_title ">
-                                <h2>leave a commet</h2>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <textarea placeholder="Comments"></textarea>
-                                </div>
-                                <!-- /.col-md-12 -->
-                                <div class="col-md-6">
-                                    <input type="text" placeholder="Your Name*">
-                                </div>
-                                <!-- /.col-md-6 -->
-                                <div class="col-md-6">
-                                    <input type="text" placeholder="Your Email*">
-                                </div>
-                                <!-- /.col-md-6 -->
-                                <div class="col-md-12">
-                                    <input type="text" placeholder="Your Website">
-                                </div>
-                                <!-- /.col-md-6 -->
-                                <div class="col-md-12">
-                                    <button type="submit" class="color1_bg">Post Comment</button>
-                                </div>
-                                <!-- /.col-md-12 -->
-                            </div>
-                            <!-- /.row -->
-                        </div>
+
+                        @include('blogs._blogcomments')
                     </div>
 
                 </div>

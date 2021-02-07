@@ -1,7 +1,7 @@
 
 @extends('layouts.app')
 @section('content')
-			<section class="breadcrumb-area" style="background-image:url(images/background/2.jpg);">
+			<section class="breadcrumb-area" style="background-image:url(/images/background/2.jpg);">
 			    <div class="container">
 			        <div class="row">
 			            <div class="col-md-12">
@@ -79,7 +79,7 @@
 									      <!-- Single Review -->
 									      <div class="item_review_content clear_fix">
 									      	<div class="img_holder float_left">
-									      		<img src="images/gallery/a1.jpg" alt="img">
+									      		<img src="/images/gallery/a1.jpg" alt="img">
 									      	</div> <!-- End of .img_holder -->
 
 									      	<div class="text float_left">
