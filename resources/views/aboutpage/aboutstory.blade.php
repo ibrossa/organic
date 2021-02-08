@@ -33,7 +33,7 @@
                         <p>{{$aboutstories->sec_text}}</p>
                     </div>
                     <div class="link">
-                        <a href="#" class="tran3s">read more</a>
+                        <a href="{{route('news')}}" class="tran3s">read more</a>
                     </div>
                 </div>
             </div>

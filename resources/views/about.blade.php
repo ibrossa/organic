@@ -19,9 +19,9 @@
                 <div class="row">
                     <div class="col-lg-8 col-md-5 col-sm-5">
                         <ul>
-                            <li><a href="#">Home</a></li>
+                            <li><a href="{{route('index')}}">Home</a></li>
                             <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                            <li><a href="#">Gallery</a></li>
+                            <li><a href="{{route('store')}}">Gallery</a></li>
                             <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
                             <li>about us</li>
                         </ul>
