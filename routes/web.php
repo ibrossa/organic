@@ -28,10 +28,17 @@ Route::post('/about',[
     \App\Http\Controllers\MainController::class, 'about_send_message'
 ]);
 
+Route::post('/',[
+    \App\Http\Controllers\MainController::class, 'index_subscribe'
+]);
+
 
 Route::get('/store',[
     \App\Http\Controllers\MainController::class, 'store'
 ])->name('store');
+Route::get('/store?catId={id}',[
+    \App\Http\Controllers\MainController::class, 'store'
+])->name('store_category');
 
 Route::get('/news',[
     \App\Http\Controllers\MainController::class, 'news'

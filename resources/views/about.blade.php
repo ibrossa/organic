@@ -47,7 +47,7 @@
 
    @include('aboutpage.awards')
 
-    <section class="call-out">
+   {{-- <section class="call-out">
         <div class="container">
             <div class="float_left">
                 <h2>Subscribe For Newsletter</h2>
@@ -77,7 +77,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>--}}
 
 @endsection
 

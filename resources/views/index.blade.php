@@ -101,21 +101,21 @@
 			        <div class="float_right">
 			        	<div class="contact-box">
 
-		                    <form method="post" action="http://st.ourhtmldemo.com/template/organic_store/sendemail.php" class="contact-form" novalidate="novalidate">
-
+		                    <form method="post" action="\" class="contact-form" >
+                                @csrf
 		                        <div class="row clearfix">
 		                            <div class="form-group">
-		                                <input type="text" name="username" value="" placeholder="Your Name*"><i class="fa fa-user" aria-hidden="true"></i>
+		                                <input type="text" name="name"  placeholder="Your Name*"><i class="fa fa-user" ></i>
 
 		                            </div>
 
 		                            <div class="form-group">
-		                                <input type="email" name="username" value="" placeholder="Email Address*"><i class="fa fa-envelope" aria-hidden="true"></i>
+		                                <input type="email" name="email"  placeholder="Email Address*"><i class="fa fa-envelope" ></i>
 		                            </div>
 
 
 		                            <div class="form-group">
-		                                <button type="submit" name="submit" class="btn-style-one center">Submit now</button>
+		                                <button type="submit"  class="btn-style-one center">Submit now</button>
 		                            </div>
 		                        </div>
 		                    </form>

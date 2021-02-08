@@ -7,7 +7,7 @@ namespace App\Http\Controllers;
 
 
 
-use App\Models\Aboutsection;
+
 use App\Models\AboutSendMessage;
 use App\Models\AboutStory;
 use App\Models\Award;
@@ -18,9 +18,11 @@ use App\Models\DeliveryProcess;
 use App\Models\Faq;
 use App\Models\Farmer;
 use App\Models\GetInTouch;
+use App\Models\IndexAbout;
 use App\Models\ParthnersLogo;
 use App\Models\Product;
 use App\Models\Slaider;
+use App\Models\Subscribe;
 use App\Models\Testimonial;
 use App\Models\ThreeColum;
 use App\Models\WhyChoose;
@@ -30,7 +32,7 @@ class MainController extends Controller
 {
     public function index() {
 
-        $sections = Aboutsection::all();
+        $sections = IndexAbout::all();
         $products = Product::orderby('created_at', 'desc')->limit(8)->get();
         $categories =Category::all();
         $blogs = Blog::orderby('created_at', 'desc')->limit(3)->get();
@@ -43,6 +45,12 @@ class MainController extends Controller
         return view('index',compact('sections','products', 'categories','blogs','whychoose',
                                                     'farmers', 'testimonials','partners_logo','slaiders'));
 
+    }
+
+    public function index_subscribe(Request $request){
+
+        Subscribe::create($request->all());
+        return redirect()->back();
     }
 
     public function footer() {

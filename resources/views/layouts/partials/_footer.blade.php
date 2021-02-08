@@ -16,30 +16,22 @@
                     <h5>recent post</h5>
 
                     <div class="recent-posts">
+                        @foreach($footer_blog as $blog)
                         <div class="post">
-                            <div class="post-thumb"><a href="#"><img src="images/blog/p1.jpg" alt=""></a></div>
-                            <h4><a href="#">Control your cholestrol & fat in 2 weeks</a></h4>
-                            <div class="post-info"><i class="fa fa-clock-o"></i>08th Sep, 2015</div>
+                            <div class="post-thumb"><a href="#"><img src="{{$blog->image}}" alt=""></a></div>
+                            <h4><a href="{{route('news.blog_details', $blog->id)}}">{{$blog->title}}</a></h4>
+                            <div class="post-info"><i class="fa fa-clock-o"></i>{{$blog->created_at}}</div>
                         </div>
-                        <div class="post">
-                            <div class="post-thumb"><a href="#"><img src="images/blog/p2.jpg" alt=""></a></div>
-                            <h4><a href="#">Control your cholestrol & fat in 2 weeks</a></h4>
-                            <div class="post-info"><i class="fa fa-clock-o"></i>08th Sep, 2015</div>
-                        </div>
-                        <div class="post">
-                            <div class="post-thumb"><a href="#"><img src="images/blog/p3.jpg" alt=""></a></div>
-                            <h4><a href="#">Control your cholestrol & fat in 2 weeks</a></h4>
-                            <div class="post-info"><i class="fa fa-clock-o"></i>08th Sep, 2015</div>
-                        </div>
+                        @endforeach
                     </div>
                 </div> <!-- End of .footer_news -->
 
                 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 footer_subscribe">
                     <h5>Categoreis</h5>
                     <ul class="list catagories">
-
-                        <li><a href="#"><i class="fa fa-angle-right"></i>категория</a></li>
-
+                        @foreach($footer_category as $category)
+                            <li><a href="{{route('store_category', $category->id)}}"><i class="fa fa-angle-right"></i>{{$category->title}}</a></li>
+                        @endforeach
                     </ul>
                 </div> <!-- End of .footer_subscribe -->
 

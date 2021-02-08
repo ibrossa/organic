@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAboutsectionsTable extends Migration
+class CreateSubscribesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateAboutsectionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('aboutsections', function (Blueprint $table) {
+        Schema::create('subscribes', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('text');
-            $table->string('image');
+            $table->string('name');
+            $table->string('email');
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateAboutsectionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('aboutsections');
+        Schema::dropIfExists('subscribes');
     }
 }
