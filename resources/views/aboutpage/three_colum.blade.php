@@ -7,7 +7,7 @@
                     <h5>{{$colum->title}}</h5>
                     <div class="icon"><i class="{{$colum->image}}"></i></div>
                     <p>{{$colum->text}}</p>
-                    <div class="link"><a href="#">Shop Now</a></div>
+                    <div class="link"><a href="{{route('store')}}">Shop Now</a></div>
                 </div>
             </div>
             @endforeach

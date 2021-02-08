@@ -1,4 +1,34 @@
+<section class="call-out">
+    <div class="container">
+        <div class="float_left">
+            <h2>Subscribe For Newsletter</h2>
+            <p>We send you latest news couple a month ( No Spam).</p>
+        </div>
+        <div class="float_right">
+            <div class="contact-box">
 
+                <form method="post" action="\" class="contact-form" >
+                    @csrf
+                    <div class="row clearfix">
+                        <div class="form-group">
+                            <input type="text" name="name"  placeholder="Your Name*"><i class="fa fa-user" ></i>
+
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" name="email"  placeholder="Email Address*"><i class="fa fa-envelope" ></i>
+                        </div>
+
+
+                        <div class="form-group">
+                            <button type="submit"  class="btn-style-one center">Submit now</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- Footer************************* -->
 <footer>
     <div class="main_footer">
@@ -56,7 +86,7 @@
 
     <div class="bottom_footer clear_fix">
         <div class="container">
-            <h6 class="pull-left">Copyrights © 2015 All Rights Reserved by<a href="http://themeforest.net/user/steelthemes/portfolio" target="_blank">Steelthemes</a></h6>
+
             <ul class="social_icon pull-right">
                 <li><a href="#" class="tran3s"><i class="fa fa-cc-visa" aria-hidden="true"></i></a></li>
                 <li><a href="#" class="tran3s"><i class="fa fa-cc-mastercard" aria-hidden="true"></i></a></li>

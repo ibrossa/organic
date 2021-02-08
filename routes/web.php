@@ -28,9 +28,13 @@ Route::post('/about',[
     \App\Http\Controllers\MainController::class, 'about_send_message'
 ]);
 
+Route::post('/contact',[
+    \App\Http\Controllers\MainController::class, 'contact_send_message'
+]);
+
 Route::post('/',[
     \App\Http\Controllers\MainController::class, 'index_subscribe'
-]);
+]);//распространяется на все страницы?
 
 
 Route::get('/store',[
@@ -55,6 +59,7 @@ Route::get('/faq',[
 Route::get('/contact',[
     \App\Http\Controllers\MainController::class, 'contact'
 ])->name('contact');
+
 
 Route::get('/news/{blog:id}', [
     \App\Http\Controllers\MainController::class, 'blog_details'

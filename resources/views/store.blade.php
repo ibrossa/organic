@@ -129,58 +129,26 @@
                                 <h4>popular products</h4>
                             </div>
 
-                            <div class="best_selling_item clear_fix border">
-                                <div class="img_holder float_left">
-                                    <img src="images/shop/9.png" alt="image">
-                                </div> <!-- End of .img_holder -->
+                            @foreach($hot_products as $product)
+                                <div class="best_selling_item clear_fix border">
+                                    <div class="img_holder float_left">
+                                        <img src="{{$product->image}}" alt="image">
+                                    </div> <!-- End of .img_holder -->
 
-                                <div class="text float_left">
-                                    <a href="shop-single.html"><h6>Turmeric Powder</h6></a>
-                                    <ul>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    </ul>
-                                    <span>$ 15.00</span>
-                                </div> <!-- End of .text -->
-                            </div> <!-- End of .best_selling_item -->
+                                    <div class="text float_left">
+                                        <a href="shop-single.html"><h6>{{$product->title}}</h6></a>
+                                        <ul>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        </ul>
+                                        <span>{{$product->price}}</span>
+                                    </div> <!-- End of .text -->
+                                </div> <!-- End of .best_selling_item -->
+                            @endforeach
 
-                            <div class="best_selling_item clear_fix border">
-                                <div class="img_holder float_left">
-                                    <img src="images/shop/10.png" alt="image">
-                                </div> <!-- End of .img_holder -->
-
-                                <div class="text float_left">
-                                    <a href="shop-single.html"><h6>Pure Jeans Coffee</h6></a>
-                                    <ul>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    </ul>
-                                    <span>$ 34.00</span>
-                                </div> <!-- End of .text -->
-                            </div> <!-- End of .best_selling_item -->
-
-                            <div class="best_selling_item clear_fix">
-                                <div class="img_holder float_left">
-                                    <img src="images/shop/11.png" alt="image">
-                                </div> <!-- End of .img_holder -->
-
-                                <div class="text float_left">
-                                    <a href="shop-single.html"><h6>Columbia Chocolate</h6></a>
-                                    <ul>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    </ul>
-                                    <span>$ 34.99</span>
-                                </div> <!-- End of .text -->
                             </div> <!-- End of .best_selling_item -->
                         </div> <!-- End of .best_sellers -->
                     </div> <!-- End of .wrapper -->

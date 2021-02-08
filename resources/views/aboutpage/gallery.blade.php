@@ -10,7 +10,7 @@
 
             <ul class="tab-list">
                 @foreach($categories as $category)
-                    <li><a href="#{{$category->id}}" class="tab-btn active"><h2><i class="icon-food-2"></i>{{$category->title}}</h2></a></li>
+                    <li><a data-role="button" data-filter=".{{$category->id}}"  class="filter"><h2><i class="icon-food-2"></i>{{$category->title}}</h2></a></li>
                 @endforeach
             </ul>
             <div class="link-btn"><a href="\store" class="tran3s">VIEW MORE<span class="fa fa-sort-desc"></span></a></div>
@@ -27,7 +27,7 @@
                     <div class="row-10">
                     @foreach($products as $product)
                         <!--Default Item-->
-                        <div class="col-md-2 column-2 col-sm-6 col-xs-12 default-item ">
+                        <div class="col-md-2 column-2 col-sm-6 col-xs-12 default-item all {{$product->cat_id}} ">
                             <div class="inner-box">
 
                                 <div class="single-item center">

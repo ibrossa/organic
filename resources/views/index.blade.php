@@ -92,37 +92,7 @@
 
 
 
-			<section class="call-out">
-			    <div class="container">
-			        <div class="float_left">
-			            <h2>Subscribe For Newsletter</h2>
-			            <p>We send you latest news couple a month ( No Spam).</p>
-			        </div>
-			        <div class="float_right">
-			        	<div class="contact-box">
 
-		                    <form method="post" action="\" class="contact-form" >
-                                @csrf
-		                        <div class="row clearfix">
-		                            <div class="form-group">
-		                                <input type="text" name="name"  placeholder="Your Name*"><i class="fa fa-user" ></i>
-
-		                            </div>
-
-		                            <div class="form-group">
-		                                <input type="email" name="email"  placeholder="Email Address*"><i class="fa fa-envelope" ></i>
-		                            </div>
-
-
-		                            <div class="form-group">
-		                                <button type="submit"  class="btn-style-one center">Submit now</button>
-		                            </div>
-		                        </div>
-		                    </form>
-		                </div>
-			        </div>
-			    </div>
-			</section>
 
 @endsection
 

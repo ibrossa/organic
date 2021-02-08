@@ -85,14 +85,21 @@ class MainController extends Controller
         AboutSendMessage::create($request->all());
         return redirect()->back();
     }
+    //
+    public function contact_send_message(Request $request){
+
+        AboutSendMessage::create($request->all());
+        return redirect()->back();
+    }
 
     public function store(Request $request) {
         $categories = \App\Models\Category::all();
 
         $catId = $request->get('catId',1);
         $products = Product::where('cat_id', $catId)->orderBy('id', 'desc')->get();
+        $hot_products = Product::where('status','hot')->orderby('created_at','desc')->limit(3)->get();
 
-        return view('store',compact('products','categories'));
+        return view('store',compact('products','categories','hot_products'));
     }
 
     public function news() {

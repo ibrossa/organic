@@ -63,27 +63,28 @@
                         <div class="theme-title ">
                             <h2>send us massege</h2>
                         </div>
-                        <form action="http://st.ourhtmldemo.com/template/organic_store/inc/sendmail.php">
+                        <form method="post" action="\contact">
+                            @csrf
                             <div class="row">
                                 <div class="col-md-6">
-                                    <input type="text" placeholder="Your Name*">
+                                    <input type="text" placeholder="Your Name*" name="name" >
                                 </div>
                                 <!-- /.col-md-6 -->
                                 <div class="col-md-6">
-                                    <input type="text" placeholder="Your Email*">
+                                    <input type="text" placeholder="Your Email*" name="mail">
                                 </div>
                                 <!-- /.col-md-6 -->
                                 <div class="col-md-6">
-                                    <input type="text" placeholder="Phone">
+                                    <input type="text" placeholder="Phone" name="phone" >
                                 </div>
                                 <!-- /.col-md-6 -->
                                 <div class="col-md-6">
-                                    <input type="text" placeholder="Subject">
+                                    <input type="text" placeholder="Subject" name="subject">
                                 </div>
                                 <!-- /.col-md-6 -->
 
                                 <div class="col-md-12">
-                                    <textarea placeholder="Comments"></textarea>
+                                    <textarea placeholder="Comments" name="text"></textarea>
                                 </div>
                                 <!-- /.col-md-12 -->
                                 <div class="col-md-12">
@@ -104,6 +105,6 @@
     <section id="google-map-area">
         <div class="google-map-home" id="google-map" data-map-lat="40.717873" data-map-lng="-73.563033" data-icon-path="images/logo/map.png" data-map-title="Awesome Place" data-map-zoom="11"></div>
     </section>
-
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRvBPo3-t31YFk588DpMYS6EqKf-oGBSI"></script> <!-- Gmap Helper -->
 
 @endsection
