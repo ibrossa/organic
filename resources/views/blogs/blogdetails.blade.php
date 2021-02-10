@@ -53,7 +53,7 @@
                                 <ul>
                                     <li><a href="blog-details.html" class="tran3s"><i class="fa fa-user" aria-hidden="true"></i> {{$blog->author_name}}</a></li>
                                     <li><a href="blog-details.html" class="tran3s"><i class="fa fa-clock-o" aria-hidden="true"></i>{{$blog->created_at}}</a></li>
-                                    <li><a href="blog-details.html" class="tran3s"><i class="fa fa-comments" aria-hidden="true"></i> 26</a></li>
+                                    <li><a href="blog-details.html" class="tran3s"><i class="fa fa-comments" aria-hidden="true"></i>{{$blog->blog_comments->count()}}</a></li>
                                 </ul>
                             </div>
 

@@ -3,6 +3,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CommentRequest;
 use App\Models\AboutSendMessage;
 use App\Models\AboutStory;
 use App\Models\Award;
@@ -155,14 +156,18 @@ class MainController extends Controller
     /**
      *
      */
-    public function blog_comment($id, Request $request)
+    public function blog_comment($id, CommentRequest $request)
     {
-       /* dd($id,$request->all());*/
+        try{
+            $blog_comment = BlogComment::create(array_merge($request->all(),['blog_id' => $id]));
+        } catch (\Exception $e){
+            logger($e);
+            echo 'Error ',  dd($e->getMessage());
+           /*return redirect();*/
+        }
+        echo 'success';
+        return redirect()->back();
 
-        BlogComment::create(array_merge($request->all(),['blog_id' => $id]));
-
-
-         return redirect()->back();
     }
 
     /**
