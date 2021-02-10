@@ -60,18 +60,21 @@ Route::get('/contact',[
     \App\Http\Controllers\MainController::class, 'contact'
 ])->name('contact');
 
-
 Route::get('/news/{blog:id}', [
     \App\Http\Controllers\MainController::class, 'blog_details'
 ])->name('news.blog_details');
 
 Route::post('/news/{blog:id}', [
-    \App\Http\Controllers\MainController::class, 'blog_details'
+    \App\Http\Controllers\MainController::class, 'blog_comment'
 ])->name('news.blog_comment');
 
 Route::get('/store/{product:id}', [
     \App\Http\Controllers\MainController::class, 'product_details'
 ])->name('store.product_details');
+
+Route::post('/store/{product:id}', [
+  \App\Http\Controllers\MainController::class ,'product_review'
+])->name('store.product_review');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

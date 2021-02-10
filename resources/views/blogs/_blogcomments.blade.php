@@ -1,6 +1,6 @@
 <div class="reply-box">
     <div class="theme_title ">
-        <h2>leave a commet</h2>
+        <h2>leave a comment</h2>
     </div>
     <form method="post" action="\news\{{$blog->id}}">
         @csrf

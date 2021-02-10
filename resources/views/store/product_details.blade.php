@@ -45,20 +45,20 @@
 	        				<div class="wrapper">
 	        					<div class="product_top_section clear_fix">
 	        						<div class="img_holder float_left">
-	        							<img src="{{$product_details->image}}" alt="img" class="img-responsive">
+	        							<img src="{{$product->image}}" alt="img" class="img-responsive">
 	        						</div> <!-- End of .img_holder -->
 	        						<div class="item_description float_left">
-	        							<h4>{{$product_details->title}}</h4>
+	        							<h4>{{$product->title}}</h4>
 	        							<ul>
 											<li><i class="fa fa-star" aria-hidden="true"></i></li>
 											<li><i class="fa fa-star" aria-hidden="true"></i></li>
 											<li><i class="fa fa-star" aria-hidden="true"></i></li>
 											<li><i class="fa fa-star" aria-hidden="true"></i></li>
 											<li><i class="fa fa-star" aria-hidden="true"></i></li>
-											<li>(2 Customers Review)</li>
+											<li>({{$product->product_review->count()}} Customers Review)</li>
 										</ul>
-										<span class="item_price">{{$product_details->price}}</span>
-										<p>{{$product_details->description}}</p>
+										<span class="item_price">{{$product->price}}</span>
+										<p>{{$product->description}}</p>
 	        						</div> <!-- End of .item_description -->
 	        					</div> <!-- End of .product_top_section -->
 
@@ -66,27 +66,28 @@
 	        					<div class="product-review-tab">
 									<ul class="nav nav-pills">
 									    <li><a data-toggle="pill" href="#tab1">Description</a></li>
-									    <li class="active"><a data-toggle="pill" href="#tab2">Reviews(2)</a></li>
+									    <li class="active"><a data-toggle="pill" href="#tab2">Reviews({{$product->product_review->count()}})</a></li>
 								  	</ul>
 
 									 <div class="tab-content">
 									    <div id="tab1" class="tab-pane fade">
-									      <p>{{$product_details->text}}</p>
+									      <p>{{$product->text}}</p>
 
 									    </div> <!-- End of #tab1 -->
 
 									    <div id="tab2" class="tab-pane fade in active">
-									      <!-- Single Review -->
-									      <div class="item_review_content clear_fix">
+
+                                            @foreach($reviews as $review)<!-- Single Review -->
+									            <div class="item_review_content clear_fix">
 									      	<div class="img_holder float_left">
 									      		<img src="/images/gallery/a1.jpg" alt="img">
 									      	</div> <!-- End of .img_holder -->
 
 									      	<div class="text float_left">
 									      		<div class="sec_up clear_fix">
-									      			<h6 class="float_left">Michel Kong</h6>
+									      			<h6 class="float_left">{{$review->name}}</h6>
 									      			<div class="float_right">
-									      				<span class="p_color">21/08/2015 &nbsp;at &nbsp;09.45</span>
+									      				<span class="p_color">{{$review->created_at}}</span>
 									      				<ul>
 															<li><i class="fa fa-star" aria-hidden="true"></i></li>
 															<li><i class="fa fa-star" aria-hidden="true"></i></li>
@@ -96,7 +97,7 @@
 														</ul>
 									      			</div>
 									      		</div> <!-- End of .sec_up -->
-									      		<p>Many web sites still sed in their infancy Various versions have sed evolveed over the years, sometimes by there accident, sometimes all times purpose rationally sed encounter se consequencess ut that are at sed extremely well painful or again is there anyone who loves or seds of pursues.</p>
+									      		<p>{{$review->review}}</p>
 
 									      		<div class="up_down_nav">
 									      			<a href="#"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
@@ -106,37 +107,9 @@
 
 									      	</div> <!-- End of .text -->
 									      </div> <!-- End of .item_review_content -->
-
+                                            @endforeach
 									      <!-- Single Review -->
-									      <div class="item_review_content clear_fix">
-									      	<div class="img_holder float_left">
-									      		<img src="images/gallery/a2.jpg" alt="img">
-									      	</div> <!-- End of .img_holder -->
 
-									      	<div class="text float_left">
-									      		<div class="sec_up clear_fix">
-									      			<h6 class="float_left">Jeorge Meckey</h6>
-									      			<div class="float_right">
-									      				<span class="p_color">26/08/2015 &nbsp;at &nbsp;05.30</span>
-									      				<ul>
-															<li><i class="fa fa-star" aria-hidden="true"></i></li>
-															<li><i class="fa fa-star" aria-hidden="true"></i></li>
-															<li><i class="fa fa-star" aria-hidden="true"></i></li>
-															<li><i class="fa fa-star" aria-hidden="true"></i></li>
-															<li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
-														</ul>
-									      			</div>
-									      		</div> <!-- End of .sec_up -->
-									      		<p>Know how to pursue pleasure rationally encounter consequences that are extremely painful nor again is there anyone who loves or pursues or desires to obtain pain seds of itself, because it is pain, under because occasionally circumstances occur in which toil great pleasure.</p>
-
-									      		<div class="up_down_nav">
-									      			<a href="#"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
-									      			<a href="#"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
-									      		</div> <!-- End of .up_down_nav -->
-
-
-									      	</div> <!-- End of .text -->
-									      </div> <!-- End of .item_review_content -->
 
 
 									      <div class="add_your_review">
@@ -171,19 +144,29 @@
 													<li><i class="fa fa-star" aria-hidden="true"></i></li>
 												</ul>
 
-												<form action="#">
+												<form method="post" action="{{ route('store.product_review', $product->id) }}">
+                                                    @csrf
 													<div class="row">
 														<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-															<input type="text" placeholder="Name*">
+															<input type="text" placeholder="Name*" name="name">
+                                                                 @error('name')
+                                                            <div class="alert alert-danger">{{$message}} </div>
+                                                            @enderror
 														</div>
 														<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-															<input type="email" placeholder="Email*">
+															<input type="email" placeholder="Email*"name="email">
+                                                            @error('email')
+                                                                  <div class="alert alert-danger">{{$message}} </div>
+                                                            @enderror
 														</div>
 														<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-															<textarea placeholder="Your Review..."></textarea>
+															<textarea placeholder="Your Review..." name="review"></textarea>
+                                                            @error('review')
+                                                                <div class="alert alert-danger">{{$message}} </div>
+                                                            @enderror
 														</div>
 													</div>
-													<button class="color1_bg tran3s">Add A Review</button>
+													<button type="submit" class="color1_bg tran3s">Add A Review</button>
 												</form>
 
 									      </div> <!-- End of .add_your_review -->
@@ -239,7 +222,7 @@
 								            <div class="col-md-4 col-sm-6 col-xs-12 default-item" style="display: inline-block;">
 								                <div class="inner-box">
 								                    <div class="single-item center">
-								                        <figure class="image-box"><img src="images/shop/2.png" alt=""></figure>
+								                        <figure class="image-box"><img src="/images/shop/2.png" alt=""></figure>
 								                        <div class="content">
 								                        	<h3><a href="shop-single.html">Turmeric Powder</a></h3>
 								                            <div class="rating"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></div>
@@ -270,7 +253,7 @@
 								            <div class="col-md-4 col-sm-6 col-xs-12 default-item" style="display: inline-block;">
 								                <div class="inner-box">
 								                    <div class="single-item center">
-								                        <figure class="image-box"><img src="images/shop/3.png" alt=""><div class="product-model hot">Hot</div></figure>
+								                        <figure class="image-box"><img src="/images/shop/3.png" alt=""><div class="product-model hot">Hot</div></figure>
 								                        <div class="content">
 								                        	<h3><a href="shop-single.html">Turmeric Powder</a></h3>
 								                            <div class="rating"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></div>

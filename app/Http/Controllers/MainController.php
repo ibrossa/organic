@@ -4,6 +4,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CommentRequest;
+use App\Http\Requests\ProductReviewRequest;
 use App\Models\AboutSendMessage;
 use App\Models\AboutStory;
 use App\Models\Award;
@@ -17,6 +18,7 @@ use App\Models\GetInTouch;
 use App\Models\IndexAbout;
 use App\Models\ParthnersLogo;
 use App\Models\Product;
+use App\Models\ProductReview;
 use App\Models\Slaider;
 use App\Models\Subscribe;
 use App\Models\Testimonial;
@@ -175,9 +177,31 @@ class MainController extends Controller
      */
     public function product_details($id)
     {
-        $product_details = Product::find($id);
+        $product = Product::find($id);
+        $reviews = Product::find($id)->product_review;
+        /*$related = Product::find($id);*/
 
-        return view('store.product_details',compact('product_details'));
+        return view('store.product_details',compact('product','reviews'));
+    }
+
+    /**
+     * @param $id
+     * @param CommentRequest $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function product_review($id, ProductReviewRequest $request)
+    {
+
+        try{
+            $product_review = ProductReview::create(array_merge($request->all(),['product_id' => $id]));
+        } catch (\Exception $e){
+            logger($e);
+            echo 'Error ',  dd($e->getMessage());
+            /*return redirect();*/
+        }
+        echo 'success';
+        return redirect()->back();
+
     }
 
     /**
