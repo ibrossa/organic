@@ -65,6 +65,10 @@ Route::get('/news/{blog:id}', [
     \App\Http\Controllers\MainController::class, 'blog_details'
 ])->name('news.blog_details');
 
+Route::post('/news/{blog:id}', [
+    \App\Http\Controllers\MainController::class, 'blog_details'
+])->name('news.blog_comment');
+
 Route::get('/store/{product:id}', [
     \App\Http\Controllers\MainController::class, 'product_details'
 ])->name('store.product_details');

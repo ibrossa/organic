@@ -91,17 +91,17 @@
                         </div>
                         <div class="comment-box">
                             <div class="theme_title ">
-                                <h2>Comments ()</h2>
+                                <h2>Comments ({{$blog->blog_comments->count()}})</h2>
 
                             </div>
                             @foreach($comments as $comment)
-                                <div class="single-comment-box">
+                            <div class="single-comment-box">
                                 <div class="text-box">
                                     <div class="clearfix">
                                         <div class="top-box float_left">
                                             <h2>{{$comment->name}}</h2>
                                         </div>
-                                        <div class="float_right">
+                                        <div class="top-box float_right">
                                             <span class="p_color">Posted on:{{$comment->created_at}}</span>
                                             <ul>
                                                 <li><i class="fa fa-star" aria-hidden="true"></i></li>

@@ -24,6 +24,7 @@ use App\Models\WhyChoose;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use Illuminate\View\View;
+use function React\Promise\all;
 
 class MainController extends Controller
 {
@@ -144,7 +145,9 @@ class MainController extends Controller
     public function blog_details($id)
     {
         $blog = Blog::find($id);
-        $comments = BlogComment::orderby('created_at','desc')->get();
+        $comments = Blog::find($id)->blog_comments;
+        /*dd($comments);*/
+       /* $comments = BlogComment::orderby('created_at','desc')->get();*/
 
         return view('blogs.blogdetails',compact('blog','comments'));
     }
@@ -152,11 +155,14 @@ class MainController extends Controller
     /**
      *
      */
-    public function blog_comment(Request $request)
+    public function blog_comment($id, Request $request)
     {
-        BlogComment::create($request->all());
+       /* dd($id,$request->all());*/
 
-        return redirect()->back();
+        BlogComment::create(array_merge($request->all(),['blog_id' => $id]));
+
+
+         return redirect()->back();
     }
 
     /**

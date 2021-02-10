@@ -20,6 +20,7 @@
             <div class="col-md-12">
                 <input type="text" placeholder="Your Website" name="website">
             </div>
+
             <!-- /.col-md-6 -->
             <div class="col-md-12">
                 <button type="submit" class="color1_bg">Post Comment</button>
