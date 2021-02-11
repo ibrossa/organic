@@ -140,13 +140,13 @@ class MainController extends Controller
      */
     public function news()
     {
-        $blogs = Blog::orderby('created_at', 'desc')->get();
+        $blogs = Blog::orderby('created_at', 'desc')->paginate(3);
 
         return view('news',compact('blogs'));
     }
 
     /**
-     * @param Blog $blog
+     *
      */
     public function blog_details($id)
     {
