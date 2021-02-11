@@ -186,16 +186,16 @@
 							        <div class="shop_page featured-product">
 
 						        		<div class="row">
-
+                                            @foreach($related as $relat)
 								            <!--Default Item-->
-								            <div class="col-md-4 col-sm-6 col-xs-12 default-item" style="display: inline-block;">
+								                 <div class="col-md-4 col-sm-6 col-xs-12 default-item" style="display: inline-block;">
 								                <div class="inner-box">
 								                    <div class="single-item center">
-								                        <figure class="image-box"><img src="images/shop/1.png" alt=""><div class="product-model new">New</div></figure>
+								                        <figure class="image-box"><img src="{{$relat->image}}" alt=""><div class="product-model {{$relat->status}}">{{$relat->status}}</div></figure>
 								                        <div class="content">
-								                        	<h3><a href="shop-single.html">Turmeric Powder</a></h3>
+								                        	<h3><a href="shop-single.html">{{$relat->title}}</a></h3>
 								                            <div class="rating"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></div>
-								                            <div class="price">$12.99 <span class="prev-rate">$14.99</span></div>
+								                            <div class="price">{{$relat->price}} <span class="prev-rate">{{$relat->old_price}}</span></div>
 								                        </div>
 								                        <div class="overlay-box">
 								                        	<div class="inner">
@@ -210,75 +210,15 @@
 									                        	</div>
 									                        	<div class="bottom-content">
 									                        		<h4><a href="#">It Contains:</a></h4>
-									                        		<p>35% of organic raisins 55% of oats and 10% of butter. </p>
+									                        		<p>{{$relat->contains}}</p>
 									                        	</div>
 								                        	</div>
 								                        </div>
 									                </div>
 								                </div>
 								            </div>
+                                            @endforeach
 
-								            <!--Default Item-->
-								            <div class="col-md-4 col-sm-6 col-xs-12 default-item" style="display: inline-block;">
-								                <div class="inner-box">
-								                    <div class="single-item center">
-								                        <figure class="image-box"><img src="/images/shop/2.png" alt=""></figure>
-								                        <div class="content">
-								                        	<h3><a href="shop-single.html">Turmeric Powder</a></h3>
-								                            <div class="rating"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></div>
-								                            <div class="price">$12.99 <span class="prev-rate">$14.99</span></div>
-								                        </div>
-								                        <div class="overlay-box">
-								                        	<div class="inner">
-									                        	<div class="top-content">
-									                        		<ul>
-									                        			<li><a href="#"><span class="fa fa-eye"></span></a></li>
-									                        			<li class="tultip-op"><span class="tultip"><i class="fa fa-sort-desc"></i>ADD TO CART</span><a href="#"><span class="icon-icon-32846"></span></a>
-
-																		</li>
-									                        			<li><a href="#"><span class="fa fa-heart-o"></span></a></li>
-									                        		</ul>
-									                        	</div>
-									                        	<div class="bottom-content">
-									                        		<h4><a href="#">It Contains:</a></h4>
-									                        		<p>35% of organic raisins 55% of oats and 10% of butter. </p>
-									                        	</div>
-								                        	</div>
-								                        </div>
-									                </div>
-								                </div>
-								            </div>
-
-								            <!--Default Item-->
-								            <div class="col-md-4 col-sm-6 col-xs-12 default-item" style="display: inline-block;">
-								                <div class="inner-box">
-								                    <div class="single-item center">
-								                        <figure class="image-box"><img src="/images/shop/3.png" alt=""><div class="product-model hot">Hot</div></figure>
-								                        <div class="content">
-								                        	<h3><a href="shop-single.html">Turmeric Powder</a></h3>
-								                            <div class="rating"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></div>
-								                            <div class="price">$12.99 <span class="prev-rate">$14.99</span></div>
-								                        </div>
-								                        <div class="overlay-box">
-								                        	<div class="inner">
-									                        	<div class="top-content">
-									                        		<ul>
-									                        			<li><a href="#"><span class="fa fa-eye"></span></a></li>
-									                        			<li class="tultip-op"><span class="tultip"><i class="fa fa-sort-desc"></i>ADD TO CART</span><a href="#"><span class="icon-icon-32846"></span></a>
-
-																		</li>
-									                        			<li><a href="#"><span class="fa fa-heart-o"></span></a></li>
-									                        		</ul>
-									                        	</div>
-									                        	<div class="bottom-content">
-									                        		<h4><a href="#">It Contains:</a></h4>
-									                        		<p>35% of organic raisins 55% of oats and 10% of butter. </p>
-									                        	</div>
-								                        	</div>
-								                        </div>
-									                </div>
-								                </div>
-								            </div>
 
 						        		</div> <!-- End of .row -->
 

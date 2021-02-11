@@ -179,9 +179,12 @@ class MainController extends Controller
     {
         $product = Product::find($id);
         $reviews = Product::find($id)->product_review;
-        /*$related = Product::find($id);*/
+        $related = Product::where('cat_id',$product->cat_id)->limit(3)->get();
+        $related = $related->filter(function ($item) use ($product){
+            return $item->id !=$product->id;
+        });
 
-        return view('store.product_details',compact('product','reviews'));
+        return view('store.product_details',compact('product','reviews','related'));
     }
 
     /**
