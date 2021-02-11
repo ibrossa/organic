@@ -35,7 +35,7 @@
 			                    <div class="single-item center">
 			                        <figure class="image-box"><img src="{{$product->image}}" alt=""><div class="product-model {{$product->status}}">{{$product->status}}</div></figure>
 			                        <div class="content">
-			                        	<h3><a href="shop-single.html">{{$product->name}}</a></h3>
+			                        	<h3><a href="shop-single.html">{{$product->title}}</a></h3>
 			                            <div class="rating"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></div>
 			                            <div class="price">${{$product->price}} <span class="prev-rate">${{$product->old_price}}</span></div>
 			                        </div>

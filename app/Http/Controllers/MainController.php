@@ -25,25 +25,17 @@ use App\Models\Subscribe;
 use App\Models\Testimonial;
 use App\Models\ThreeColum;
 use App\Models\WhyChoose;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use Illuminate\View\View;
+use phpDocumentor\Reflection\Types\Mixed_;
 use function React\Promise\all;
 
 class MainController extends Controller
 {
-
-    /**
-     * @param IndexAbout $sections
-     * @param Product $products
-     * @param Category $categories
-     * @param Blog $blogs
-     * @param WhyChoose $whychoose
-     * @param Farmer $farmers
-     * @param Testimonial $testimonials
-     * @param ParthnersLogo $partners_logo
-     * @param Subscribe $slaiders
-     * @return View index
+     /**
+     *
      */
     public function index()
     {
@@ -59,6 +51,20 @@ class MainController extends Controller
 
         return view('index',compact('sections','products', 'categories','blogs','whychoose',
                                                     'farmers', 'testimonials','partners_logo','slaiders'));
+    }
+    /**
+     *
+     */
+    public function search(Request $request){
+        $s = $request->s;
+        if(!empty($s)){
+            $blogs = Blog::query()->where('title', 'LIKE', '%'.$s.'%')->get();
+            $products = Product::query()->where('title', 'LIKE', '%'.$s.'%')->get();
+            return view('search', compact('blogs','s','products'));
+        }
+        else
+            echo 'Nothig to Search';return redirect()->back();
+
     }
 
     /**

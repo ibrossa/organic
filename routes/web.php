@@ -76,6 +76,11 @@ Route::post('/store/{product:id}', [
   \App\Http\Controllers\MainController::class ,'product_review'
 ])->name('store.product_review');
 
+
+Route::get('/search', [
+    \App\Http\Controllers\MainController::class, 'search'
+])->name('search');
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

@@ -19,8 +19,8 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-12 col-xs-12">
                         <div class="search-box">
-                            <form action="#" class="clearfix">
-                                <input type="text" placeholder="Search...">
+                            <form action="{{route('search')}}"  method="get">
+                                <input type="text" placeholder="Search..." id="s" name="s">
                                 <button><i class="fa fa-search"></i></button>
                             </form>
                         </div>
