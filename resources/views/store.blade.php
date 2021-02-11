@@ -2,21 +2,6 @@
 
 @section('content')
 
-
-            <!-- ******* Cart And Search Option ******** -->
-            <div class="nav_side_content pull-right">
-                <ul class="icon_header">
-                    <li class="border_round tran3s"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li class="border_round tran3s"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li class="border_round tran3s"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li class="border_round tran3s"><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                </ul>
-            </div> <!-- End of .nav_side_content -->
-
-        </div> <!-- End of .conatiner -->
-    </div> <!-- End of .theme_menu -->
-
-
     <section class="breadcrumb-area" style="background-image:url(images/background/2.jpg);">
         <div class="container">
             <div class="row">
@@ -114,13 +99,15 @@
                             </div>
                             <div class="single-sidebar price-ranger">
                                 <div id="slider-range"></div>
+                                <form method="get" acton="/store">
                                 <div class="ranger-min-max-block">
                                     <input type="submit" value="Filter">
                                     <span>Price:</span>
-                                    <input type="text" readonly class="min">
+                                    <input type="text" readonly class="min" name="min">
                                     <span>-</span>
-                                    <input type="text" readonly class="max">
+                                    <input type="text" readonly class="max" name="max">
                                 </div>
+                                </form>
                             </div> <!-- /price-ranger -->
                         </div> <!-- /price_filter -->
 
