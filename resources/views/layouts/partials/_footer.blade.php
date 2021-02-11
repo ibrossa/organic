@@ -74,9 +74,9 @@
                         <li><a href="#"><i class="fa fa-home"></i>{{setting('contact-us.addres')}}.</a></li>
                     </ul>
 
-                    <h5>Business Hours</h5>
+                    <h5>{{setting('contact-us.business_hours')}}</h5>
                     <div class="list Business">
-                        <p>Monday - Friday: 09.00am to 07.00pm <br>Saturday: 10.00am to 05.00pm <br>Sunday: <span>Closed</span></p>
+                        <p>{{setting('contact-us.work_hours')}}<br><span>{{setting('contact-us.sunday')}}</span></p>
                     </div>
 
                 </div> <!-- End of .footer_contact -->

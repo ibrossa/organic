@@ -9,23 +9,36 @@
             <div class="row">
                 <div class="col-md-6">
                     <input type="text" placeholder="Your Name*" name="name" >
+                    @error('name')
+                    <div class="alert alert-danger">{{$message}} </div>
+                    @enderror
                 </div>
                 <!-- /.col-md-6 -->
                 <div class="col-md-6">
-                    <input type="text" placeholder="Your Email*" name="mail">
+                    <input type="text" placeholder="Your Email*" name="email">
+                    @error('email')
+                    <div class="alert alert-danger">{{$message}} </div>
+                    @enderror
                 </div>
                 <!-- /.col-md-6 -->
                 <div class="col-md-6">
                     <input type="text" placeholder="Phone" name="phone" >
+                    @error('phone')
+                    <div class="alert alert-danger">{{$message}} </div>
+                    @enderror
                 </div>
                 <!-- /.col-md-6 -->
                 <div class="col-md-6">
                     <input type="text" placeholder="Subject" name="subject">
+                    @error('subject')
+                    <div class="alert alert-danger">{{$message}} </div>
+                    @enderror
                 </div>
-                <!-- /.col-md-6 -->
-
                 <div class="col-md-12">
                     <textarea placeholder="Comments" name="text"></textarea>
+                    @error('text')
+                    <div class="alert alert-danger">{{$message}} </div>
+                    @enderror
                 </div>
                 <!-- /.col-md-12 -->
                 <div class="col-md-12">
@@ -35,6 +48,7 @@
             </div>
             <!-- /.row -->
         </form>
+
 
     </div>
 </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CommentRequest;
 use App\Http\Requests\ProductReviewRequest;
+use App\Http\Requests\SendUsRequest;
 use App\Models\AboutSendMessage;
 use App\Models\AboutStory;
 use App\Models\Award;
@@ -102,9 +103,10 @@ class MainController extends Controller
     /**
      *
      */
-    public function about_send_message(Request $request)
+    public function about_send_message(SendUsRequest $request)
     {
-        AboutSendMessage::create($request->all());
+        $data = $request->validated();
+        AboutSendMessage::create($data);
 
         return redirect()->back();
     }
@@ -112,9 +114,10 @@ class MainController extends Controller
     /**
      *
      */
-    public function contact_send_message(Request $request)
+    public function contact_send_message(SendUsRequest $request)
     {
-        AboutSendMessage::create($request->all());
+        $data = $request->validated();
+        AboutSendMessage::create($data);
 
         return redirect()->back();
     }
@@ -160,16 +163,11 @@ class MainController extends Controller
      */
     public function blog_comment($id, CommentRequest $request)
     {
-        try{
-            $blog_comment = BlogComment::create(array_merge($request->all(),['blog_id' => $id]));
-        } catch (\Exception $e){
-            logger($e);
-            echo 'Error ',  dd($e->getMessage());
-           /*return redirect();*/
-        }
-        echo 'success';
-        return redirect()->back();
+        $data = $request->validated();
+        $data['blog_id'] = $id;
+        $blog_comment = BlogComment::create($data);
 
+        return redirect()->back();
     }
 
     /**
@@ -194,17 +192,11 @@ class MainController extends Controller
      */
     public function product_review($id, ProductReviewRequest $request)
     {
+        $data = $request->validated();
+        $data['product_id'] = $id;
+        $product_review = ProductReview::create($data);
 
-        try{
-            $product_review = ProductReview::create(array_merge($request->all(),['product_id' => $id]));
-        } catch (\Exception $e){
-            logger($e);
-            echo 'Error ',  dd($e->getMessage());
-            /*return redirect();*/
-        }
-        echo 'success';
         return redirect()->back();
-
     }
 
     /**

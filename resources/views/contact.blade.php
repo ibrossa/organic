@@ -40,17 +40,17 @@
             <div class="row">
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="left_contact">
-                        <h5>Get In Touch</h5>
+                        <h5>{{setting('contact-us.contact_us')}}</h5>
                         <ul class="list catagories">
-                            <li><a href="#"><i class="fa fa-home color1"></i>No 271, Red Cross Building, Modern Street, Newyork City, USA.</a></li>
-                            <li><a href="#"><i class="fa fa-envelope color1"></i><span>Organicstore@gmail.com</span><br>customersupport@organic.com</a></li>
-                            <li><a href="#"><i class="fa fa-phone color1"></i>+91 (321) 758 142 5698 <br>1800-8692-258-1547</a></li>
+                            <li><i class="fa fa-home color1"></i>{{setting('contact-us.addres')}}</li>
+                            <li><i class="fa fa-envelope color1"></i>{{setting('contact-us.email')}}</li>
+                            <li><i class="fa fa-phone color1"></i>{{setting('contact-us.phone')}}</li>
                         </ul>
 
                         <div class="border-area">
-                            <h6>Woriking Hours</h6>
+                            <h6>{{setting('contact-us.business_hours')}}</h6>
                             <div class="list Business">
-                                <p>Monday - Friday: 09.00am to 07.00pm <br>Saturday: 10.00am to 05.00pm <br>Sunday: <span>Closed</span></p>
+                                {{setting('contact-us.work_hours')}}<br><span>{{setting('contact-us.sunday')}}</span>
                             </div>
 
                         </div>
@@ -68,23 +68,36 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <input type="text" placeholder="Your Name*" name="name" >
+                                    @error('name')
+                                        <div class="alert alert-danger">{{$message}} </div>
+                                    @enderror
                                 </div>
                                 <!-- /.col-md-6 -->
                                 <div class="col-md-6">
-                                    <input type="text" placeholder="Your Email*" name="mail">
+                                    <input type="text" placeholder="Your Email*" name="email">
+                                    @error('email')
+                                     <div class="alert alert-danger">{{$message}} </div>
+                                    @enderror
                                 </div>
                                 <!-- /.col-md-6 -->
                                 <div class="col-md-6">
                                     <input type="text" placeholder="Phone" name="phone" >
+                                    @error('phone')
+                                         <div class="alert alert-danger">{{$message}} </div>
+                                    @enderror
                                 </div>
                                 <!-- /.col-md-6 -->
                                 <div class="col-md-6">
                                     <input type="text" placeholder="Subject" name="subject">
+                                    @error('subject')
+                                         <div class="alert alert-danger">{{$message}} </div>
+                                    @enderror
                                 </div>
-                                <!-- /.col-md-6 -->
-
                                 <div class="col-md-12">
                                     <textarea placeholder="Comments" name="text"></textarea>
+                                    @error('text')
+                                        <div class="alert alert-danger">{{$message}} </div>
+                                    @enderror
                                 </div>
                                 <!-- /.col-md-12 -->
                                 <div class="col-md-12">

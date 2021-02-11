@@ -32,6 +32,7 @@
                     <div class="alert alert-danger">{{$message}} </div>
                 @enderror
             </div>
+            <input type="text" value="HELLO WORLD!" name="mySuperAwesomeField" />
 
             <!-- /.col-md-6 -->
             <div class="col-md-12">
