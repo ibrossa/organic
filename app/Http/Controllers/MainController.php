@@ -40,13 +40,13 @@ class MainController extends Controller
     public function index()
     {
         $sections = IndexAbout::ordered('desc')->get();
-        $products = Product::orderby('created_at', 'desc')->limit(8)->get();
-        $categories =Category::all();
-        $blogs = Blog::orderby('created_at', 'desc')->limit(3)->get();
+        $products = Product::active()->get();
+        $categories = Category::all();
+        $blogs = Blog::active()->orderBy('created_at', 'desc')->limit(3)->get();
         $whychoose = WhyChoose::all();
-        $farmers = Farmer::all();
-        $testimonials = Testimonial::all();
-        $partners_logo = ParthnersLogo::all();
+        $farmers = Farmer::active()->get();
+        $testimonials = Testimonial::active()->get();
+        $partners_logo = ParthnersLogo::active()->get();
         $slaiders = Slaider::all();
 
         return view('index',
@@ -142,7 +142,7 @@ class MainController extends Controller
         }
 
 
-        $hot_products = Product::where('status', 'hot')->orderby('created_at', 'desc')->limit(3)->get();
+        $hot_products = Product::query()->where('flag', 'hot')->orderby('created_at', 'desc')->limit(3)->get();
 
         return view('store', compact('products','categories','hot_products'));
     }

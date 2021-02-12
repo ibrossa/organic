@@ -49,7 +49,7 @@
                         <div class="col-md-4 col-sm-6 col-xs-12 default-item" style="display: inline-block;">
                             <div class="inner-box">
                                 <div class="single-item center">
-                                    <figure class="image-box"><img href="{{route('store.product_details', $product->id)}}" src="{{Voyager::image($product->image)}}" alt=""><div class="product-model {{$product->status}}">{{$product->status}}</div></figure>
+                                    <figure class="image-box"><img href="{{route('store.product_details', $product->id)}}" src="{{Voyager::image($product->image)}}" alt=""><div class="product-model {{$product->flag}}">{{$product->flag}}</div></figure>
                                     <div class="content">
                                         <h3><a href="{{route('store.product_details', $product->id)}}">{{$product->title}} </a></h3>
                                         <div class="rating"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></div>
@@ -59,7 +59,7 @@
                                         <div class="inner">
                                             <div class="bottom-content">
                                                 <h4><a href="{{route('store.product_details', $product->id)}}">It Contains:</a></h4>
-                                                <p>{{$product->contains}}</p>
+                                                <p>{!! $product->contains !!}</p>
                                             </div>
                                         </div>
                                     </div>

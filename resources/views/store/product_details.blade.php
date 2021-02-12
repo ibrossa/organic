@@ -45,7 +45,7 @@
 	        				<div class="wrapper">
 	        					<div class="product_top_section clear_fix">
 	        						<div class="img_holder float_left">
-	        							<img src="{{$product->image}}" alt="img" class="img-responsive">
+	        							<img src="{{Voyager::image($product->image)}}" alt="img" class="img-responsive">
 	        						</div> <!-- End of .img_holder -->
 	        						<div class="item_description float_left">
 	        							<h4>{{$product->title}}</h4>
@@ -58,7 +58,7 @@
 											<li>({{$product->product_review->count()}} Customers Review)</li>
 										</ul>
 										<span class="item_price">{{$product->price}}</span>
-										<p>{{$product->description}}</p>
+										<p>{!! $product->description !!}</p>
 	        						</div> <!-- End of .item_description -->
 	        					</div> <!-- End of .product_top_section -->
 
@@ -71,7 +71,7 @@
 
 									 <div class="tab-content">
 									    <div id="tab1" class="tab-pane fade">
-									      <p>{{$product->text}}</p>
+									      <p>{!! $product->text !!}</p>
 
 									    </div> <!-- End of #tab1 -->
 
@@ -97,7 +97,7 @@
 														</ul>
 									      			</div>
 									      		</div> <!-- End of .sec_up -->
-									      		<p>{{$review->review}}</p>
+									      		<p>{!! $review->review !!}</p>
 
 									      		<div class="up_down_nav">
 									      			<a href="#"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
@@ -191,7 +191,7 @@
 								                 <div class="col-md-4 col-sm-6 col-xs-12 default-item" style="display: inline-block;">
 								                <div class="inner-box">
 								                    <div class="single-item center">
-								                        <figure class="image-box"><img src="{{$relat->image}}" alt=""><div class="product-model {{$relat->status}}">{{$relat->status}}</div></figure>
+								                        <figure class="image-box"><img src="{{Voyager::image($relat->image)}}" alt=""><div class="product-model {{$relat->flag}}">{{$relat->flag}}</div></figure>
 								                        <div class="content">
 								                        	<h3><a href="shop-single.html">{{$relat->title}}</a></h3>
 								                            <div class="rating"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></div>
@@ -210,7 +210,7 @@
 									                        	</div>
 									                        	<div class="bottom-content">
 									                        		<h4><a href="#">It Contains:</a></h4>
-									                        		<p>{{$relat->contains}}</p>
+									                        		<p>{!! $relat->contains !!}</p>
 									                        	</div>
 								                        	</div>
 								                        </div>

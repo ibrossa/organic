@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class ParthnersLogo extends Model
 {
     use HasFactory;
+    public function scopeActive($query)
+    {
+        $query->where('status',1);
+    }
 }

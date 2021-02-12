@@ -73,7 +73,7 @@
                                         <div class="inner">
                                             <div class="bottom-content">
                                                 <h4><a href="#">It Contains:</a></h4>
-                                                <p>{{$product->contains}}</p>
+                                                <p>{!! $product->contains !!}</p>
                                             </div>
                                         </div>
                                     </div>

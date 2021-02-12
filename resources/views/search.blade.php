@@ -60,7 +60,7 @@
                         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mix mix_all default-item all {{$product->category_id}} " style="display: inline-block;">
                             <div class="inner-box">
                                 <div class="single-item center">
-                                    <figure class="image-box"><img src="{{Voyager::image($product->image)}}" alt=""><div class="product-model {{$product->status}}">{{$product->status}}</div></figure>
+                                    <figure class="image-box"><img src="{{Voyager::image($product->image)}}" alt=""><div class="product-model {{$product->flag}}">{{$product->flag}}</div></figure>
                                     <div class="content">
                                         <h3><a href="shop-single.html">{{$product->title}}</a></h3>
                                         <div class="rating"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></div>

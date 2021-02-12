@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Farmer extends Model
 {
     use HasFactory;
+    public function scopeActive($query)
+    {
+        $query->where('status',1);
+    }
 }

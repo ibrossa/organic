@@ -56,7 +56,7 @@
                         </ul>
                         <div class="text">
                             <h4><a href="{{route('news.blog_details', $blog->id)}}">{{$blog->title}}</a></h4>
-                            <p>{{$blog->description}}</p>
+                            <p>{!! $blog->description !!}</p>
                             <div class="link"><a href="{{route('news.blog_details', $blog->id)}}" class="tran3s">READ MORE<span class="fa fa-sort-desc"></span></a></div>
 
                         </div>

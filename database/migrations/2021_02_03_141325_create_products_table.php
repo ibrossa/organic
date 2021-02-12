@@ -23,7 +23,8 @@ class CreateProductsTable extends Migration
             $table->text('description');
             $table->text('text');
             $table->string('contains');
-            $table->enum('status',['new','hot','null']);
+            $table->boolean('status');
+            $table->enum('flag',['new','hot','null']);
             $table->timestamps();
         });
     }

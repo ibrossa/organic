@@ -4,11 +4,11 @@
             <div class="col-md-6 col-sm-12">
                 <div class="award-info">
                     <div class="theme_title">
-                        <h2>{{$awards->title}}</h2>
+                        <h2>{{setting('about-page.awards')}}</h2>
                     </div>
                 </div>
                 <div class="text">
-                    <p>{{$awards->text}}</p>
+                    <p>{!! setting('about-page.awards_text') !!}</p>
                 </div>
                 <div class="award-logo">
                     <ul>
@@ -19,8 +19,8 @@
 
                 </div>
                 <div class="customer-text">
-                    <p><b>Customer Support:</b>{{$awards->sup_text}}</p>
-                    <p><b>Office Hours :</b>{{$awards->off_text}}</p>
+                    {!! setting('about-page.Awards_support') !!}
+                    {!! setting('about-page.ofice_hours') !!}
                 </div>
             </div>
            @include('aboutpage.send_message')
