@@ -41,7 +41,7 @@
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="blogList_single_post clear_fix wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
                     <div class="img_holder">
-                        <img src="{{$blog->image}}" alt="News" class="img-responsive">
+                        <img src="{{Voyager::image($blog->image)}}" alt="News" class="img-responsive">
                         <div class="opacity tran3s">
                             <div class="icon">
                                 <span><a href="blog-details.html" class="border_round">+</a></span>

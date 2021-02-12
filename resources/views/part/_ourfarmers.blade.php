@@ -11,7 +11,7 @@
                 @foreach($farmers as $farmer)
                 <div class="item center">
                     <div class="img_holder">
-                        <img src="{{$farmer->image}}" alt="images">
+                        <img src="{{Voyager::image($farmer->image)}}" alt="images">
                         <div class="overlay tran3s">
                             <div class="inner-box">
                                 <ul>
@@ -25,7 +25,7 @@
                     <div class="text">
                         <h4>{{$farmer->name}}</h4>
                         <a href="turnaround.html"><h5>{{$farmer->position}}</h5></a>
-                        <p>{{$farmer->description}}</p>
+                        <p>{!! $farmer->description !!}</p>
                     </div>
                 </div> <!-- End of .item -->
                 @endforeach

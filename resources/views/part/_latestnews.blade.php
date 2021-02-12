@@ -8,7 +8,7 @@
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="blogList_single_post clear_fix wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
                     <div class="img_holder">
-                        <img src="{{$blog->image}}" alt="News" class="img-responsive">
+                        <img src="{{Voyager::image($blog->image)}}" alt="News" class="img-responsive">
                         <div class="opacity tran3s">
                             <div class="icon">
                                 <span><a href="{{route('news.blog_details', $blog->id)}}" class="border_round">+</a></span>
@@ -23,7 +23,7 @@
                         </ul>
                         <div class="text">
                             <h4><a href="{{route('news.blog_details', $blog->id)}}}">{{$blog->title}}</a></h4>
-                            <p>{{$blog->description}}</p>
+                            <p>{!! $blog->description !!}</p>
                             <div class="link"><a href="{{route('news.blog_details', $blog->id)}}" class="tran3s">READ MORE<span class="fa fa-sort-desc"></span></a></div>
 
                         </div>

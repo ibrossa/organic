@@ -4519,7 +4519,7 @@ footer .bottom_footer h6 {
   color:#fff;
   margin-right: 40px;
 }
-.single-sidebar.price-ranger .ranger-min-max-block input[type='text'] {
+.single-sidebar.price-ranger .ranger-min-max-block input[type='text']{
   max-width: 30px;
   border: none;
   text-align: center;

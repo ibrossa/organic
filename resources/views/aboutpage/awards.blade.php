@@ -13,7 +13,7 @@
                 <div class="award-logo">
                     <ul>
                         @foreach($award_images as $image)
-                        <li><img src="{{$image->image}}" alt=""></li>
+                        <li><img src="{{Voyager::image($image->image)}}" alt=""></li>
                         @endforeach
                     </ul>
 

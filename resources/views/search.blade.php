@@ -13,7 +13,7 @@
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <div class="blogList_single_post clear_fix wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
                                 <div class="img_holder">
-                                    <img src="{{$blog->image}}" alt="News" class="img-responsive">
+                                    <img src="{{Voyager::image($blog->image)}}" alt="News" class="img-responsive">
                                     <div class="opacity tran3s">
                                         <div class="icon">
                                             <span><a href="{{route('news.blog_details', $blog->id)}}" class="border_round">+</a></span>
@@ -28,7 +28,7 @@
                                     </ul>
                                     <div class="text">
                                         <h4><a href="{{route('news.blog_details', $blog->id)}}}">{{$blog->title}}</a></h4>
-                                        <p>{{$blog->description}}</p>
+                                        <p>{!! $blog->description !!}</p>
                                         <div class="link"><a href="{{route('news.blog_details', $blog->id)}}" class="tran3s">READ MORE<span class="fa fa-sort-desc"></span></a></div>
 
                                     </div>
@@ -57,10 +57,10 @@
                 <div class="row filter-list clearfix" id="MixItUp717B05">
                 @foreach($products as $product)
                     <!--Default Item-->
-                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mix mix_all default-item all {{$product->cat_id}} " style="display: inline-block;">
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mix mix_all default-item all {{$product->category_id}} " style="display: inline-block;">
                             <div class="inner-box">
                                 <div class="single-item center">
-                                    <figure class="image-box"><img src="{{$product->image}}" alt=""><div class="product-model {{$product->status}}">{{$product->status}}</div></figure>
+                                    <figure class="image-box"><img src="{{Voyager::image($product->image)}}" alt=""><div class="product-model {{$product->status}}">{{$product->status}}</div></figure>
                                     <div class="content">
                                         <h3><a href="shop-single.html">{{$product->title}}</a></h3>
                                         <div class="rating"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></div>
@@ -79,7 +79,7 @@
                                             </div>
                                             <div class="bottom-content">
                                                 <h4><a href="{{route('store.product_details', $product->id)}}">It Contains:</a></h4>
-                                                <p>{{$product->contains}} </p>
+                                                <p>{!! $product->contains !!} </p>
                                             </div>
                                         </div>
                                     </div>

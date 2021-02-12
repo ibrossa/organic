@@ -39,7 +39,7 @@ class MainController extends Controller
      */
     public function index()
     {
-        $sections = IndexAbout::all();
+        $sections = IndexAbout::ordered('desc')->get();
         $products = Product::orderby('created_at', 'desc')->limit(8)->get();
         $categories =Category::all();
         $blogs = Blog::orderby('created_at', 'desc')->limit(3)->get();
@@ -49,7 +49,9 @@ class MainController extends Controller
         $partners_logo = ParthnersLogo::all();
         $slaiders = Slaider::all();
 
-        return view('index',compact('sections','products', 'categories','blogs','whychoose',
+        return view('index',
+            compact(
+            'sections','products', 'categories','blogs','whychoose',
                                                     'farmers', 'testimonials','partners_logo','slaiders'));
     }
     /**
@@ -60,10 +62,13 @@ class MainController extends Controller
         if(!empty($s)){
             $blogs = Blog::query()->where('title', 'LIKE', '%'.$s.'%')->get();
             $products = Product::query()->where('title', 'LIKE', '%'.$s.'%')->get();
+
             return view('search', compact('blogs','s','products'));
         }
         else
-            echo 'Nothig to Search';return redirect()->back();
+            echo 'Nothig to Search';
+
+        return redirect()->back();
 
     }
 
@@ -77,15 +82,6 @@ class MainController extends Controller
         return redirect()->back();
     }
 
-    /**
-     *
-     */
-    public function footer()
-    {
-        $get_in_touch = GetInTouch::first();
-
-        return view('part.footer',compact('get_in_touch'));
-    }
 
     /**
      *
@@ -133,23 +129,22 @@ class MainController extends Controller
      */
     public function store(Request $request)
     {
-        $categories = \App\Models\Category::all();
+        $categories = Category::all();
         $products =Product::all();
         if($request->has('catId')) {
             $catId = $request->get('catId', 1);
-            $products = Product::where('cat_id', $catId)->orderBy('id', 'desc')->get();
+            $products = Product::where('category_id', $catId)->orderBy('id', 'desc')->get();
         }
         if($request->has('min')) {
             $min = $request->get('min');
             $max = $request->get('max');
-            $products = Product::query()->whereBetween('price',[$min,$max])->get();
-            dd($products);
+            $products = Product::query()->whereBetween('price', [$min,$max])->get();
         }
 
 
-        $hot_products = Product::where('status','hot')->orderby('created_at','desc')->limit(3)->get();
+        $hot_products = Product::where('status', 'hot')->orderby('created_at', 'desc')->limit(3)->get();
 
-        return view('store',compact('products','categories','hot_products'));
+        return view('store', compact('products','categories','hot_products'));
     }
 
     /**
@@ -159,7 +154,7 @@ class MainController extends Controller
     {
         $blogs = Blog::orderby('created_at', 'desc')->paginate(3);
 
-        return view('news',compact('blogs'));
+        return view('news', compact('blogs'));
     }
 
     /**
@@ -172,7 +167,7 @@ class MainController extends Controller
         /*dd($comments);*/
        /* $comments = BlogComment::orderby('created_at','desc')->get();*/
 
-        return view('blogs.blogdetails',compact('blog','comments'));
+        return view('blogs.blogdetails', compact('blog','comments'));
     }
 
     /**
@@ -194,7 +189,8 @@ class MainController extends Controller
     {
         $product = Product::find($id);
         $reviews = Product::find($id)->product_review;
-        $related = Product::where('cat_id',$product->cat_id)->limit(3)->get();
+        $related = Product::where('category_id',$product->category_id)->limit(3)->get();
+
         $related = $related->filter(function ($item) use ($product){
             return $item->id !=$product->id;
         });
@@ -234,15 +230,8 @@ class MainController extends Controller
         return view('contact');
     }
 
-    /**
-     *
-     */
-    public function category()
-    {
-        dd('category');
 
-        return view("category");
-    }
+
 
 
 

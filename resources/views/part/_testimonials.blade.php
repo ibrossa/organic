@@ -12,10 +12,10 @@
                     <div class="content">
                         <div class="text-bg">
                             <div class="quote-icon"><span class="fa fa-quote-left"></span></div>
-                            <div class="text">{{$testimonial->description}}</div>
+                            <div class="text">{!! $testimonial->description !!}</div>
                         </div>
                         <div class="info clearfix">
-                            <div class="author-thumb"><img src="{{$testimonial->image}}" alt=""></div>
+                            <div class="author-thumb"><img src="{{Voyager::image($testimonial->image)}}" alt=""></div>
                             <div class="author">{{$testimonial->name}}</div>
                             <div class="author-title">{{$testimonial->position}}</div>
                         </div>

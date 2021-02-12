@@ -49,11 +49,11 @@
                         <div class="col-md-4 col-sm-6 col-xs-12 default-item" style="display: inline-block;">
                             <div class="inner-box">
                                 <div class="single-item center">
-                                    <figure class="image-box"><img href="{{route('store.product_details', $product->id)}}" src="{{$product->image}}" alt=""><div class="product-model {{$product->status}}">{{$product->status}}</div></figure>
+                                    <figure class="image-box"><img href="{{route('store.product_details', $product->id)}}" src="{{Voyager::image($product->image)}}" alt=""><div class="product-model {{$product->status}}">{{$product->status}}</div></figure>
                                     <div class="content">
                                         <h3><a href="{{route('store.product_details', $product->id)}}">{{$product->title}} </a></h3>
                                         <div class="rating"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></div>
-                                        <div class="price">${{$product->price}}<span class="prev-rate">${{$product->old_price}}</span></div>
+                                        <div class="price">${{$product->price}}$<span class="prev-rate">${{$product->old_price}}$</span></div>
                                     </div>
                                     <div class="overlay-box">
                                         <div class="inner">
@@ -99,13 +99,15 @@
                             </div>
                             <div class="single-sidebar price-ranger">
                                 <div id="slider-range"></div>
-                                <form method="get" acton="/store">
+                                <form method="get" action="/store">
                                 <div class="ranger-min-max-block">
                                     <input type="submit" value="Filter">
                                     <span>Price:</span>
-                                    <input type="text" readonly class="min" name="min">
+                                    <input type="hidden" readonly class="min" name="min">
+                                    <input type="text" readonly class="min_doll">
                                     <span>-</span>
-                                    <input type="text" readonly class="max" name="max">
+                                    <input type="hidden" readonly class="max" name="max">
+                                    <input type="text" readonly class="max_doll">
                                 </div>
                                 </form>
                             </div> <!-- /price-ranger -->
@@ -115,13 +117,11 @@
                             <div class="theme_inner_title">
                                 <h4>popular products</h4>
                             </div>
-
                             @foreach($hot_products as $product)
                                 <div class="best_selling_item clear_fix border">
                                     <div class="img_holder float_left">
-                                        <img src="{{$product->image}}" alt="image">
+                                        <img src="{{Voyager::image($product->image)}}" alt="image">
                                     </div> <!-- End of .img_holder -->
-
                                     <div class="text float_left">
                                         <a href="shop-single.html"><h6>{{$product->title}}</h6></a>
                                         <ul>
@@ -131,12 +131,12 @@
                                             <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                             <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                         </ul>
-                                        <span>{{$product->price}}</span>
+                                        <span>{{$product->price}}$</span>
                                     </div> <!-- End of .text -->
                                 </div> <!-- End of .best_selling_item -->
                             @endforeach
+                        </div> <!-- End of .best_selling_item -->
 
-                            </div> <!-- End of .best_selling_item -->
                         </div> <!-- End of .best_sellers -->
                     </div> <!-- End of .wrapper -->
                 </div> <!-- End of .sidebar_styleTwo -->

@@ -3,7 +3,7 @@
 @section('content')
 
 
-    <section class="breadcrumb-area" style="background-image:url(images/background/2.jpg);">
+    <section class="breadcrumb-area" style="background-image:url(/images/background/2.jpg);">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">

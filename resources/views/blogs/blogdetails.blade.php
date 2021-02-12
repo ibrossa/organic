@@ -39,25 +39,25 @@
                 <div class="single_left_bar">
                     <div class="blogList_single_post clear_fix wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
                         <div class="img_holder">
-                            <img src="{{$blog->image}}" alt="News" class="img-responsive">
+                            <img src="{{Voyager::image($blog->image)}}" alt="News" class="img-responsive">
                             <div class="opacity tran3s">
                                 <div class="icon">
-                                    <span><a href="blog-details.html" class="border_round">+</a></span>
+                                    <span><a href="" class="border_round">+</a></span>
                                 </div> <!-- End of .icon -->
                             </div> <!-- End of .opacity -->
                         </div> <!-- End of .img_holder -->
                         <div class="post">
 
                             <div class="text">
-                                <h4><a href="blog-details.html">{{$blog->title}}</a></h4>
+                                <h4><a href="blog-details.html">{!! $blog->title !!}</a></h4>
                                 <ul>
-                                    <li><a href="blog-details.html" class="tran3s"><i class="fa fa-user" aria-hidden="true"></i> {{$blog->author_name}}</a></li>
-                                    <li><a href="blog-details.html" class="tran3s"><i class="fa fa-clock-o" aria-hidden="true"></i>{{$blog->created_at}}</a></li>
-                                    <li><a href="blog-details.html" class="tran3s"><i class="fa fa-comments" aria-hidden="true"></i>{{$blog->blog_comments->count()}}</a></li>
+                                    <li><a href="blog-details.html" class="tran3s"><i class="fa fa-user" aria-hidden="true"></i> {!! $blog->author_name !!}</a></li>
+                                    <li><a href="blog-details.html" class="tran3s"><i class="fa fa-clock-o" aria-hidden="true"></i>{!! $blog->created_at !!}}</a></li>
+                                    <li><a href="blog-details.html" class="tran3s"><i class="fa fa-comments" aria-hidden="true"></i>{!!  $blog->blog_comments->count() !1!}}</a></li>
                                 </ul>
                             </div>
 
-                            <div class="text"><p>{{$blog->text}}</p></div>
+                            <div class="text"><p>{!! $blog->text !!}</p></div>
 
                         </div> <!-- End of .post -->
 
@@ -69,7 +69,7 @@
                                 </div>
                                 <div class="single-comment-box">
                                     <div class="img-box">
-                                        <img src="{{$blog->author_image}}" alt="Awesome Image">
+                                        <img src="{{Voyager::image($blog->author_image)}}" alt="Awesome Image">
                                     </div>
                                     <div class="text-box">
                                         <div class="top-box">
@@ -77,7 +77,7 @@
 
                                         </div>
                                         <div class="content">
-                                          <p>{{$blog->author_text}}</p>
+                                          <p>{!!  $blog->author_text !!}</p>
                                             <ul class="social_icon author_icon">
                                                 <li><a href="#" class="tran3s" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                                                 <li><a href="#" class="tran3s" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -114,7 +114,7 @@
                                     </div>
 
                                     <div class="content">
-                                        <p>{{$comment->comment}}</p>
+                                        <p>{!!  $comment->comment !!}</p>
                                     </div>
                                 </div>
                             </div>

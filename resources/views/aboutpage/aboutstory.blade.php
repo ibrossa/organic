@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-6 col-sm-12">
                 <figure class="img-holder">
-                    <img src="{{$aboutstories->image}}" alt="">
+                    <img src="{{Voyager::image($aboutstories->image)}}" alt="">
                 </figure>
             </div>
             <div class="col-md-6 col-sm-12">
@@ -12,9 +12,9 @@
                         <h3>{{$aboutstories->title}}</h3>
                     </div>
                     <div class="about_quot">
-                        {{$aboutstories->about_title}}
+                        {!! $aboutstories->about_title !!}
                     </div>
-                    <div class="text"><p>{{$aboutstories->text}}</p></div>
+                    <div class="text"><p>{!! $aboutstories->text !!}</p></div>
                     <div class="icon-box">
                         <div class="single-item">
                             <div class="icon"><i class="icon-wheat"></i></div>
@@ -30,7 +30,7 @@
 
                     </div>
                     <div class="text">
-                        <p>{{$aboutstories->sec_text}}</p>
+                        <p>{!! $aboutstories->sec_text !!}</p>
                     </div>
                     <div class="link">
                         <a href="{{route('news')}}" class="tran3s">read more</a>

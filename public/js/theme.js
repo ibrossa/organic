@@ -10,7 +10,7 @@ function prealoader() {
     };
 }
 
-// Banner rev Slider 
+// Banner rev Slider
 function mainBanner() {
     if ($("#banner").length) {
         $("#main_slider").revolution({
@@ -110,7 +110,7 @@ function countryInfo() {
 
 
 
-// Select menu 
+// Select menu
 function selectDropdown() {
     if ($(".selectmenu").length) {
         $(".selectmenu").selectmenu();
@@ -141,7 +141,7 @@ function removePlaceholder() {
 }
 
 
-// Main Menu Function 
+// Main Menu Function
 function themeMenu() {
     if ($("#main_menu").length) {
         $("#main_menu").menuzord({
@@ -164,7 +164,7 @@ function cartItemDismiss() {
     };
 }
 
-// Cart Open function 
+// Cart Open function
 function cartOpen() {
     if ($('#cartDropdown').length) {
         $("#cartDropdown").on('click', function() {
@@ -192,7 +192,7 @@ function FancypopUpVideo() {
     };
 }
 
-// Fancybox 
+// Fancybox
 function FancypopUp() {
     if ($(".fancybox").length) {
         $(".fancybox").fancybox({
@@ -308,7 +308,7 @@ function accordion() {
 }
 
 
-// Partner Logo Footer 
+// Partner Logo Footer
 function partnersLogo() {
     if ($('#partner_logo').length) {
         $('#partner_logo').owlCarousel({
@@ -439,7 +439,7 @@ function mixitupGallery() {
         $(".filter-list").mixItUp()
     };
 }
- 
+
 //Sortable Masonary with Filters
 function enableMasonry() {
     if($('.sortable-masonry').length){
@@ -452,21 +452,21 @@ function enableMasonry() {
         $container.isotope({
             filter:'*',
              masonry: {
-                columnWidth : 0 
+                columnWidth : 0
              },
             animationOptions:{
                 duration:500,
                 easing:'linear'
             }
         });
-        
 
-        // Isotope Filter 
+
+        // Isotope Filter
         $filter.find('li').on('click', function(){
             var selector = $(this).attr('data-filter');
 
             try {
-                $container.isotope({ 
+                $container.isotope({
                     filter  : selector,
                     animationOptions: {
                         duration: 500,
@@ -484,7 +484,7 @@ function enableMasonry() {
         winDow.bind('resize', function(){
             var selector = $filter.find('li.active').attr('data-filter');
 
-            $container.isotope({ 
+            $container.isotope({
                 filter  : selector,
                 animationOptions: {
                     duration: 500,
@@ -511,7 +511,7 @@ enableMasonry();
 
 
 
-// Price Ranger 
+// Price Ranger
 function priceRange() {
     if ($('.price-ranger').length) {
         $('.price-ranger #slider-range').slider({
@@ -520,8 +520,10 @@ function priceRange() {
             max: 100,
             values: [11, 49],
             slide: function(event, ui) {
-                $('.price-ranger .ranger-min-max-block .min').val('$' + ui.values[0]);
-                $('.price-ranger .ranger-min-max-block .max').val('$' + ui.values[1]);
+                $('.price-ranger .ranger-min-max-block .min_doll').val('$' + ui.values[0]);
+                $('.price-ranger .ranger-min-max-block .max_doll').val('$' + ui.values[1]);
+                $('.price-ranger .ranger-min-max-block .min').val(ui.values[0]);
+                $('.price-ranger .ranger-min-max-block .max').val(ui.values[1]);
             }
         });
         $('.price-ranger .ranger-min-max-block .min').val('$' + $('.price-ranger #slider-range').slider('values', 0));
@@ -533,15 +535,15 @@ function priceRange() {
 
     //tab Hide Show Function
     if($('.about-gallery .tab-links').length){
-        
+
         //Links Nav SLide Toggle
         $('.about-gallery .tab-links .tab-btn').on('click', function(e) {
             e.preventDefault();
             var target = $($(this).next('.tab-list'));
             $(target).slideToggle(300);
         });
-        
-        
+
+
         //tab Images Hide Show
         $('.about-gallery .tab-links .tab-list li a').on('click', function(e) {
             e.preventDefault();
@@ -552,10 +554,10 @@ function priceRange() {
             $('.about-gallery .tab-content .item').fadeOut(0);
             $(target).fadeIn(500);
         });
-        
+
     }
 
-// WOW animation 
+// WOW animation
 function wowAnimation() {
     if ($('.wow').length) {
         var wow = new WOW({

@@ -15,15 +15,15 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->integer('cat_id');
+            $table->integer('category_id');
             $table->string('title');
-            $table->string('price');
-            $table->string('old_price');
+            $table->float('price',8,2);
+            $table->float('old_price',8,2);
             $table->string('image');
             $table->text('description');
             $table->text('text');
             $table->string('contains');
-            $table->enum('status',['new','hot']);
+            $table->enum('status',['new','hot','null']);
             $table->timestamps();
         });
     }

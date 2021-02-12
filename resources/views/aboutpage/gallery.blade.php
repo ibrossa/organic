@@ -27,16 +27,16 @@
                     <div class="row-10">
                     @foreach($products as $product)
                         <!--Default Item-->
-                        <div class="col-md-2 column-2 col-sm-6 col-xs-12 default-item all {{$product->cat_id}} ">
+                        <div class="col-md-2 column-2 col-sm-6 col-xs-12 default-item all {{$product->category_id}} ">
                             <div class="inner-box">
 
                                 <div class="single-item center">
-                                    <figure class="image-box"><img src=" {{$product->image}}" alt=""></figure>
+                                    <figure class="image-box"><img src="{{Voyager::image($product->image)}}" alt=""></figure>
                                     <div class="overlay-box">
                                         <div class="inner">
                                             <div class="image-view">
                                                 <div class="icon-holder">
-                                                    <a href=" {{$product->image}}" class="fancybox"><span class="icon-magnifier"></span></a>
+                                                    <a href="{{Voyager::image($product->image)}}" class="fancybox"><span class="icon-magnifier"></span></a>
                                                 </div>
                                             </div>
                                             <div class="bottom-content">
