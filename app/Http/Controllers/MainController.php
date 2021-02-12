@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CommentRequest;
 use App\Http\Requests\ProductReviewRequest;
+use App\Http\Requests\SearchRequest;
 use App\Http\Requests\SendUsRequest;
+use App\Http\Requests\SuscribeRequest;
 use App\Models\AboutSendMessage;
 use App\Models\AboutStory;
 use App\Models\Award;
@@ -41,7 +43,7 @@ class MainController extends Controller
     {
         $sections = IndexAbout::ordered('desc')->get();
         $products = Product::active()->get();
-        $categories = Category::all();
+        $categories = Category::active()->get();
         $blogs = Blog::active()->orderBy('created_at', 'desc')->limit(3)->get();
         $whychoose = WhyChoose::all();
         $farmers = Farmer::active()->get();
@@ -50,34 +52,35 @@ class MainController extends Controller
         $slaiders = Slaider::all();
 
         return view('index',
-            compact(
+               compact(
             'sections','products', 'categories','blogs','whychoose',
-                                                    'farmers', 'testimonials','partners_logo','slaiders'));
+                     'farmers', 'testimonials','partners_logo','slaiders')
+        );
     }
     /**
      *
      */
-    public function search(Request $request){
-        $s = $request->s;
-        if(!empty($s)){
-            $blogs = Blog::query()->where('title', 'LIKE', '%'.$s.'%')->get();
-            $products = Product::query()->where('title', 'LIKE', '%'.$s.'%')->get();
+    public function search(SearchRequest $request){
+        $search = $request->s;
+        $blogs = Blog::query()
+            ->where('title', 'LIKE', '%'.$search.'%')
+            ->active()
+            ->get();
+        $products = Product::query()
+            ->where('title', 'LIKE', '%'.$search.'%')
+            ->active()
+            ->get();
 
-            return view('search', compact('blogs','s','products'));
-        }
-        else
-            echo 'Nothig to Search';
-
-        return redirect()->back();
-
+        return view('search', compact('blogs','search','products'));
     }
 
     /**
      *
      */
-    public function index_subscribe(Request $request)
+    public function index_subscribe(SuscribeRequest $request)
     {
-        Subscribe::create($request->all());
+        $data = $request->validated();
+        Subscribe::create($data);
 
         return redirect()->back();
     }
@@ -91,10 +94,9 @@ class MainController extends Controller
         $aboutstories = AboutStory::first();
         $three_colums = ThreeColum::all();
         $deliveries = DeliveryProcess::all();
-        $awards = Award::first();
         $award_images = AwardImage::all();
-        $categories = Category::all();
-        $products = Product::orderby('created_at', 'desc')->limit(5)->get();;
+        $categories = Category::active()->get();
+        $products = Product::active()->orderBy('created_at', 'desc')->limit(5)->get();
 
         return view('about',compact('aboutstories','three_colums','deliveries','awards',
                                                     'award_images','categories','products'
@@ -129,8 +131,8 @@ class MainController extends Controller
      */
     public function store(Request $request)
     {
-        $categories = Category::all();
-        $products =Product::all();
+        $categories = Category::active()->get();
+        $products =Product::active()->get();
         if($request->has('catId')) {
             $catId = $request->get('catId', 1);
             $products = Product::where('category_id', $catId)->orderBy('id', 'desc')->get();
@@ -142,7 +144,7 @@ class MainController extends Controller
         }
 
 
-        $hot_products = Product::query()->where('flag', 'hot')->orderby('created_at', 'desc')->limit(3)->get();
+        $hot_products = Product::active()->where('flag', 'hot')->orderby('created_at', 'desc')->limit(3)->get();
 
         return view('store', compact('products','categories','hot_products'));
     }
@@ -152,7 +154,7 @@ class MainController extends Controller
      */
     public function news()
     {
-        $blogs = Blog::orderby('created_at', 'desc')->paginate(3);
+        $blogs = Blog::active()->orderby('created_at', 'desc')->paginate(3);
 
         return view('news', compact('blogs'));
     }
@@ -199,9 +201,7 @@ class MainController extends Controller
     }
 
     /**
-     * @param $id
-     * @param CommentRequest $request
-     * @return \Illuminate\Http\RedirectResponse
+     *
      */
     public function product_review($id, ProductReviewRequest $request)
     {
@@ -217,7 +217,7 @@ class MainController extends Controller
      */
     public function faq()
     {
-        $faqs = Faq::all();
+        $faqs = Faq::active()->get();
 
         return view('faq',compact('faqs'));
     }

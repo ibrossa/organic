@@ -18,12 +18,12 @@ class CreateProductsTable extends Migration
             $table->integer('category_id');
             $table->string('title');
             $table->float('price',8,2);
-            $table->float('old_price',8,2);
+            $table->float('old_price',8,2)->nullable();
             $table->string('image');
             $table->text('description');
             $table->text('text');
             $table->string('contains');
-            $table->boolean('status');
+            $table->tinyInteger('status')->nullable()->default(0);
             $table->enum('flag',['new','hot','null']);
             $table->timestamps();
         });

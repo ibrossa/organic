@@ -22,7 +22,7 @@ class CreateBlogsTable extends Migration
             $table->string('author_name');
             $table->string('author_image');
             $table->text('author_text');
-            $table->integer('post_category');
+            $table->tinyInteger('status')->nullable()->default(0);
             $table->timestamps();
         });
     }

@@ -16,7 +16,7 @@ class CreateParthnersLogosTable extends Migration
         Schema::create('parthners_logos', function (Blueprint $table) {
             $table->id();
             $table->string('image');
-
+            $table->tinyInteger('status')->nullable()->default(0);
             $table->timestamps();
         });
     }

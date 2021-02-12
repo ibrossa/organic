@@ -12,11 +12,16 @@
                     <div class="row clearfix">
                         <div class="form-group">
                             <input type="text" name="name"  placeholder="Your Name*"><i class="fa fa-user" ></i>
-
+                            @error('name')
+                                <div class="alert alert-danger">{{$message}} </div>
+                            @enderror
                         </div>
 
                         <div class="form-group">
                             <input type="email" name="email"  placeholder="Email Address*"><i class="fa fa-envelope" ></i>
+                            @error('email')
+                                <div class="alert alert-danger">{{$message}} </div>
+                            @enderror
                         </div>
 
 

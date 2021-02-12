@@ -17,8 +17,7 @@ class CreateFaqsTable extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
-
-
+            $table->tinyInteger('status')->nullable()->default(0);
             $table->timestamps();
         });
     }

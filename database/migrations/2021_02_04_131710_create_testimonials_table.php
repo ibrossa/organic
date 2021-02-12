@@ -19,6 +19,7 @@ class CreateTestimonialsTable extends Migration
             $table->string('position');
             $table->text('description');
             $table->string('image');
+            $table->tinyInteger('status')->nullable()->default(0);
             $table->timestamps();
         });
     }
