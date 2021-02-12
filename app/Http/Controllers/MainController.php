@@ -98,7 +98,7 @@ class MainController extends Controller
         $categories = Category::active()->get();
         $products = Product::active()->orderBy('created_at', 'desc')->limit(5)->get();
 
-        return view('about',compact('aboutstories','three_colums','deliveries','awards',
+        return view('about',compact('aboutstories','three_colums','deliveries',
                                                     'award_images','categories','products'
                                          ));
 

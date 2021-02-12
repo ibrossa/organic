@@ -53,7 +53,7 @@
                     <div class="recent-posts">
                         @foreach($footer_blog as $blog)
                         <div class="post">
-                            <div class="post-thumb"><a href="#"><img src="{{Voyager::image($blog->image)}}" alt=""></a></div>
+                            <div class="post-thumb"><a href="{{route('news.blog_details',$blog->id)}}"><img src="{{Voyager::image($blog->image)}}" alt=""></a></div>
                             <h4><a href="{{route('news.blog_details', $blog->id)}}">{{$blog->title}}</a></h4>
                             <div class="post-info"><i class="fa fa-clock-o"></i>{{$blog->created_at}}</div>
                         </div>

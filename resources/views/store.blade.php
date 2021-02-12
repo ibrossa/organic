@@ -120,10 +120,10 @@
                             @foreach($hot_products as $product)
                                 <div class="best_selling_item clear_fix border">
                                     <div class="img_holder float_left">
-                                        <img src="{{Voyager::image($product->image)}}" alt="image">
+                                        <img href="{{route('store.product_details',$product->id)}}" src="{{Voyager::image($product->image)}}" alt="image">
                                     </div> <!-- End of .img_holder -->
                                     <div class="text float_left">
-                                        <a href="shop-single.html"><h6>{{$product->title}}</h6></a>
+                                        <a href="{{route('store.product_details',$product->id)}}"><h6>{{$product->title}}</h6></a>
                                         <ul>
                                             <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                             <li><i class="fa fa-star" aria-hidden="true"></i></li>
