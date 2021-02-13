@@ -18,6 +18,8 @@ class CreateSlaidersTable extends Migration
             $table->string('title');
             $table->text('description');
             $table->string('image');
+            $table->string('logo');
+            $table->string('small_text')->nullable();
             $table->timestamps();
         });
     }

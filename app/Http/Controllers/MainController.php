@@ -49,12 +49,15 @@ class MainController extends Controller
         $farmers = Farmer::active()->get();
         $testimonials = Testimonial::active()->get();
         $partners_logo = ParthnersLogo::active()->get();
-        $slaiders = Slaider::all();
+        $slaider_first = Slaider::where('id',1)->active()->get();
+        $slaider_second = Slaider::where('id',2)->active()->get();
+        $slaider_third = Slaider::where('id',3)->active()->get();
 
         return view('index',
                compact(
             'sections','products', 'categories','blogs','whychoose',
-                     'farmers', 'testimonials','partners_logo','slaiders')
+                     'farmers', 'testimonials','partners_logo','slaider_first',
+                      'slaider_second','slaider_third')
         );
     }
     /**
