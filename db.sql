@@ -23,8 +23,6 @@ INSERT INTO `about_stories` (`id`, `title`, `about_title`, `image`, `text`, `far
 	(1, 'story about us', '<h3>Our food should be our medicine</h3>', 'about-stories\\February2021\\sL5VHkeYOzOe3uuVu7Sg.jpg', '<p>How all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness</p>', 745, 2480, '<p>Denouncing pleasure and praising pain was born and I will give you a complete account of the system, the actual teachings of the great explorer.</p>', '2021-02-02 19:08:00', '2021-02-12 16:15:45');
 /*!40000 ALTER TABLE `about_stories` ENABLE KEYS */;
 
--- Дамп данных таблицы organic.awards: ~1 rows (приблизительно)
-/*!40000 ALTER TABLE `awards` DISABLE KEYS */;
 -- Дамп данных таблицы organic.award_images: ~4 rows (приблизительно)
 /*!40000 ALTER TABLE `award_images` DISABLE KEYS */;
 INSERT INTO `award_images` (`id`, `image`, `created_at`, `updated_at`) VALUES
@@ -37,10 +35,10 @@ INSERT INTO `award_images` (`id`, `image`, `created_at`, `updated_at`) VALUES
 -- Дамп данных таблицы organic.blogs: ~4 rows (приблизительно)
 /*!40000 ALTER TABLE `blogs` DISABLE KEYS */;
 INSERT INTO `blogs` (`id`, `title`, `description`, `text`, `image`, `author_name`, `author_image`, `author_text`, `status`, `created_at`, `updated_at`) VALUES
-	(1, 'Interesting facts about organic food and organic store', '<p>As more and more people are turning to organic lifestyles &amp; trying improve their health...</p>', '<p>How all this mistaken idea denouncing pleasure and praising will give you a completed take a trivial sed example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with man sed who chooses to enjoyonsequences which of us every physical exercise.</p>\r\n<p>Praising will give you a completed take a trivial sed example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with man sed who chooses to enjoy.</p>\r\n<div class="qoute">\r\n<h3>Men who are so beguiled and demoralized by the charms of pleasure of <br />the moment, so blinded by desire, they cannot foresee.</h3>\r\n<span class="author color1">- Bianca Jones - </span></div>\r\n<div class="text">\r\n<p>All this mistaken idea of denouncing pleasure and praising pain was born and I will give you seds our complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>\r\n</div>', 'blogs\\February2021\\ktwC3J8SdGEorVJBlky1.jpg', 'Robecca Garza', '/images/gallery/a3.jpg', '<p>How all this mistaken idea of denouncing pleasures and praising ours pains was born and I will give you sed a works complete account of the system, and expound the actual teachings off the greatest</p>', b'0001', '2021-02-03 10:52:00', '2021-02-12 16:08:21'),
-	(2, 'You should add 5 things in your daily meals.', '<p>As more and more people are turning to organic lifestyles &amp; trying improve their health...</p>', '<p>How all this mistaken idea denouncing pleasure and praising will give you a completed take a trivial sed example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with man sed who chooses to enjoyonsequences which of us every physical exercise.</p>\r\n<p>Praising will give you a completed take a trivial sed example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with man sed who chooses to enjoy.</p>\r\n<div class="qoute">\r\n<h3>Men who are so beguiled and demoralized by the charms of pleasure of <br />the moment, so blinded by desire, they cannot foresee.</h3>\r\n<span class="author color1">- Bianca Jones - </span></div>\r\n<div class="text">\r\n<p>All this mistaken idea of denouncing pleasure and praising pain was born and I will give you seds our complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful</p>\r\n</div>', 'blogs\\February2021\\9VezxdwpICMHfuWN9y3l.jpg', 'John Abraham', '/images/gallery/a3.jpg', '<p>How all this mistaken idea of denouncing pleasures and praising ours pains was born and I will give you sed a works complete account of the system, and expound the actual teachings off the greatest</p>', b'0001', '2021-02-03 11:46:00', '2021-02-12 13:54:38'),
-	(3, 'You should add 5 things in your daily meals.', '<p>As more and more people are turning to organic lifestyles &amp; trying improve their health..</p>', '<p>How all this mistaken idea denouncing pleasure and praising will give you a completed take a trivial sed example, which of us ever undertakes laborious physical exercise, except t</p>', 'blogs\\February2021\\5JL2NqFQaqJ0m6tU4lpN.jpg', 'Robecca Garza', '/images/gallery/a3.jpg', '<p>How all this mistaken idea of denouncing pleasures and praising ours pains was born and I will give you sed a works complete account of the system, and expound the actual teachings off the greatest ...</p>', b'0001', '2021-02-04 12:35:00', '2021-02-12 13:54:27'),
-	(4, 'You should add 5 things in your daily meals.', '<p><strong>As more and more people are turning to organic lifestyles &amp; trying improve</strong></p>', '<p>Give you a completed take a trivial sed example, which of us ever undertakes laborious phys</p>', 'blogs\\February2021\\oFi2CjrOwFyWuuSWN5V8.jpg', 'Robecca Garza', 'blogs\\February2021\\73W0dijaYKXWSiVHaNYD.jpg', '<p>How all this mistaken idea of denouncing pleasures and praising ours pains was born and I will give you sed a works complete account of the system, and expound the actual teachings off the greatest</p>', b'0000', '2021-02-04 12:36:00', '2021-02-12 13:56:35');
+	(1, 'Interesting facts about organic food and organic store', '<p>As more and more people are turning to organic lifestyles &amp; trying improve their health...</p>', '<p>How all this mistaken idea denouncing pleasure and praising will give you a completed take a trivial sed example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with man sed who chooses to enjoyonsequences which of us every physical exercise.</p>\r\n<p>Praising will give you a completed take a trivial sed example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with man sed who chooses to enjoy.</p>\r\n<div class="qoute">\r\n<h3>Men who are so beguiled and demoralized by the charms of pleasure of <br />the moment, so blinded by desire, they cannot foresee.</h3>\r\n<span class="author color1">- Bianca Jones - </span></div>\r\n<div class="text">\r\n<p>All this mistaken idea of denouncing pleasure and praising pain was born and I will give you seds our complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>\r\n</div>', 'blogs\\February2021\\ktwC3J8SdGEorVJBlky1.jpg', 'Robecca Garza', '/images/gallery/a3.jpg', '<p>How all this mistaken idea of denouncing pleasures and praising ours pains was born and I will give you sed a works complete account of the system, and expound the actual teachings off the greatest</p>', 1, '2021-02-03 10:52:00', '2021-02-12 16:08:21'),
+	(2, 'You should add 5 things in your daily meals.', '<p>As more and more people are turning to organic lifestyles &amp; trying improve their health...</p>', '<p>How all this mistaken idea denouncing pleasure and praising will give you a completed take a trivial sed example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with man sed who chooses to enjoyonsequences which of us every physical exercise.</p>\r\n<p>Praising will give you a completed take a trivial sed example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with man sed who chooses to enjoy.</p>\r\n<div class="qoute">\r\n<h3>Men who are so beguiled and demoralized by the charms of pleasure of <br />the moment, so blinded by desire, they cannot foresee.</h3>\r\n<span class="author color1">- Bianca Jones - </span></div>\r\n<div class="text">\r\n<p>All this mistaken idea of denouncing pleasure and praising pain was born and I will give you seds our complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful</p>\r\n</div>', 'blogs\\February2021\\9VezxdwpICMHfuWN9y3l.jpg', 'John Abraham', '/images/gallery/a3.jpg', '<p>How all this mistaken idea of denouncing pleasures and praising ours pains was born and I will give you sed a works complete account of the system, and expound the actual teachings off the greatest</p>', 1, '2021-02-03 11:46:00', '2021-02-12 13:54:38'),
+	(3, 'You should add 5 things in your daily meals.', '<p>As more and more people are turning to organic lifestyles &amp; trying improve their health..</p>', '<p>How all this mistaken idea denouncing pleasure and praising will give you a completed take a trivial sed example, which of us ever undertakes laborious physical exercise, except t</p>', 'blogs\\February2021\\5JL2NqFQaqJ0m6tU4lpN.jpg', 'Robecca Garza', '/images/gallery/a3.jpg', '<p>How all this mistaken idea of denouncing pleasures and praising ours pains was born and I will give you sed a works complete account of the system, and expound the actual teachings off the greatest ...</p>', 1, '2021-02-04 12:35:00', '2021-02-12 13:54:27'),
+	(4, 'You should add 5 things in your daily meals.', '<p><strong>As more and more people are turning to organic lifestyles &amp; trying improve</strong></p>', '<p>How all this mistaken idea denouncing pleasure and praising will give you a completed take a trivial sed example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with man sed who chooses to enjoyonsequences which of us every physical exercise.</p>\r\n<p>Praising will give you a completed take a trivial sed example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with man sed who chooses to enjoy.</p>\r\n<div class="qoute">\r\n<h3>Men who are so beguiled and demoralized by the charms of pleasure of <br />the moment, so blinded by desire, they cannot foresee.</h3>\r\n<span class="author color1">- Bianca Jones - </span></div>\r\n<div class="text">\r\n<p>All this mistaken idea of denouncing pleasure and praising pain was born and I will give you seds our complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>\r\n</div>', 'blogs\\February2021\\oFi2CjrOwFyWuuSWN5V8.jpg', 'Robecca Garza', 'blogs\\February2021\\73W0dijaYKXWSiVHaNYD.jpg', '<p>How all this mistaken idea of denouncing pleasures and praising ours pains was born and I will give you sed a works complete account of the system, and expound the actual teachings off the greatest</p>', 1, '2021-02-04 12:36:00', '2021-02-13 14:47:35');
 /*!40000 ALTER TABLE `blogs` ENABLE KEYS */;
 
 -- Дамп данных таблицы organic.blog_comments: ~12 rows (приблизительно)
@@ -69,7 +67,7 @@ INSERT INTO `categories` (`id`, `title`, `created_at`, `updated_at`, `status`) V
 	(4, 'Beauty care', '2021-02-04 11:29:00', '2021-02-12 15:37:51', 1);
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 
--- Дамп данных таблицы organic.data_rows: ~166 rows (приблизительно)
+-- Дамп данных таблицы organic.data_rows: ~162 rows (приблизительно)
 /*!40000 ALTER TABLE `data_rows` DISABLE KEYS */;
 INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, `required`, `browse`, `read`, `edit`, `add`, `delete`, `details`, `order`) VALUES
 	(1, 1, 'id', 'number', 'ID', 1, 0, 0, 0, 0, 0, NULL, 1),
@@ -166,11 +164,11 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 	(150, 37, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 7),
 	(151, 37, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 8),
 	(152, 38, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
-	(153, 38, 'title', 'text', 'Title', 1, 1, 1, 1, 1, 1, '{}', 2),
-	(154, 38, 'description', 'text_area', 'Description', 1, 1, 1, 1, 1, 1, '{}', 3),
-	(155, 38, 'image', 'text', 'Image', 1, 1, 1, 1, 1, 1, '{}', 4),
-	(156, 38, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 5),
-	(157, 38, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 6),
+	(153, 38, 'title', 'text', 'Title', 1, 1, 1, 1, 1, 1, '{}', 5),
+	(154, 38, 'description', 'text_area', 'Description', 1, 1, 1, 1, 1, 1, '{}', 7),
+	(155, 38, 'image', 'image', 'Image', 1, 1, 1, 1, 1, 1, '{}', 3),
+	(156, 38, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 8),
+	(157, 38, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 9),
 	(158, 39, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 	(159, 39, 'blog_id', 'text', 'Blog Id', 1, 0, 1, 1, 1, 1, '{}', 2),
 	(160, 39, 'name', 'text', 'Name', 1, 1, 1, 1, 1, 1, '{}', 3),
@@ -230,10 +228,13 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 	(226, 33, 'status', 'checkbox', 'Status', 0, 1, 1, 1, 1, 1, '{}', 2),
 	(227, 35, 'status', 'checkbox', 'Status', 0, 1, 1, 1, 1, 1, '{}', 2),
 	(228, 29, 'status', 'checkbox', 'Status', 0, 1, 1, 1, 1, 1, '{}', 2),
-	(229, 50, 'status', 'checkbox', 'Status', 0, 1, 1, 1, 1, 1, '{}', 2);
+	(229, 50, 'status', 'checkbox', 'Status', 0, 1, 1, 1, 1, 1, '{}', 2),
+	(230, 38, 'logo', 'image', 'Logo', 1, 1, 1, 1, 1, 1, '{}', 4),
+	(231, 38, 'smal_text', 'text_area', 'Smal Text', 0, 1, 1, 1, 1, 1, '{}', 6),
+	(232, 38, 'status', 'checkbox', 'Status', 0, 1, 1, 1, 1, 1, '{}', 2);
 /*!40000 ALTER TABLE `data_rows` ENABLE KEYS */;
 
--- Дамп данных таблицы organic.data_types: ~24 rows (приблизительно)
+-- Дамп данных таблицы organic.data_types: ~23 rows (приблизительно)
 /*!40000 ALTER TABLE `data_types` DISABLE KEYS */;
 INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `display_name_plural`, `icon`, `model_name`, `policy_name`, `controller`, `description`, `generate_permissions`, `server_side`, `details`, `created_at`, `updated_at`) VALUES
 	(1, 'users', 'users', 'User', 'Users', 'voyager-person', 'TCG\\Voyager\\Models\\User', 'TCG\\Voyager\\Policies\\UserPolicy', 'TCG\\Voyager\\Http\\Controllers\\VoyagerUserController', '', 1, 0, NULL, '2021-01-31 12:30:55', '2021-01-31 12:30:55'),
@@ -251,7 +252,7 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 	(33, 'parthners_logos', 'parthners-logos', 'Parthners Logo', 'Parthners Logos', NULL, 'App\\Models\\ParthnersLogo', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2021-02-04 13:19:54', '2021-02-12 14:06:27'),
 	(35, 'testimonials', 'testimonials', 'Testimonial', 'Testimonials', NULL, 'App\\Models\\Testimonial', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2021-02-04 13:23:07', '2021-02-12 14:06:56'),
 	(37, 'about_send_messages', 'about-send-messages', 'About Send Message', 'About Send Messages', NULL, 'App\\Models\\AboutSendMessage', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null}', '2021-02-04 14:52:48', '2021-02-04 14:52:48'),
-	(38, 'slaiders', 'slaiders', 'Slaider', 'Slaiders', NULL, 'App\\Models\\Slaider', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null}', '2021-02-05 13:09:24', '2021-02-05 13:09:24'),
+	(38, 'slaiders', 'slaiders', 'Slaider', 'Slaiders', NULL, 'App\\Models\\Slaider', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2021-02-05 13:09:24', '2021-02-13 13:59:55'),
 	(39, 'blog_comments', 'blog-comments', 'Blog Comment', 'Blog Comments', NULL, 'App\\Models\\BlogComment', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2021-02-06 10:58:17', '2021-02-12 10:18:51'),
 	(45, 'aboutsections', 'indexaboutsections', 'Index Aboutsection', 'Index Aboutsections', NULL, 'App\\Models\\Aboutsection', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2021-02-08 09:33:59', '2021-02-08 09:35:26'),
 	(46, 'index_abouts', 'index-abouts', 'Index About', 'Index Abouts', NULL, 'App\\Models\\IndexAbout', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2021-02-08 09:39:32', '2021-02-12 10:29:00'),
@@ -285,10 +286,10 @@ INSERT INTO `faqs` (`id`, `title`, `description`, `created_at`, `updated_at`, `s
 -- Дамп данных таблицы organic.farmers: ~4 rows (приблизительно)
 /*!40000 ALTER TABLE `farmers` DISABLE KEYS */;
 INSERT INTO `farmers` (`id`, `name`, `position`, `description`, `status`, `created_at`, `updated_at`, `image`) VALUES
-	(1, 'Rebecca Garzany', 'Pastoral Farmer', '<p>Praising pain was born and I will give you a complete account of the system.</p>', b'0001', '2021-02-04 13:09:00', '2021-02-12 14:05:54', 'farmers\\February2021\\5wPhUShQb0W1JrV0qQJz.jpg'),
+	(1, 'Rebecca Garzany', 'Pastoral Farmer', '<p>Praising pain was born and I will give you a complete account of the system.</p>', 1, '2021-02-04 13:09:00', '2021-02-12 14:05:54', 'farmers\\February2021\\5wPhUShQb0W1JrV0qQJz.jpg'),
 	(2, 'Vasilii Pupkin', 'Farm Manager', '<p>Praising pain was born and I will give you a complete account of the system.</p>', NULL, '2021-02-04 13:09:00', '2021-02-12 10:27:59', 'farmers\\February2021\\K4PW1C2LQrbAAPsb7Cyw.jpg'),
-	(3, 'Ivan Ivanov', 'Arable farmer', '<p>Praising pain was born and I will give you a complete account of the system.</p>', b'0001', '2021-02-04 13:10:00', '2021-02-12 14:05:33', 'farmers\\February2021\\6z4GZaErX7ApY6JrGiDo.jpg'),
-	(4, 'Jhon Batman', 'Disgine', '<p>Praising pain was born and I will give you a complete account of the system.</p>', b'0001', '2021-02-04 13:10:00', '2021-02-12 14:05:44', 'farmers\\February2021\\cybfUGswYkdUV2zoaUhL.jpg');
+	(3, 'Ivan Ivanov', 'Arable farmer', '<p>Praising pain was born and I will give you a complete account of the system.</p>', 1, '2021-02-04 13:10:00', '2021-02-12 14:05:33', 'farmers\\February2021\\6z4GZaErX7ApY6JrGiDo.jpg'),
+	(4, 'Jhon Batman', 'Disgine', '<p>Praising pain was born and I will give you a complete account of the system.</p>', 1, '2021-02-04 13:10:00', '2021-02-12 14:05:44', 'farmers\\February2021\\cybfUGswYkdUV2zoaUhL.jpg');
 /*!40000 ALTER TABLE `farmers` ENABLE KEYS */;
 
 -- Дамп данных таблицы organic.index_abouts: ~2 rows (приблизительно)
@@ -304,7 +305,7 @@ INSERT INTO `menus` (`id`, `name`, `created_at`, `updated_at`) VALUES
 	(1, 'admin', '2021-01-31 12:30:56', '2021-01-31 12:30:56');
 /*!40000 ALTER TABLE `menus` ENABLE KEYS */;
 
--- Дамп данных таблицы organic.menu_items: ~36 rows (приблизительно)
+-- Дамп данных таблицы organic.menu_items: ~35 rows (приблизительно)
 /*!40000 ALTER TABLE `menu_items` DISABLE KEYS */;
 INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class`, `color`, `parent_id`, `order`, `created_at`, `updated_at`, `route`, `parameters`) VALUES
 	(1, 1, 'Dashboard', '', '_self', 'voyager-boat', NULL, NULL, 10, '2021-01-31 12:30:56', '2021-02-11 09:43:22', 'voyager.dashboard', NULL),
@@ -396,18 +397,18 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- Дамп данных таблицы organic.parthners_logos: ~5 rows (приблизительно)
 /*!40000 ALTER TABLE `parthners_logos` DISABLE KEYS */;
 INSERT INTO `parthners_logos` (`id`, `image`, `status`, `created_at`, `updated_at`) VALUES
-	(1, 'parthners-logos\\February2021\\6V9c6ZgqMQgMelePYmRa.png', b'0001', '2021-02-04 13:30:00', '2021-02-12 14:08:17'),
-	(2, 'parthners-logos\\February2021\\WYWgdfHX4dudmDPiXGjD.png', b'0001', '2021-02-04 13:31:00', '2021-02-12 14:07:45'),
+	(1, 'parthners-logos\\February2021\\6V9c6ZgqMQgMelePYmRa.png', 1, '2021-02-04 13:30:00', '2021-02-12 14:08:17'),
+	(2, 'parthners-logos\\February2021\\WYWgdfHX4dudmDPiXGjD.png', 1, '2021-02-04 13:31:00', '2021-02-12 14:07:45'),
 	(3, 'parthners-logos\\February2021\\kEH6U6FFbVdXdYZJcPVN.png', NULL, '2021-02-04 13:31:00', '2021-02-12 10:32:31'),
-	(4, 'parthners-logos\\February2021\\05SgzJqE7MViCQH4FsNw.png', b'0001', '2021-02-04 13:31:00', '2021-02-12 14:07:57'),
-	(5, 'parthners-logos\\February2021\\tAJwE8R5C54R73owhulM.png', b'0001', '2021-02-04 13:31:00', '2021-02-12 14:08:07');
+	(4, 'parthners-logos\\February2021\\05SgzJqE7MViCQH4FsNw.png', 1, '2021-02-04 13:31:00', '2021-02-12 14:07:57'),
+	(5, 'parthners-logos\\February2021\\tAJwE8R5C54R73owhulM.png', 1, '2021-02-04 13:31:00', '2021-02-12 14:08:07');
 /*!40000 ALTER TABLE `parthners_logos` ENABLE KEYS */;
 
 -- Дамп данных таблицы organic.password_resets: ~0 rows (приблизительно)
 /*!40000 ALTER TABLE `password_resets` DISABLE KEYS */;
 /*!40000 ALTER TABLE `password_resets` ENABLE KEYS */;
 
--- Дамп данных таблицы organic.permissions: ~131 rows (приблизительно)
+-- Дамп данных таблицы organic.permissions: ~126 rows (приблизительно)
 /*!40000 ALTER TABLE `permissions` DISABLE KEYS */;
 INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`) VALUES
 	(1, 'browse_admin', NULL, '2021-01-31 12:30:57', '2021-01-31 12:30:57'),
@@ -538,7 +539,7 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 	(196, 'delete_faqs', 'faqs', '2021-02-11 09:39:42', '2021-02-11 09:39:42');
 /*!40000 ALTER TABLE `permissions` ENABLE KEYS */;
 
--- Дамп данных таблицы organic.permission_role: ~131 rows (приблизительно)
+-- Дамп данных таблицы organic.permission_role: ~126 rows (приблизительно)
 /*!40000 ALTER TABLE `permission_role` DISABLE KEYS */;
 INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 	(1, 1),
@@ -673,21 +674,22 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
 INSERT INTO `products` (`id`, `category_id`, `title`, `price`, `old_price`, `image`, `description`, `text`, `contains`, `flag`, `status`, `created_at`, `updated_at`) VALUES
 	(1, 1, 'The Art Of The Start', 12.99, 15.99, 'products\\February2021\\Asg5i0YNboIoIw7UKfnz.png', '<p>There are many variations of passages,the majority suffered uts seds alterationin some of form uts, by injected humour random words which don\'t look evenslightly believable.</p>', '<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years on purpose. Distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors when looking.</p>', '<p>35% of organic raisins 55% of oats and 10% of butter.</p>', 'new', NULL, '2021-02-03 14:30:00', '2021-02-12 10:47:21'),
-	(2, 2, 'Turmeric Power', 15.99, 20.99, 'products\\February2021\\2HzduqbyPZIY0UWpQuVG.png', '<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years on purpose. Distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors when looking.</p>', '<p>There are many variations of passages,the majority suffered uts seds alterationin some of form uts, by injected humour random words which don\'t look evenslightly believable.</p>', '<p>35% of organic raisins 55% of oats and 10% of butter.</p>', 'hot', b'0001', '2021-02-03 14:31:00', '2021-02-12 13:13:32'),
-	(3, 3, 'dog food', 19.99, 25.99, 'products\\February2021\\FV0wovsltUBDrQucqPpL.png', '<p>There are many variations of passages,the majority suffered uts seds alterationin some of form uts, by injected humour random words which don\'t look evenslightly believable.</p>', '<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years on purpose. Distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors when looking.</p>', '<p>100% dog food</p>', 'hot', b'0001', '2021-02-04 11:47:00', '2021-02-12 13:13:07'),
-	(4, 4, 'Milk shake', 10.99, 15.99, 'products\\February2021\\VYa4epT0dq73ujzYIZqc.png', '<p>Very taysty</p>', '<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout The point o</p>', '<p>milk</p>', 'new', b'0001', '2021-02-04 11:55:00', '2021-02-12 13:12:23'),
-	(5, 1, 'Turmeric Power', 5.99, 10.99, 'products\\February2021\\MMJnjUCYZ7HbFlLEPRCK.png', '<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout The point of using Lorem Ipsum is that it has a more-or-less normal distribu ...</p>', '<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout The point of using Lorem Ipsum is that it has a more-or-less normal distribu ...</p>', '<p>Weed</p>', 'hot', b'0001', '2021-02-04 11:56:00', '2021-02-12 13:12:04'),
-	(6, 2, 'Power', 10.99, 15.99, 'products\\February2021\\mo2riYozhcIOYkKpb76v.png', '<p>fdfsdfdfds</p>', '<p>text jdjfd</p>', '<p>100 power</p>', 'new', b'0001', '2021-02-04 16:32:00', '2021-02-12 13:18:08'),
-	(7, 1, 'Carrot', 10.99, 10.99, 'products\\February2021\\eXaaccsKNfTF2K3Hv5hn.png', '<p>Good product</p>', '<p>Product is awsome</p>', '<p>100% vagetable</p>', 'new', b'0001', '2021-02-12 13:00:00', '2021-02-12 13:11:45');
+	(2, 2, 'Turmeric Power', 15.99, 20.99, 'products\\February2021\\2HzduqbyPZIY0UWpQuVG.png', '<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years on purpose. Distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors when looking.</p>', '<p>There are many variations of passages,the majority suffered uts seds alterationin some of form uts, by injected humour random words which don\'t look evenslightly believable.</p>', '<p>35% of organic raisins 55% of oats and 10% of butter.</p>', 'hot', 1, '2021-02-03 14:31:00', '2021-02-12 13:13:32'),
+	(3, 3, 'dog food', 19.99, 25.99, 'products\\February2021\\FV0wovsltUBDrQucqPpL.png', '<p>There are many variations of passages,the majority suffered uts seds alterationin some of form uts, by injected humour random words which don\'t look evenslightly believable.</p>', '<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years on purpose. Distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors when looking.</p>', '<p>100% dog food</p>', 'hot', 1, '2021-02-04 11:47:00', '2021-02-12 13:13:07'),
+	(4, 4, 'Milk shake', 10.99, 15.99, 'products\\February2021\\VYa4epT0dq73ujzYIZqc.png', '<p>Very taysty</p>', '<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout The point o</p>', '<p>milk</p>', 'new', 1, '2021-02-04 11:55:00', '2021-02-12 13:12:23'),
+	(5, 1, 'Turmeric Power', 5.99, 10.99, 'products\\February2021\\MMJnjUCYZ7HbFlLEPRCK.png', '<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout The point of using Lorem Ipsum is that it has a more-or-less normal distribu ...</p>', '<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout The point of using Lorem Ipsum is that it has a more-or-less normal distribu ...</p>', '<p>Weed</p>', 'hot', 1, '2021-02-04 11:56:00', '2021-02-12 13:12:04'),
+	(6, 2, 'Power', 10.99, 15.99, 'products\\February2021\\mo2riYozhcIOYkKpb76v.png', '<p>fdfsdfdfds</p>', '<p>text jdjfd</p>', '<p>100 power</p>', 'new', 1, '2021-02-04 16:32:00', '2021-02-12 13:18:08'),
+	(7, 1, 'Carrot', 10.99, 10.99, 'products\\February2021\\eXaaccsKNfTF2K3Hv5hn.png', '<p>Good product</p>', '<p>Product is awsome</p>', '<p>100% vagetable</p>', 'new', 1, '2021-02-12 13:00:00', '2021-02-12 13:11:45');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 
--- Дамп данных таблицы organic.product_reviews: ~4 rows (приблизительно)
+-- Дамп данных таблицы organic.product_reviews: ~5 rows (приблизительно)
 /*!40000 ALTER TABLE `product_reviews` DISABLE KEYS */;
 INSERT INTO `product_reviews` (`id`, `product_id`, `name`, `email`, `review`, `created_at`, `updated_at`) VALUES
 	(1, 5, 'erwr', 'admin@admin.com', 'wer', '2021-02-10 16:01:22', '2021-02-10 16:01:22'),
 	(2, 5, 'Igor', 'igor@mail.com', 'I want to type some text for ypou.', '2021-02-10 16:23:29', '2021-02-10 16:23:29'),
 	(3, 6, 'Pasha Finogentov', 'pasha@gmail.com', 'This product is awsame', '2021-02-10 17:11:19', '2021-02-10 17:11:19'),
-	(4, 5, 'цукуц', 'admin@admin.com', 'уцу', '2021-02-11 08:42:26', '2021-02-11 08:42:26');
+	(4, 5, 'цукуц', 'admin@admin.com', 'уцу', '2021-02-11 08:42:26', '2021-02-11 08:42:26'),
+	(5, 3, 'Vova', 'v@mail.com', 'awsome', '2021-02-13 14:52:08', '2021-02-13 14:52:08');
 /*!40000 ALTER TABLE `product_reviews` ENABLE KEYS */;
 
 -- Дамп данных таблицы organic.roles: ~2 rows (приблизительно)
@@ -697,7 +699,7 @@ INSERT INTO `roles` (`id`, `name`, `display_name`, `created_at`, `updated_at`) V
 	(2, 'user', 'Normal User', '2021-01-31 12:30:57', '2021-01-31 12:30:57');
 /*!40000 ALTER TABLE `roles` ENABLE KEYS */;
 
--- Дамп данных таблицы organic.settings: ~23 rows (приблизительно)
+-- Дамп данных таблицы organic.settings: ~24 rows (приблизительно)
 /*!40000 ALTER TABLE `settings` DISABLE KEYS */;
 INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`, `order`, `group`) VALUES
 	(1, 'site.title', 'Site Title', 'Site Title', '', 'text', 1, 'Site'),
@@ -722,15 +724,16 @@ INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`,
 	(22, 'about-page.awards', 'Awards', 'Awards & Recognition', NULL, 'text_area', 15, 'About Page'),
 	(23, 'about-page.awards_text', 'Awards text', '<p>How to pursue pleasure rationally encounter consequences that are extremely painful Nor again is there anyone who loves or pursues or desires to obtain pain of because it is pain, but because occasionally circumstances occur in some great.</p>', NULL, 'rich_text_box', 16, 'About Page'),
 	(24, 'about-page.Awards_support', 'Awards Support', '<p><strong>Customer Support:</strong> If you have any doubt about ConsultPress WordPress or how we can support your business, Send us an email and we&rsquo;ll get in touch shortly, or Contact via Support Forum.</p>', NULL, 'rich_text_box', 17, 'About Page'),
-	(25, 'about-page.ofice_hours', 'Awards Ofice Hours', '<p><strong>Office Hours :</strong>07:30 and 19:00 Monday to Saturday,Sunday - Holidayort Forum.</p>', NULL, 'rich_text_box', 18, 'About Page');
+	(25, 'about-page.ofice_hours', 'Awards Ofice Hours', '<p><strong>Office Hours :</strong>07:30 and 19:00 Monday to Saturday,Sunday - Holidayort Forum.</p>', NULL, 'rich_text_box', 18, 'About Page'),
+	(26, 'slaider-first.logo', 'Logo', 'settings\\February2021\\yXdJm8PdaaWbh3ph2BUx.png', NULL, 'image', 19, 'slaider_first');
 /*!40000 ALTER TABLE `settings` ENABLE KEYS */;
 
 -- Дамп данных таблицы organic.slaiders: ~3 rows (приблизительно)
 /*!40000 ALTER TABLE `slaiders` DISABLE KEYS */;
-INSERT INTO `slaiders` (`id`, `title`, `description`, `image`, `created_at`, `updated_at`) VALUES
-	(1, 'Get Blackberry Pack With 50% Off', 'Great explorer of the truth, the master-builder of human happiness no send one rejects <br>dislikes, or avoids pleasure itself, because it is pleasure.', 'images/home/4.png', '2021-02-05 13:11:24', '2021-02-05 13:11:24'),
-	(2, 'Organic Store', 'We are providing highest quality Organics Products for USA almost', 'images/home/3.png', '2021-02-05 13:12:12', '2021-02-05 13:12:12'),
-	(3, 'Natural Healthy Foods', 'Great explorer of the truth, the master-builder of human happin', 'images/home/3.png', '2021-02-05 13:13:23', '2021-02-05 13:13:23');
+INSERT INTO `slaiders` (`id`, `title`, `description`, `image`, `created_at`, `updated_at`, `logo`, `smal_text`, `status`) VALUES
+	(1, 'organic store', 'We are providing highest quality Organics Products for USA', 'slaiders\\February2021\\P551Fsefa9ELfLQymGux.jpg', '2021-02-05 13:11:00', '2021-02-13 14:02:59', 'slaiders\\February2021\\eaTpqYPlVZ3LP2F6zP8V.png', 'Fruits ~ Vegetables ~ Foods ~ Cosmetics', 1),
+	(2, 'Get Blackberry <br>Pack With 50% Off', 'Great explorer of the truth, the master-builder of human happiness no sed one rejects dislikes,\r\nor avoids pleasure itself, because it is pleasure.', 'slaiders\\February2021\\ZLH30SUQbGsDI9dhVdCt.jpg', '2021-02-05 13:12:00', '2021-02-13 14:00:15', 'slaiders\\February2021\\ffF0oM9Vie8qjI4RWksn.png', NULL, 1),
+	(3, 'Natural Healthy Foods', 'Great explorer of the truth, the master-builder of human happen', 'slaiders\\February2021\\qrz7XR4ym4xqQHNakYOB.jpg', '2021-02-05 13:13:00', '2021-02-13 14:00:06', 'slaiders\\February2021\\6aMjHmSB1Ig5PtWv5JVA.png', 'With you AffourTabble', 1);
 /*!40000 ALTER TABLE `slaiders` ENABLE KEYS */;
 
 -- Дамп данных таблицы organic.subscribes: ~4 rows (приблизительно)
@@ -747,9 +750,9 @@ INSERT INTO `subscribes` (`id`, `name`, `email`, `created_at`, `updated_at`) VAL
 INSERT INTO `testimonials` (`id`, `name`, `position`, `description`, `image`, `status`, `created_at`, `updated_at`) VALUES
 	(1, 'Jessy Federar', 'Cor.Manager', 'Who do not know how to pursue an seed pleasure rationally encounter that are extremely win painful nor again is there anyone who loves or pursues or desires obtain pain itself circumstances.', 'testimonials\\February2021\\HLpQuFtUmjPgwFuxRnF0.jpg', NULL, '2021-02-04 13:24:00', '2021-02-12 12:21:24'),
 	(2, 'Gleb Sidorov', 'Designer', 'Who do not know how to pursue an seed pleasure rationally encounter that are extremely win painful nor again is there anyone who loves or pursues or desires obtain pain itself circumstances.', 'testimonials\\February2021\\1aKzn7XOs5EqYYe7vEya.png', NULL, '2021-02-04 13:27:00', '2021-02-12 12:20:51'),
-	(3, 'Pupkin Vasile', 'Cor.Manager', 'Who do not know how to pursue an seed pleasure rationally encounter that are extremely win painful nor again is there anyone who loves or pursues or desires obtain pain itself circumstances.', 'testimonials\\February2021\\8q3SU8jVFMcJ0OBe6hRh.png', b'0001', '2021-02-04 13:27:00', '2021-02-12 14:07:29'),
-	(4, 'Ion Cicu', 'Presidente', 'Who do not know how to pursue an seed pleasure rationally encounter that are extremely win painful nor again is there anyone who loves or pursues or desires obtain pain itself circumstances.', 'testimonials\\February2021\\C7JTVoXuvLzpv9oeYDMn.png', b'0001', '2021-02-04 13:28:00', '2021-02-12 14:07:17'),
-	(5, 'Ion Ceban', 'Cumatru', 'Who do not know how to pursue an seed pleasure rationally encounter that are extremely win painful nor again is there anyone who loves or pursues or desires obtain pain itself circumstances', 'testimonials\\February2021\\xRI1jrgFWLECtZsf6jha.png', b'0001', '2021-02-04 13:29:00', '2021-02-12 14:07:07');
+	(3, 'Pupkin Vasile', 'Cor.Manager', 'Who do not know how to pursue an seed pleasure rationally encounter that are extremely win painful nor again is there anyone who loves or pursues or desires obtain pain itself circumstances.', 'testimonials\\February2021\\8q3SU8jVFMcJ0OBe6hRh.png', 1, '2021-02-04 13:27:00', '2021-02-12 14:07:29'),
+	(4, 'Ion Cicu', 'Presidente', 'Who do not know how to pursue an seed pleasure rationally encounter that are extremely win painful nor again is there anyone who loves or pursues or desires obtain pain itself circumstances.', 'testimonials\\February2021\\C7JTVoXuvLzpv9oeYDMn.png', 1, '2021-02-04 13:28:00', '2021-02-12 14:07:17'),
+	(5, 'Ion Ceban', 'Cumatru', 'Who do not know how to pursue an seed pleasure rationally encounter that are extremely win painful nor again is there anyone who loves or pursues or desires obtain pain itself circumstances', 'testimonials\\February2021\\xRI1jrgFWLECtZsf6jha.png', 1, '2021-02-04 13:29:00', '2021-02-12 14:07:07');
 /*!40000 ALTER TABLE `testimonials` ENABLE KEYS */;
 
 -- Дамп данных таблицы organic.three_colums: ~3 rows (приблизительно)
