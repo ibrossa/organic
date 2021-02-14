@@ -6,6 +6,11 @@ use App\Traits\HasDefaultScopes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class Blog
+ * @package App\Models
+ * @mixin HasDefaultScopes
+ */
 class Blog extends Model
 {
     use HasFactory;

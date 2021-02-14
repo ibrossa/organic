@@ -36,7 +36,7 @@ use function React\Promise\all;
 
 class MainController extends Controller
 {
-     /**
+    /**
      *
      */
     public function index()
@@ -49,32 +49,34 @@ class MainController extends Controller
         $farmers = Farmer::active()->get();
         $testimonials = Testimonial::active()->get();
         $partners_logo = ParthnersLogo::active()->get();
-        $slaider_first = Slaider::where('id',1)->active()->get();
-        $slaider_second = Slaider::where('id',2)->active()->get();
-        $slaider_third = Slaider::where('id',3)->active()->get();
+        $slaider_first = Slaider::where('id', 1)->active()->get();
+        $slaider_second = Slaider::where('id', 2)->active()->get();
+        $slaider_third = Slaider::where('id', 3)->active()->get();
 
         return view('index',
-               compact(
-            'sections','products', 'categories','blogs','whychoose',
-                     'farmers', 'testimonials','partners_logo','slaider_first',
-                      'slaider_second','slaider_third')
+            compact(
+                'sections', 'products', 'categories', 'blogs', 'whychoose',
+                'farmers', 'testimonials', 'partners_logo', 'slaider_first',
+                'slaider_second', 'slaider_third')
         );
     }
+
     /**
      *
      */
-    public function search(SearchRequest $request){
+    public function search(SearchRequest $request)
+    {
         $search = $request->s;
         $blogs = Blog::query()
-            ->where('title', 'LIKE', '%'.$search.'%')
+            ->where('title', 'LIKE', '%' . $search . '%')
             ->active()
             ->get();
         $products = Product::query()
-            ->where('title', 'LIKE', '%'.$search.'%')
+            ->where('title', 'LIKE', '%' . $search . '%')
             ->active()
             ->get();
 
-        return view('search', compact('blogs','search','products'));
+        return view('search', compact('blogs', 'search', 'products'));
     }
 
     /**
@@ -101,9 +103,9 @@ class MainController extends Controller
         $categories = Category::active()->get();
         $products = Product::active()->orderBy('created_at', 'desc')->limit(5)->get();
 
-        return view('about',compact('aboutstories','three_colums','deliveries',
-                                                    'award_images','categories','products'
-                                         ));
+        return view('about', compact('aboutstories', 'three_colums', 'deliveries',
+            'award_images', 'categories', 'products'
+        ));
 
     }
 
@@ -135,21 +137,20 @@ class MainController extends Controller
     public function store(Request $request)
     {
         $categories = Category::active()->get();
-        $products =Product::active()->get();
-        if($request->has('catId')) {
+        $products = Product::active()->get();
+        if ($request->has('catId')) {
             $catId = $request->get('catId', 1);
             $products = Product::where('category_id', $catId)->orderBy('id', 'desc')->get();
         }
-        if($request->has('min')) {
+        if ($request->has('min')) {
             $min = $request->get('min');
             $max = $request->get('max');
-            $products = Product::query()->whereBetween('price', [$min,$max])->get();
+            $products = Product::query()->whereBetween('price', [$min, $max])->get();
         }
-
 
         $hot_products = Product::active()->where('flag', 'hot')->orderby('created_at', 'desc')->limit(3)->get();
 
-        return view('store', compact('products','categories','hot_products'));
+        return view('store', compact('products', 'categories', 'hot_products'));
     }
 
     /**
@@ -170,9 +171,9 @@ class MainController extends Controller
         $blog = Blog::find($id);
         $comments = Blog::find($id)->blog_comments;
         /*dd($comments);*/
-       /* $comments = BlogComment::orderby('created_at','desc')->get();*/
+        /* $comments = BlogComment::orderby('created_at','desc')->get();*/
 
-        return view('blogs.blogdetails', compact('blog','comments'));
+        return view('blogs.blogdetails', compact('blog', 'comments'));
     }
 
     /**
@@ -194,13 +195,13 @@ class MainController extends Controller
     {
         $product = Product::find($id);
         $reviews = Product::find($id)->product_review;
-        $related = Product::where('category_id',$product->category_id)->limit(3)->get();
+        $related = Product::where('category_id', $product->category_id)->limit(3)->get();
 
-        $related = $related->filter(function ($item) use ($product){
-            return $item->id !=$product->id;
+        $related = $related->filter(function ($item) use ($product) {
+            return $item->id != $product->id;
         });
 
-        return view('store.product_details',compact('product','reviews','related'));
+        return view('store.product_details', compact('product', 'reviews', 'related'));
     }
 
     /**
@@ -222,7 +223,7 @@ class MainController extends Controller
     {
         $faqs = Faq::active()->get();
 
-        return view('faq',compact('faqs'));
+        return view('faq', compact('faqs'));
     }
 
     /**
@@ -232,14 +233,6 @@ class MainController extends Controller
     {
         return view('contact');
     }
-
-
-
-
-
-
-
-
 
 
 }
