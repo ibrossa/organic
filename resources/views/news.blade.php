@@ -2,37 +2,7 @@
 
 @section('content')
 
-<section class="breadcrumb-area" style="background-image:url(images/background/2.jpg);">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="breadcrumbs text-center">
-                    <h1>News Standard</h1>
-                    <h4>Welcome to certified online organic products suppliersr</h4>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="breadcrumb-bottom-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-5 col-sm-5">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                        <li>News Standard</li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 col-md-7 col-sm-7">
-                    <p>We provide <span>100% organic</span> products</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</section>
+@include('layouts.partials._second_header')
 
 <section class="news single_news_page style-2">
     <div class="container">
@@ -58,9 +28,7 @@
                             <h4><a href="{{route('news.blog_details', $blog->id)}}">{{$blog->title}}</a></h4>
                             <p>{!! $blog->description !!}</p>
                             <div class="link"><a href="{{route('news.blog_details', $blog->id)}}" class="tran3s">READ MORE<span class="fa fa-sort-desc"></span></a></div>
-
                         </div>
-
                     </div> <!-- End of .post -->
                 </div>
             </div>

@@ -22,6 +22,7 @@ use App\Models\IndexAbout;
 use App\Models\ParthnersLogo;
 use App\Models\Product;
 use App\Models\ProductReview;
+use App\Models\SecondHeader;
 use App\Models\Slaider;
 use App\Models\Subscribe;
 use App\Models\Testimonial;
@@ -102,9 +103,10 @@ class MainController extends Controller
         $award_images = AwardImage::all();
         $categories = Category::active()->get();
         $products = Product::active()->orderBy('created_at', 'desc')->limit(5)->get();
+        $second_header = SecondHeader::where('title','about us')->get();
 
         return view('about', compact('aboutstories', 'three_colums', 'deliveries',
-            'award_images', 'categories', 'products'
+            'award_images', 'categories', 'products','second_header'
         ));
 
     }
@@ -149,8 +151,9 @@ class MainController extends Controller
         }
 
         $hot_products = Product::active()->where('flag', 'hot')->orderby('created_at', 'desc')->limit(3)->get();
+        $second_header = SecondHeader::where('title','our store')->get();
 
-        return view('store', compact('products', 'categories', 'hot_products'));
+        return view('store', compact('products', 'categories', 'hot_products','second_header'));
     }
 
     /**
@@ -159,8 +162,9 @@ class MainController extends Controller
     public function news()
     {
         $blogs = Blog::active()->orderby('created_at', 'desc')->paginate(3);
+        $second_header = SecondHeader::where('title','News Standard')->get();
 
-        return view('news', compact('blogs'));
+        return view('news', compact('blogs','second_header'));
     }
 
     /**
@@ -222,8 +226,9 @@ class MainController extends Controller
     public function faq()
     {
         $faqs = Faq::active()->get();
+        $second_header = SecondHeader::where('title','faq\'s')->get();
 
-        return view('faq', compact('faqs'));
+        return view('faq', compact('faqs','second_header'));
     }
 
     /**
@@ -231,7 +236,9 @@ class MainController extends Controller
      */
     public function contact()
     {
-        return view('contact');
+        $second_header = SecondHeader::where('title','Contact us')->get();
+
+        return view('contact',compact('second_header'));
     }
 
 

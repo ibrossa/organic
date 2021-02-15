@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSlaidersTable extends Migration
+class CreateSecondHeadersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class CreateSlaidersTable extends Migration
      */
     public function up()
     {
-        Schema::create('slaiders', function (Blueprint $table) {
+        Schema::create('second_headers', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->tinyInteger('status');
-            $table->text('description');
+            $table->string('sub_title');
             $table->string('image');
-            $table->string('logo');
-            $table->string('smal_text')->nullable();
             $table->timestamps();
         });
     }
@@ -32,6 +29,6 @@ class CreateSlaidersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('slaiders');
+        Schema::dropIfExists('second_headers');
     }
 }

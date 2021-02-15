@@ -11,4 +11,9 @@ class CartController extends Controller
     {
         return view('cart');
     }
+
+    public function addToCart(Request $request)
+    {
+        return response()->json(['id'=>$request->id]);
+    }
 }

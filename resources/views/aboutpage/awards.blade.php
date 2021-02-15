@@ -16,7 +16,6 @@
                         <li><img src="{{Voyager::image($image->image)}}" alt=""></li>
                         @endforeach
                     </ul>
-
                 </div>
                 <div class="customer-text">
                     {!! setting('about-page.Awards_support') !!}

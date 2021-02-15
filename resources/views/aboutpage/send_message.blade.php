@@ -1,4 +1,3 @@
-
 <div class="col-md-6 col-sm-12">
     <div class="contact_in-box">
         <div class="theme-title ">
@@ -48,7 +47,5 @@
             </div>
             <!-- /.row -->
         </form>
-
-
     </div>
 </div>

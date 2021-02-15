@@ -13,15 +13,9 @@
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="images/fav-icon/apple-icon-57x57.png">
 
-
-
     <!-- Custom Css -->
     <link rel="stylesheet" type="text/css" href="{{asset('/css/style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/css/responsive.css')}}">
-
-
-
-    <!-- Fixing Internet Explorer ______________________________________-->
 
     <!--[if lt IE 9]>
     <script src="/http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>

@@ -1,7 +1,7 @@
 <section class="testimonials-section" style="background-image:url(images/parallax/1.jpg);">
     <div class="container">
         <div class="theme_title">
-            <h2>testimonials</h2>
+            <h2>{{setting('main.testimonials_title')}}</h2>
         </div>
         <div class="testimonials-carousel">
 

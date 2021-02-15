@@ -6,7 +6,7 @@
             <div class="col-md-12">
                 <div class="breadcrumbs text-center">
                     <h1>{{$blog->title}}</h1>
-                    <h4>Welcome to certified online organic products suppliersr</h4>
+                    <h4>{!! $blog->description !!}</h4>
                 </div>
             </div>
         </div>

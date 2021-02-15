@@ -13,8 +13,6 @@
 
 -- Дамп данных таблицы organic.about_send_messages: ~1 rows (приблизительно)
 /*!40000 ALTER TABLE `about_send_messages` DISABLE KEYS */;
-INSERT INTO `about_send_messages` (`id`, `name`, `email`, `phone`, `subject`, `text`, `created_at`, `updated_at`) VALUES
-	(7, 'Igor', 'admin@admin.com', '7978781', 'hello', 'Hello world', '2021-02-11 10:32:13', '2021-02-11 10:32:13');
 /*!40000 ALTER TABLE `about_send_messages` ENABLE KEYS */;
 
 -- Дамп данных таблицы organic.about_stories: ~1 rows (приблизительно)
@@ -733,7 +731,7 @@ INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`,
 INSERT INTO `slaiders` (`id`, `title`, `description`, `image`, `created_at`, `updated_at`, `logo`, `smal_text`, `status`) VALUES
 	(1, 'organic store', 'We are providing highest quality Organics Products for USA', 'slaiders\\February2021\\P551Fsefa9ELfLQymGux.jpg', '2021-02-05 13:11:00', '2021-02-13 14:02:59', 'slaiders\\February2021\\eaTpqYPlVZ3LP2F6zP8V.png', 'Fruits ~ Vegetables ~ Foods ~ Cosmetics', 1),
 	(2, 'Get Blackberry <br>Pack With 50% Off', 'Great explorer of the truth, the master-builder of human happiness no sed one rejects dislikes,\r\nor avoids pleasure itself, because it is pleasure.', 'slaiders\\February2021\\ZLH30SUQbGsDI9dhVdCt.jpg', '2021-02-05 13:12:00', '2021-02-13 14:00:15', 'slaiders\\February2021\\ffF0oM9Vie8qjI4RWksn.png', NULL, 1),
-	(3, 'Natural Healthy Foods', 'Great explorer of the truth, the master-builder of human happen', 'slaiders\\February2021\\qrz7XR4ym4xqQHNakYOB.jpg', '2021-02-05 13:13:00', '2021-02-13 14:00:06', 'slaiders\\February2021\\6aMjHmSB1Ig5PtWv5JVA.png', 'With you AffourTabble', 1);
+	(3, 'Natural Healthy Foods', 'Great explorer of the truth, the master-builder of human happen', 'slaiders\\February2021\\qrz7XR4ym4xqQHNakYOB.jpg', '2021-02-05 13:13:00', '2021-02-14 16:02:06', 'slaiders\\February2021\\6aMjHmSB1Ig5PtWv5JVA.png', 'With you AffourTabble', 0);
 /*!40000 ALTER TABLE `slaiders` ENABLE KEYS */;
 
 -- Дамп данных таблицы organic.subscribes: ~4 rows (приблизительно)

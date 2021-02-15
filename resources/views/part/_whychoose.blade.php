@@ -1,11 +1,10 @@
 <!-- Request Quote ******************************* -->
 <section class="why_choose_us">
-    <div class="theme_title_bg" style="background-image: url(images/background/1.jpg);">
+    <div class="theme_title_bg" style="background-image: url(/images/background/1.jpg);">
         <div class="theme_title center">
             <div class="container">
-                <h2>Why to Choose Us</h2>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered <br>alteration in some form, by injected humour.</p>
-
+                <h2>{{setting('main.why_title')}}</h2>
+                {!! setting('main.why_text') !!}
             </div>
         </div>
 

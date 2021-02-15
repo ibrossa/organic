@@ -85,6 +85,10 @@ Route::get('/cart', [
     CartController::class, 'cart'
 ])->name('cart');
 
+Route::post('/add_to_card', [
+    CartController::class, 'addToCart'
+])->name('addToCart');
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

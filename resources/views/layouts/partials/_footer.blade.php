@@ -40,8 +40,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 footer_logo">
-                    <a href="{{route('index')}}"><img src="/images/logo/logo-2.png" alt="Logo"></a>
-                    <p>Denouncing pleasures and praising pain was born and I will give you a complete account of the system.</p><p>Expound that actual teachings the great explorer of the truth, the master-builder of human happiness no one rejects, likes, or avoids pleasure itself rationally. </p>
+                    <a href="{{route('index')}}"><img src="{{Voyager::image(setting('footer.footer_logo'))}}" alt="Logo"></a>
+                    {!! setting('footer.footer_text') !!}
 
 
 

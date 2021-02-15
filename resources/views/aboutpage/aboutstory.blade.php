@@ -26,8 +26,6 @@
                             <div class="count">{{$aboutstories->farmer_count}}+</div>
                             <div class="name color1">Pastoral Farmers</div>
                         </div>
-
-
                     </div>
                     <div class="text">
                         <p>{!! $aboutstories->sec_text !!}</p>

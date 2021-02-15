@@ -2,7 +2,7 @@
 <div class="our_farmer">
     <div class="container">
         <div class="theme_title center">
-            <h2>our farmers</h2>
+            <h2>{{setting('main.farmers_title')}}</h2>
         </div>
 
         <div class="row">
