@@ -16,7 +16,7 @@ class CreateAboutSendMessagesTable extends Migration
         Schema::create('about_send_messages', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('mail');
+            $table->string('email');
             $table->string('phone')->nullable();
             $table->string('subject')->nullable();
             $table->text('text');

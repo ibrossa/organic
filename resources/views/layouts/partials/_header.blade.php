@@ -55,6 +55,7 @@
                     <li><a href="{{route('news')}}">News</a></li>
                     <li><a href="{{route('faq')}}">FAQ</a></li>
                     <li><a href="{{route('contact')}}">Contact us</a></li>
+                    <li><a href="{{route('cart')}}">Cart</a></li>
                 </ul> <!-- End of .menuzord-menu -->
             </nav> <!-- End of #main_menu -->
 

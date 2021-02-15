@@ -60,6 +60,7 @@
 										<span class="item_price">{{$product->price}}</span>
 										<p>{!! $product->description !!}</p>
 	        						</div> <!-- End of .item_description -->
+
 	        					</div> <!-- End of .product_top_section -->
 
 	        					<!-- __________________ Product review ___________________ -->
@@ -67,6 +68,7 @@
 									<ul class="nav nav-pills">
 									    <li><a data-toggle="pill" href="#tab1">Description</a></li>
 									    <li class="active"><a data-toggle="pill" href="#tab2">Reviews({{$product->product_review->count()}})</a></li>
+
 								  	</ul>
 
 									 <div class="tab-content">

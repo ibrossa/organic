@@ -58,8 +58,18 @@
                                     <div class="overlay-box">
                                         <div class="inner">
                                             <div class="bottom-content">
+                                                <div class="top-content">
+                                                    <ul>
+                                                        <li><a href="#"><span class="fa fa-eye"></span></a></li>
+                                                        <li class="tultip-op"><span class="tultip"><i class="fa fa-sort-desc"></i>ADD TO CART</span><a href="#"><span class="icon-icon-32846"></span></a>
+
+                                                        </li>
+                                                        <li><a href="#"><span class="fa fa-heart-o"></span></a></li>
+                                                    </ul>
+                                                </div>
                                                 <h4><a href="{{route('store.product_details', $product->id)}}">It Contains:</a></h4>
                                                 <p>{!! $product->contains !!}</p>
+
                                             </div>
                                         </div>
                                     </div>

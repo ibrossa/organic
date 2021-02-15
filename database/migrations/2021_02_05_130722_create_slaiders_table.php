@@ -16,6 +16,7 @@ class CreateSlaidersTable extends Migration
         Schema::create('slaiders', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->tinyInteger('status');
             $table->text('description');
             $table->string('image');
             $table->string('logo');

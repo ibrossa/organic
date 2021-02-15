@@ -16,6 +16,7 @@ class Blog extends Model
     use HasFactory;
     use HasDefaultScopes;
 
+
     public function blog_comments()
     {
         return $this->hasMany(BlogComment::class, 'blog_id');
