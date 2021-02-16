@@ -11,17 +11,20 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
--- Дамп данных таблицы organic.about_send_messages: ~1 rows (приблизительно)
+-- Дамп данных таблицы organic.about_send_messages: ~0 rows (приблизительно)
+DELETE FROM `about_send_messages`;
 /*!40000 ALTER TABLE `about_send_messages` DISABLE KEYS */;
 /*!40000 ALTER TABLE `about_send_messages` ENABLE KEYS */;
 
--- Дамп данных таблицы organic.about_stories: ~1 rows (приблизительно)
+-- Дамп данных таблицы organic.about_stories: ~0 rows (приблизительно)
+DELETE FROM `about_stories`;
 /*!40000 ALTER TABLE `about_stories` DISABLE KEYS */;
 INSERT INTO `about_stories` (`id`, `title`, `about_title`, `image`, `text`, `farm_count`, `farmer_count`, `sec_text`, `created_at`, `updated_at`) VALUES
 	(1, 'story about us', '<h3>Our food should be our medicine</h3>', 'about-stories\\February2021\\sL5VHkeYOzOe3uuVu7Sg.jpg', '<p>How all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness</p>', 745, 2480, '<p>Denouncing pleasure and praising pain was born and I will give you a complete account of the system, the actual teachings of the great explorer.</p>', '2021-02-02 19:08:00', '2021-02-12 16:15:45');
 /*!40000 ALTER TABLE `about_stories` ENABLE KEYS */;
 
 -- Дамп данных таблицы organic.award_images: ~4 rows (приблизительно)
+DELETE FROM `award_images`;
 /*!40000 ALTER TABLE `award_images` DISABLE KEYS */;
 INSERT INTO `award_images` (`id`, `image`, `created_at`, `updated_at`) VALUES
 	(1, 'award-images\\February2021\\8sCTDvg7HnzYChqmU01v.png', '2021-02-02 20:38:00', '2021-02-12 11:37:24'),
@@ -30,7 +33,8 @@ INSERT INTO `award_images` (`id`, `image`, `created_at`, `updated_at`) VALUES
 	(4, 'award-images\\February2021\\QAmhAXQDrblgcWWJ3OwJ.png', '2021-02-02 20:39:00', '2021-02-12 11:36:48');
 /*!40000 ALTER TABLE `award_images` ENABLE KEYS */;
 
--- Дамп данных таблицы organic.blogs: ~4 rows (приблизительно)
+-- Дамп данных таблицы organic.blogs: ~3 rows (приблизительно)
+DELETE FROM `blogs`;
 /*!40000 ALTER TABLE `blogs` DISABLE KEYS */;
 INSERT INTO `blogs` (`id`, `title`, `description`, `text`, `image`, `author_name`, `author_image`, `author_text`, `status`, `created_at`, `updated_at`) VALUES
 	(1, 'Interesting facts about organic food and organic store', '<p>As more and more people are turning to organic lifestyles &amp; trying improve their health...</p>', '<p>How all this mistaken idea denouncing pleasure and praising will give you a completed take a trivial sed example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with man sed who chooses to enjoyonsequences which of us every physical exercise.</p>\r\n<p>Praising will give you a completed take a trivial sed example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with man sed who chooses to enjoy.</p>\r\n<div class="qoute">\r\n<h3>Men who are so beguiled and demoralized by the charms of pleasure of <br />the moment, so blinded by desire, they cannot foresee.</h3>\r\n<span class="author color1">- Bianca Jones - </span></div>\r\n<div class="text">\r\n<p>All this mistaken idea of denouncing pleasure and praising pain was born and I will give you seds our complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>\r\n</div>', 'blogs\\February2021\\ktwC3J8SdGEorVJBlky1.jpg', 'Robecca Garza', '/images/gallery/a3.jpg', '<p>How all this mistaken idea of denouncing pleasures and praising ours pains was born and I will give you sed a works complete account of the system, and expound the actual teachings off the greatest</p>', 1, '2021-02-03 10:52:00', '2021-02-12 16:08:21'),
@@ -39,7 +43,8 @@ INSERT INTO `blogs` (`id`, `title`, `description`, `text`, `image`, `author_name
 	(4, 'You should add 5 things in your daily meals.', '<p><strong>As more and more people are turning to organic lifestyles &amp; trying improve</strong></p>', '<p>How all this mistaken idea denouncing pleasure and praising will give you a completed take a trivial sed example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with man sed who chooses to enjoyonsequences which of us every physical exercise.</p>\r\n<p>Praising will give you a completed take a trivial sed example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with man sed who chooses to enjoy.</p>\r\n<div class="qoute">\r\n<h3>Men who are so beguiled and demoralized by the charms of pleasure of <br />the moment, so blinded by desire, they cannot foresee.</h3>\r\n<span class="author color1">- Bianca Jones - </span></div>\r\n<div class="text">\r\n<p>All this mistaken idea of denouncing pleasure and praising pain was born and I will give you seds our complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>\r\n</div>', 'blogs\\February2021\\oFi2CjrOwFyWuuSWN5V8.jpg', 'Robecca Garza', 'blogs\\February2021\\73W0dijaYKXWSiVHaNYD.jpg', '<p>How all this mistaken idea of denouncing pleasures and praising ours pains was born and I will give you sed a works complete account of the system, and expound the actual teachings off the greatest</p>', 1, '2021-02-04 12:36:00', '2021-02-13 14:47:35');
 /*!40000 ALTER TABLE `blogs` ENABLE KEYS */;
 
--- Дамп данных таблицы organic.blog_comments: ~12 rows (приблизительно)
+-- Дамп данных таблицы organic.blog_comments: ~11 rows (приблизительно)
+DELETE FROM `blog_comments`;
 /*!40000 ALTER TABLE `blog_comments` DISABLE KEYS */;
 INSERT INTO `blog_comments` (`id`, `blog_id`, `name`, `email`, `website`, `comment`, `created_at`, `updated_at`) VALUES
 	(1, 1, 'vasea vasilev', 'vasea@gmail.com', 'vasea.com', 'hello world', '2021-02-10 12:38:52', '2021-02-10 12:38:52'),
@@ -57,6 +62,7 @@ INSERT INTO `blog_comments` (`id`, `blog_id`, `name`, `email`, `website`, `comme
 /*!40000 ALTER TABLE `blog_comments` ENABLE KEYS */;
 
 -- Дамп данных таблицы organic.categories: ~4 rows (приблизительно)
+DELETE FROM `categories`;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
 INSERT INTO `categories` (`id`, `title`, `created_at`, `updated_at`, `status`) VALUES
 	(1, 'Vegetables', '2021-02-04 11:28:00', '2021-02-12 15:39:00', 1),
@@ -65,7 +71,8 @@ INSERT INTO `categories` (`id`, `title`, `created_at`, `updated_at`, `status`) V
 	(4, 'Beauty care', '2021-02-04 11:29:00', '2021-02-12 15:37:51', 1);
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 
--- Дамп данных таблицы organic.data_rows: ~162 rows (приблизительно)
+-- Дамп данных таблицы organic.data_rows: ~168 rows (приблизительно)
+DELETE FROM `data_rows`;
 /*!40000 ALTER TABLE `data_rows` DISABLE KEYS */;
 INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, `required`, `browse`, `read`, `edit`, `add`, `delete`, `details`, `order`) VALUES
 	(1, 1, 'id', 'number', 'ID', 1, 0, 0, 0, 0, 0, NULL, 1),
@@ -229,10 +236,17 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 	(229, 50, 'status', 'checkbox', 'Status', 0, 1, 1, 1, 1, 1, '{}', 2),
 	(230, 38, 'logo', 'image', 'Logo', 1, 1, 1, 1, 1, 1, '{}', 4),
 	(231, 38, 'smal_text', 'text_area', 'Smal Text', 0, 1, 1, 1, 1, 1, '{}', 6),
-	(232, 38, 'status', 'checkbox', 'Status', 0, 1, 1, 1, 1, 1, '{}', 2);
+	(232, 38, 'status', 'checkbox', 'Status', 0, 1, 1, 1, 1, 1, '{}', 2),
+	(233, 51, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+	(234, 51, 'title', 'text', 'Title', 1, 1, 1, 1, 1, 1, '{}', 2),
+	(235, 51, 'sub_title', 'text', 'Sub Title', 1, 1, 1, 1, 1, 1, '{}', 3),
+	(236, 51, 'image', 'image', 'Image', 1, 1, 1, 1, 1, 1, '{}', 4),
+	(237, 51, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 5),
+	(238, 51, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 6);
 /*!40000 ALTER TABLE `data_rows` ENABLE KEYS */;
 
--- Дамп данных таблицы organic.data_types: ~23 rows (приблизительно)
+-- Дамп данных таблицы organic.data_types: ~24 rows (приблизительно)
+DELETE FROM `data_types`;
 /*!40000 ALTER TABLE `data_types` DISABLE KEYS */;
 INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `display_name_plural`, `icon`, `model_name`, `policy_name`, `controller`, `description`, `generate_permissions`, `server_side`, `details`, `created_at`, `updated_at`) VALUES
 	(1, 'users', 'users', 'User', 'Users', 'voyager-person', 'TCG\\Voyager\\Models\\User', 'TCG\\Voyager\\Policies\\UserPolicy', 'TCG\\Voyager\\Http\\Controllers\\VoyagerUserController', '', 1, 0, NULL, '2021-01-31 12:30:55', '2021-01-31 12:30:55'),
@@ -253,14 +267,16 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 	(38, 'slaiders', 'slaiders', 'Slaider', 'Slaiders', NULL, 'App\\Models\\Slaider', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2021-02-05 13:09:24', '2021-02-13 13:59:55'),
 	(39, 'blog_comments', 'blog-comments', 'Blog Comment', 'Blog Comments', NULL, 'App\\Models\\BlogComment', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2021-02-06 10:58:17', '2021-02-12 10:18:51'),
 	(45, 'aboutsections', 'indexaboutsections', 'Index Aboutsection', 'Index Aboutsections', NULL, 'App\\Models\\Aboutsection', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2021-02-08 09:33:59', '2021-02-08 09:35:26'),
-	(46, 'index_abouts', 'index-abouts', 'Index About', 'Index Abouts', NULL, 'App\\Models\\IndexAbout', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2021-02-08 09:39:32', '2021-02-12 10:29:00'),
+	(46, 'index_abouts', 'index-abouts', 'Index About', 'Index Abouts', NULL, 'App\\Models\\Offer', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2021-02-08 09:39:32', '2021-02-12 10:29:00'),
 	(47, 'product_reviews', 'product-reviews', 'Product Review', 'Product Reviews', NULL, 'App\\Models\\ProductReview', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2021-02-10 15:35:36', '2021-02-12 10:35:05'),
 	(48, 'products', 'products', 'Product', 'Products', NULL, 'App\\Models\\Product', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2021-02-11 09:36:36', '2021-02-12 13:12:51'),
 	(49, 'subscribes', 'subscribes', 'Subscribe', 'Subscribes', NULL, 'App\\Models\\Subscribe', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null}', '2021-02-11 09:37:02', '2021-02-11 09:37:02'),
-	(50, 'faqs', 'faqs', 'Faq', 'Faqs', NULL, 'App\\Models\\Faq', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2021-02-11 09:39:42', '2021-02-12 15:46:58');
+	(50, 'faqs', 'faqs', 'Faq', 'Faqs', NULL, 'App\\Models\\Faq', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2021-02-11 09:39:42', '2021-02-12 15:46:58'),
+	(51, 'second_headers', 'second-headers', 'Second Header', 'Second Headers', NULL, 'App\\Models\\SecondHeader', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null}', '2021-02-15 12:09:08', '2021-02-15 12:09:08');
 /*!40000 ALTER TABLE `data_types` ENABLE KEYS */;
 
 -- Дамп данных таблицы organic.delivery_processes: ~4 rows (приблизительно)
+DELETE FROM `delivery_processes`;
 /*!40000 ALTER TABLE `delivery_processes` DISABLE KEYS */;
 INSERT INTO `delivery_processes` (`id`, `title`, `description`, `image`, `created_at`, `updated_at`) VALUES
 	(1, 'Customer Order', 'Organicstore.com’s customers order is captured by warehouse API..', 'icon-business', '2021-02-02 20:17:00', '2021-02-02 20:17:00'),
@@ -270,10 +286,12 @@ INSERT INTO `delivery_processes` (`id`, `title`, `description`, `image`, `create
 /*!40000 ALTER TABLE `delivery_processes` ENABLE KEYS */;
 
 -- Дамп данных таблицы organic.failed_jobs: ~0 rows (приблизительно)
+DELETE FROM `failed_jobs`;
 /*!40000 ALTER TABLE `failed_jobs` DISABLE KEYS */;
 /*!40000 ALTER TABLE `failed_jobs` ENABLE KEYS */;
 
--- Дамп данных таблицы organic.faqs: ~3 rows (приблизительно)
+-- Дамп данных таблицы organic.faqs: ~2 rows (приблизительно)
+DELETE FROM `faqs`;
 /*!40000 ALTER TABLE `faqs` DISABLE KEYS */;
 INSERT INTO `faqs` (`id`, `title`, `description`, `created_at`, `updated_at`, `status`) VALUES
 	(1, 'What are the benefits of organic food?', 'Again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise.', '2021-02-03 10:03:00', '2021-02-12 15:47:30', 1),
@@ -282,6 +300,7 @@ INSERT INTO `faqs` (`id`, `title`, `description`, `created_at`, `updated_at`, `s
 /*!40000 ALTER TABLE `faqs` ENABLE KEYS */;
 
 -- Дамп данных таблицы organic.farmers: ~4 rows (приблизительно)
+DELETE FROM `farmers`;
 /*!40000 ALTER TABLE `farmers` DISABLE KEYS */;
 INSERT INTO `farmers` (`id`, `name`, `position`, `description`, `status`, `created_at`, `updated_at`, `image`) VALUES
 	(1, 'Rebecca Garzany', 'Pastoral Farmer', '<p>Praising pain was born and I will give you a complete account of the system.</p>', 1, '2021-02-04 13:09:00', '2021-02-12 14:05:54', 'farmers\\February2021\\5wPhUShQb0W1JrV0qQJz.jpg'),
@@ -291,19 +310,22 @@ INSERT INTO `farmers` (`id`, `name`, `position`, `description`, `status`, `creat
 /*!40000 ALTER TABLE `farmers` ENABLE KEYS */;
 
 -- Дамп данных таблицы organic.index_abouts: ~2 rows (приблизительно)
+DELETE FROM `index_abouts`;
 /*!40000 ALTER TABLE `index_abouts` DISABLE KEYS */;
 INSERT INTO `index_abouts` (`id`, `title`, `text`, `image`, `created_at`, `updated_at`) VALUES
 	(1, 'We Grow Beauty', '<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking organic cosmetics.</p>', 'index-abouts\\February2021\\gyqWW1pUKnjSRgfHxIE3.jpg', '2021-02-08 09:41:00', '2021-02-12 10:29:34'),
 	(2, 'We Grow Beauty', '<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking organic cosmetics.</p>', 'index-abouts\\February2021\\K7I5XK9Skiw1JJValfN9.jpg', '2021-02-08 09:42:00', '2021-02-12 10:29:25');
 /*!40000 ALTER TABLE `index_abouts` ENABLE KEYS */;
 
--- Дамп данных таблицы organic.menus: ~1 rows (приблизительно)
+-- Дамп данных таблицы organic.menus: ~0 rows (приблизительно)
+DELETE FROM `menus`;
 /*!40000 ALTER TABLE `menus` DISABLE KEYS */;
 INSERT INTO `menus` (`id`, `name`, `created_at`, `updated_at`) VALUES
 	(1, 'admin', '2021-01-31 12:30:56', '2021-01-31 12:30:56');
 /*!40000 ALTER TABLE `menus` ENABLE KEYS */;
 
--- Дамп данных таблицы organic.menu_items: ~35 rows (приблизительно)
+-- Дамп данных таблицы organic.menu_items: ~36 rows (приблизительно)
+DELETE FROM `menu_items`;
 /*!40000 ALTER TABLE `menu_items` DISABLE KEYS */;
 INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class`, `color`, `parent_id`, `order`, `created_at`, `updated_at`, `route`, `parameters`) VALUES
 	(1, 1, 'Dashboard', '', '_self', 'voyager-boat', NULL, NULL, 10, '2021-01-31 12:30:56', '2021-02-11 09:43:22', 'voyager.dashboard', NULL),
@@ -340,10 +362,12 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class
 	(48, 1, 'Subscribes', '', '_self', NULL, NULL, 51, 2, '2021-02-11 09:37:02', '2021-02-11 09:43:29', 'voyager.subscribes.index', NULL),
 	(49, 1, 'Faqs', '', '_self', NULL, NULL, 50, 1, '2021-02-11 09:39:42', '2021-02-11 09:40:27', 'voyager.faqs.index', NULL),
 	(50, 1, 'Faq Page', '', '_self', 'voyager-megaphone', '#000000', NULL, 5, '2021-02-11 09:40:17', '2021-02-12 10:13:53', NULL, ''),
-	(51, 1, 'Contact Page', '', '_self', 'voyager-mail', '#000000', NULL, 6, '2021-02-11 09:43:11', '2021-02-12 10:14:19', NULL, '');
+	(51, 1, 'Contact Page', '', '_self', 'voyager-mail', '#000000', NULL, 6, '2021-02-11 09:43:11', '2021-02-12 10:14:19', NULL, ''),
+	(52, 1, 'Second Headers', '', '_self', NULL, NULL, NULL, 11, '2021-02-15 12:09:08', '2021-02-15 12:09:08', 'voyager.second-headers.index', NULL);
 /*!40000 ALTER TABLE `menu_items` ENABLE KEYS */;
 
--- Дамп данных таблицы organic.migrations: ~44 rows (приблизительно)
+-- Дамп данных таблицы organic.migrations: ~43 rows (приблизительно)
+DELETE FROM `migrations`;
 /*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 	(1, '2014_10_12_000000_create_users_table', 1),
@@ -389,10 +413,12 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 	(45, '2021_02_06_105153_create_blog_comments_table', 17),
 	(48, '2021_02_08_090553_create_subscribes_table', 18),
 	(49, '2021_02_08_093709_create_index_abouts_table', 18),
-	(50, '2021_02_10_153056_create_product_reviews_table', 19);
+	(50, '2021_02_10_153056_create_product_reviews_table', 19),
+	(53, '2021_02_15_120256_create_second_headers_table', 20);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 
 -- Дамп данных таблицы organic.parthners_logos: ~5 rows (приблизительно)
+DELETE FROM `parthners_logos`;
 /*!40000 ALTER TABLE `parthners_logos` DISABLE KEYS */;
 INSERT INTO `parthners_logos` (`id`, `image`, `status`, `created_at`, `updated_at`) VALUES
 	(1, 'parthners-logos\\February2021\\6V9c6ZgqMQgMelePYmRa.png', 1, '2021-02-04 13:30:00', '2021-02-12 14:08:17'),
@@ -403,10 +429,12 @@ INSERT INTO `parthners_logos` (`id`, `image`, `status`, `created_at`, `updated_a
 /*!40000 ALTER TABLE `parthners_logos` ENABLE KEYS */;
 
 -- Дамп данных таблицы organic.password_resets: ~0 rows (приблизительно)
+DELETE FROM `password_resets`;
 /*!40000 ALTER TABLE `password_resets` DISABLE KEYS */;
 /*!40000 ALTER TABLE `password_resets` ENABLE KEYS */;
 
--- Дамп данных таблицы organic.permissions: ~126 rows (приблизительно)
+-- Дамп данных таблицы organic.permissions: ~135 rows (приблизительно)
+DELETE FROM `permissions`;
 /*!40000 ALTER TABLE `permissions` DISABLE KEYS */;
 INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`) VALUES
 	(1, 'browse_admin', NULL, '2021-01-31 12:30:57', '2021-01-31 12:30:57'),
@@ -534,10 +562,16 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 	(193, 'read_faqs', 'faqs', '2021-02-11 09:39:42', '2021-02-11 09:39:42'),
 	(194, 'edit_faqs', 'faqs', '2021-02-11 09:39:42', '2021-02-11 09:39:42'),
 	(195, 'add_faqs', 'faqs', '2021-02-11 09:39:42', '2021-02-11 09:39:42'),
-	(196, 'delete_faqs', 'faqs', '2021-02-11 09:39:42', '2021-02-11 09:39:42');
+	(196, 'delete_faqs', 'faqs', '2021-02-11 09:39:42', '2021-02-11 09:39:42'),
+	(197, 'browse_second_headers', 'second_headers', '2021-02-15 12:09:08', '2021-02-15 12:09:08'),
+	(198, 'read_second_headers', 'second_headers', '2021-02-15 12:09:08', '2021-02-15 12:09:08'),
+	(199, 'edit_second_headers', 'second_headers', '2021-02-15 12:09:08', '2021-02-15 12:09:08'),
+	(200, 'add_second_headers', 'second_headers', '2021-02-15 12:09:08', '2021-02-15 12:09:08'),
+	(201, 'delete_second_headers', 'second_headers', '2021-02-15 12:09:08', '2021-02-15 12:09:08');
 /*!40000 ALTER TABLE `permissions` ENABLE KEYS */;
 
--- Дамп данных таблицы organic.permission_role: ~126 rows (приблизительно)
+-- Дамп данных таблицы organic.permission_role: ~141 rows (приблизительно)
+DELETE FROM `permission_role`;
 /*!40000 ALTER TABLE `permission_role` DISABLE KEYS */;
 INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 	(1, 1),
@@ -665,10 +699,16 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 	(193, 1),
 	(194, 1),
 	(195, 1),
-	(196, 1);
+	(196, 1),
+	(197, 1),
+	(198, 1),
+	(199, 1),
+	(200, 1),
+	(201, 1);
 /*!40000 ALTER TABLE `permission_role` ENABLE KEYS */;
 
 -- Дамп данных таблицы organic.products: ~7 rows (приблизительно)
+DELETE FROM `products`;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
 INSERT INTO `products` (`id`, `category_id`, `title`, `price`, `old_price`, `image`, `description`, `text`, `contains`, `flag`, `status`, `created_at`, `updated_at`) VALUES
 	(1, 1, 'The Art Of The Start', 12.99, 15.99, 'products\\February2021\\Asg5i0YNboIoIw7UKfnz.png', '<p>There are many variations of passages,the majority suffered uts seds alterationin some of form uts, by injected humour random words which don\'t look evenslightly believable.</p>', '<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years on purpose. Distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors when looking.</p>', '<p>35% of organic raisins 55% of oats and 10% of butter.</p>', 'new', NULL, '2021-02-03 14:30:00', '2021-02-12 10:47:21'),
@@ -681,6 +721,7 @@ INSERT INTO `products` (`id`, `category_id`, `title`, `price`, `old_price`, `ima
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 
 -- Дамп данных таблицы organic.product_reviews: ~5 rows (приблизительно)
+DELETE FROM `product_reviews`;
 /*!40000 ALTER TABLE `product_reviews` DISABLE KEYS */;
 INSERT INTO `product_reviews` (`id`, `product_id`, `name`, `email`, `review`, `created_at`, `updated_at`) VALUES
 	(1, 5, 'erwr', 'admin@admin.com', 'wer', '2021-02-10 16:01:22', '2021-02-10 16:01:22'),
@@ -691,19 +732,28 @@ INSERT INTO `product_reviews` (`id`, `product_id`, `name`, `email`, `review`, `c
 /*!40000 ALTER TABLE `product_reviews` ENABLE KEYS */;
 
 -- Дамп данных таблицы organic.roles: ~2 rows (приблизительно)
+DELETE FROM `roles`;
 /*!40000 ALTER TABLE `roles` DISABLE KEYS */;
 INSERT INTO `roles` (`id`, `name`, `display_name`, `created_at`, `updated_at`) VALUES
 	(1, 'admin', 'Administrator', '2021-01-31 12:30:57', '2021-01-31 12:30:57'),
 	(2, 'user', 'Normal User', '2021-01-31 12:30:57', '2021-01-31 12:30:57');
 /*!40000 ALTER TABLE `roles` ENABLE KEYS */;
 
--- Дамп данных таблицы organic.settings: ~24 rows (приблизительно)
+-- Дамп данных таблицы organic.second_headers: ~5 rows (приблизительно)
+DELETE FROM `second_headers`;
+/*!40000 ALTER TABLE `second_headers` DISABLE KEYS */;
+INSERT INTO `second_headers` (`id`, `title`, `sub_title`, `image`, `created_at`, `updated_at`) VALUES
+	(1, 'about us', 'Welcome to certified online organic products suppliersr', 'second-headers\\February2021\\Il7KbuWaaljhSfG4iv2M.jpg', '2021-02-15 12:10:42', '2021-02-15 12:10:42'),
+	(2, 'our store', 'Welcome to certified online organic products suppliersr', 'second-headers\\February2021\\HIkrN8w07HSlpGFLLV8T.jpg', '2021-02-15 12:11:31', '2021-02-15 12:11:31'),
+	(3, 'News Standard', 'Welcome to certified online organic products suppliersr', 'second-headers\\February2021\\WLxkoAGZTnucvslrkwxo.jpg', '2021-02-15 12:12:01', '2021-02-15 12:12:01'),
+	(4, 'faq\'s', 'Welcome to certified online organic products suppliersr', 'second-headers\\February2021\\XYzwznkZSubrlCuYU5Wd.jpg', '2021-02-15 12:12:00', '2021-02-15 12:30:29'),
+	(5, 'Contact us', 'Welcome to certified online organic products suppliersr', 'second-headers\\February2021\\qFdxg2uPVy4oq3sJ6iZ5.jpg', '2021-02-15 12:12:51', '2021-02-15 12:12:51');
+/*!40000 ALTER TABLE `second_headers` ENABLE KEYS */;
+
+-- Дамп данных таблицы organic.settings: ~31 rows (приблизительно)
+DELETE FROM `settings`;
 /*!40000 ALTER TABLE `settings` DISABLE KEYS */;
 INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`, `order`, `group`) VALUES
-	(1, 'site.title', 'Site Title', 'Site Title', '', 'text', 1, 'Site'),
-	(2, 'site.description', 'Site Description', 'Site Description', '', 'text', 2, 'Site'),
-	(3, 'site.logo', 'Site Logo', '', '', 'image', 3, 'Site'),
-	(4, 'site.google_analytics_tracking_id', 'Google Analytics Tracking ID', NULL, '', 'text', 4, 'Site'),
 	(5, 'admin.bg_image', 'Admin Background Image', '', '', 'image', 5, 'Admin'),
 	(6, 'admin.title', 'Admin Title', 'Voyager', '', 'text', 1, 'Admin'),
 	(7, 'admin.description', 'Admin Description', 'Welcome to Voyager. The Missing Admin for Laravel', '', 'text', 2, 'Admin'),
@@ -723,10 +773,22 @@ INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`,
 	(23, 'about-page.awards_text', 'Awards text', '<p>How to pursue pleasure rationally encounter consequences that are extremely painful Nor again is there anyone who loves or pursues or desires to obtain pain of because it is pain, but because occasionally circumstances occur in some great.</p>', NULL, 'rich_text_box', 16, 'About Page'),
 	(24, 'about-page.Awards_support', 'Awards Support', '<p><strong>Customer Support:</strong> If you have any doubt about ConsultPress WordPress or how we can support your business, Send us an email and we&rsquo;ll get in touch shortly, or Contact via Support Forum.</p>', NULL, 'rich_text_box', 17, 'About Page'),
 	(25, 'about-page.ofice_hours', 'Awards Ofice Hours', '<p><strong>Office Hours :</strong>07:30 and 19:00 Monday to Saturday,Sunday - Holidayort Forum.</p>', NULL, 'rich_text_box', 18, 'About Page'),
-	(26, 'slaider-first.logo', 'Logo', 'settings\\February2021\\yXdJm8PdaaWbh3ph2BUx.png', NULL, 'image', 19, 'slaider_first');
+	(27, 'main.product_title', 'Product Title', 'OUR PRODUCTS', NULL, 'text_area', 19, 'main'),
+	(28, 'main.why_title', 'Why choose Title', 'Why to Choose Us', NULL, 'text', 20, 'main'),
+	(29, 'main.why_text', 'Why Cjoose Text', '<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered <br />alteration in some form, by injected humour.</p>', NULL, 'rich_text_box', 21, 'main'),
+	(30, 'main.news_title', 'News Title', 'our latest news', NULL, 'text', 22, 'main'),
+	(31, 'main.farmers_title', 'Farmers Title', 'our farmers', NULL, 'text', 23, 'main'),
+	(32, 'main.testimonials_title', 'Testimonials Title', 'our testimonials', NULL, 'text', 24, 'main'),
+	(33, 'footer.footer_text', 'Footer Text', '<p>Denouncing pleasures and praising pain was born and I will give you a complete account of the system.</p>\r\n<p>Expound that actual teachings the great explorer of the truth, the master-builder of human happiness no one rejects, likes, or avoids pleasure itself rationally.</p>', NULL, 'rich_text_box', 25, 'Footer'),
+	(34, 'footer.footer_logo', 'logo', 'settings\\February2021\\DZrgKp8iTTWhskx9omAU.png', NULL, 'image', 26, 'Footer'),
+	(35, 'header.header_logo', 'Logo', 'settings\\February2021\\h7Qn4JwhorPThcKB1lCj.png', NULL, 'image', 27, 'Header'),
+	(36, 'contact-us.contact_title', 'Contact Title', 'setting(\'header.header_logo\')', NULL, 'text', 28, 'Contact Us'),
+	(37, 'search.post_title', 'Posts Title', 'News', NULL, 'text', 29, 'Search'),
+	(38, 'search.product_title', 'Product Title', 'Products', NULL, 'text', 30, 'Search');
 /*!40000 ALTER TABLE `settings` ENABLE KEYS */;
 
 -- Дамп данных таблицы organic.slaiders: ~3 rows (приблизительно)
+DELETE FROM `slaiders`;
 /*!40000 ALTER TABLE `slaiders` DISABLE KEYS */;
 INSERT INTO `slaiders` (`id`, `title`, `description`, `image`, `created_at`, `updated_at`, `logo`, `smal_text`, `status`) VALUES
 	(1, 'organic store', 'We are providing highest quality Organics Products for USA', 'slaiders\\February2021\\P551Fsefa9ELfLQymGux.jpg', '2021-02-05 13:11:00', '2021-02-13 14:02:59', 'slaiders\\February2021\\eaTpqYPlVZ3LP2F6zP8V.png', 'Fruits ~ Vegetables ~ Foods ~ Cosmetics', 1),
@@ -734,7 +796,8 @@ INSERT INTO `slaiders` (`id`, `title`, `description`, `image`, `created_at`, `up
 	(3, 'Natural Healthy Foods', 'Great explorer of the truth, the master-builder of human happen', 'slaiders\\February2021\\qrz7XR4ym4xqQHNakYOB.jpg', '2021-02-05 13:13:00', '2021-02-14 16:02:06', 'slaiders\\February2021\\6aMjHmSB1Ig5PtWv5JVA.png', 'With you AffourTabble', 0);
 /*!40000 ALTER TABLE `slaiders` ENABLE KEYS */;
 
--- Дамп данных таблицы organic.subscribes: ~4 rows (приблизительно)
+-- Дамп данных таблицы organic.subscribes: ~2 rows (приблизительно)
+DELETE FROM `subscribes`;
 /*!40000 ALTER TABLE `subscribes` DISABLE KEYS */;
 INSERT INTO `subscribes` (`id`, `name`, `email`, `created_at`, `updated_at`) VALUES
 	(1, 'Igor', 'mail@mail.com', '2021-02-08 10:41:32', '2021-02-08 10:41:32'),
@@ -744,6 +807,7 @@ INSERT INTO `subscribes` (`id`, `name`, `email`, `created_at`, `updated_at`) VAL
 /*!40000 ALTER TABLE `subscribes` ENABLE KEYS */;
 
 -- Дамп данных таблицы organic.testimonials: ~5 rows (приблизительно)
+DELETE FROM `testimonials`;
 /*!40000 ALTER TABLE `testimonials` DISABLE KEYS */;
 INSERT INTO `testimonials` (`id`, `name`, `position`, `description`, `image`, `status`, `created_at`, `updated_at`) VALUES
 	(1, 'Jessy Federar', 'Cor.Manager', 'Who do not know how to pursue an seed pleasure rationally encounter that are extremely win painful nor again is there anyone who loves or pursues or desires obtain pain itself circumstances.', 'testimonials\\February2021\\HLpQuFtUmjPgwFuxRnF0.jpg', NULL, '2021-02-04 13:24:00', '2021-02-12 12:21:24'),
@@ -753,7 +817,8 @@ INSERT INTO `testimonials` (`id`, `name`, `position`, `description`, `image`, `s
 	(5, 'Ion Ceban', 'Cumatru', 'Who do not know how to pursue an seed pleasure rationally encounter that are extremely win painful nor again is there anyone who loves or pursues or desires obtain pain itself circumstances', 'testimonials\\February2021\\xRI1jrgFWLECtZsf6jha.png', 1, '2021-02-04 13:29:00', '2021-02-12 14:07:07');
 /*!40000 ALTER TABLE `testimonials` ENABLE KEYS */;
 
--- Дамп данных таблицы organic.three_colums: ~3 rows (приблизительно)
+-- Дамп данных таблицы organic.three_colums: ~2 rows (приблизительно)
+DELETE FROM `three_colums`;
 /*!40000 ALTER TABLE `three_colums` DISABLE KEYS */;
 INSERT INTO `three_colums` (`id`, `title`, `text`, `image`, `created_at`, `updated_at`) VALUES
 	(2, 'Organic Vegetables', 'We will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human complete happiness.', 'icon-nature', '2021-02-02 19:41:45', '2021-02-02 19:41:45'),
@@ -762,20 +827,24 @@ INSERT INTO `three_colums` (`id`, `title`, `text`, `image`, `created_at`, `updat
 /*!40000 ALTER TABLE `three_colums` ENABLE KEYS */;
 
 -- Дамп данных таблицы organic.translations: ~0 rows (приблизительно)
+DELETE FROM `translations`;
 /*!40000 ALTER TABLE `translations` DISABLE KEYS */;
 /*!40000 ALTER TABLE `translations` ENABLE KEYS */;
 
--- Дамп данных таблицы organic.users: ~1 rows (приблизительно)
+-- Дамп данных таблицы organic.users: ~2 rows (приблизительно)
+DELETE FROM `users`;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `avatar`, `email_verified_at`, `password`, `remember_token`, `settings`, `created_at`, `updated_at`) VALUES
 	(2, 1, 'admin', 'admin@admin.com', 'users\\February2021\\7DuDstXrFS8fYSSfPw3N.png', NULL, '$2y$10$9LXKE2hpFiMxr4D.ZbunxOL3rNCNnEsT.fdJ3qoBwHoaLHGfizgIa', NULL, '{"locale":"en"}', '2021-01-31 12:35:46', '2021-02-12 10:51:58');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 -- Дамп данных таблицы organic.user_roles: ~0 rows (приблизительно)
+DELETE FROM `user_roles`;
 /*!40000 ALTER TABLE `user_roles` DISABLE KEYS */;
 /*!40000 ALTER TABLE `user_roles` ENABLE KEYS */;
 
 -- Дамп данных таблицы organic.why_chooses: ~4 rows (приблизительно)
+DELETE FROM `why_chooses`;
 /*!40000 ALTER TABLE `why_chooses` DISABLE KEYS */;
 INSERT INTO `why_chooses` (`id`, `title`, `image`, `description`, `created_at`, `updated_at`) VALUES
 	(1, '100% Organic Products', 'ficon icon-fruit-1', 'Duis aute irure dolor in reprehenderit voluptate velit esse seds cillum dolore eu fugiat nulla pariatur excepteur sint occaecat.', '2021-02-04 12:54:47', '2021-02-04 12:54:47'),

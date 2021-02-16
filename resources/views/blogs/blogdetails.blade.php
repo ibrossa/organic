@@ -1,12 +1,13 @@
 @extends('layouts.app')
 @section('content')
+
 <section class="breadcrumb-area" style="background-image:url(/images/background/2.jpg);">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="breadcrumbs text-center">
                     <h1>{{$blog->title}}</h1>
-                    <h4>{!! $blog->description !!}</h4>
+                    <h4>{!! $blog->small_description !!}</h4>
                 </div>
             </div>
         </div>
@@ -29,7 +30,6 @@
             </div>
         </div>
     </div>
-
 </section>
 
 <section class="news single_news_page with_sidebar news_single">
@@ -42,22 +42,22 @@
                             <img src="{{Voyager::image($blog->image)}}" alt="News" class="img-responsive">
                             <div class="opacity tran3s">
                                 <div class="icon">
-                                    <span><a href="" class="border_round">+</a></span>
+                                    <span><a href="{{route('news.blog_details', $blog->id)}}" class="border_round">+</a></span>
                                 </div> <!-- End of .icon -->
                             </div> <!-- End of .opacity -->
                         </div> <!-- End of .img_holder -->
                         <div class="post">
 
                             <div class="text">
-                                <h4><a href="blog-details.html">{!! $blog->title !!}</a></h4>
+                                <h4><a href="{{route('news.blog_details',$blog->id)}}">{!! $blog->title !!}</a></h4>
                                 <ul>
-                                    <li><a href="blog-details.html" class="tran3s"><i class="fa fa-user" aria-hidden="true"></i> {!! $blog->author_name !!}</a></li>
-                                    <li><a href="blog-details.html" class="tran3s"><i class="fa fa-clock-o" aria-hidden="true"></i>{!! $blog->created_at !!}</a></li>
-                                    <li><a href="blog-details.html" class="tran3s"><i class="fa fa-comments" aria-hidden="true"></i>({!!  $blog->blog_comments->count() !!})</a></li>
+                                    <li><a href="{{route('news.blog_details', $blog->id)}}" class="tran3s"><i class="fa fa-user" aria-hidden="true"></i> {!! $blog->author_name !!}</a></li>
+                                    <li><a href="{{route('news.blog_details', $blog->id)}}" class="tran3s"><i class="fa fa-clock-o" aria-hidden="true"></i>{!! $blog->created_at !!}</a></li>
+                                    <li><a href="{{route('news.blog_details', $blog->id)}}" class="tran3s"><i class="fa fa-comments" aria-hidden="true"></i>Comments({!!  $blog->blog_comments->count() !!})</a></li>
                                 </ul>
                             </div>
 
-                            <div class="text"><p>{!! $blog->text !!}</p></div>
+                            <div class="text"><p>{!! $blog->description !!}</p></div>
 
                         </div> <!-- End of .post -->
 
@@ -65,7 +65,6 @@
                             <div class="comment-box">
                                 <div class="theme_title ">
                                     <h2>about author</h2>
-
                                 </div>
                                 <div class="single-comment-box">
                                     <div class="img-box">
@@ -91,8 +90,7 @@
                         </div>
                         <div class="comment-box">
                             <div class="theme_title ">
-                                <h2>Comments ({{$blog->blog_comments->count()}})</h2>
-
+                                <h2>Comments({{$blog->blog_comments->count()}})</h2>
                             </div>
                             @foreach($comments as $comment)
                             <div class="single-comment-box">
@@ -120,10 +118,51 @@
                             </div>
                             @endforeach
                         </div>
-
-                        @include('blogs._blogcomments')
+                        {{--Blog Comment--}}
+                        <div class="reply-box">
+                            <div class="theme_title ">
+                                <h2>leave a comment</h2>
+                            </div>
+                            <form method="post" action="{{route('blog_comment',$blog->id)}}">
+                                @csrf
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <textarea placeholder="Comments" name="comment"></textarea>
+                                        @error('comment')
+                                        <div class="alert alert-danger">{{$message}} </div>
+                                        @enderror
+                                    </div>
+                                    <!-- /.col-md-12 -->
+                                    <div class="col-md-6">
+                                        <input type="text" placeholder="Your Name*" name="name">
+                                        @error('name')
+                                        <div class="alert alert-danger">{{$message}} </div>
+                                        @enderror
+                                    </div>
+                                    <!-- /.col-md-6 -->
+                                    <div class="col-md-6">
+                                        <input type="text" placeholder="Your Email*" name="email">
+                                        @error('email')
+                                        <div class="alert alert-danger">{{$message}} </div>
+                                        @enderror
+                                    </div>
+                                    <!-- /.col-md-6 -->
+                                    <div class="col-md-12">
+                                        <input type="text" placeholder="Your Website" name="website">
+                                        @error('website')
+                                        <div class="alert alert-danger">{{$message}} </div>
+                                        @enderror
+                                    </div>
+                                    <!-- /.col-md-6 -->
+                                    <div class="col-md-12">
+                                        <button type="submit" class="color1_bg">Post Comment</button>
+                                    </div>
+                                    <!-- /.col-md-12 -->
+                                </div>
+                                <!-- /.row -->
+                            </form>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </div>

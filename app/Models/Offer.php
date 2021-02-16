@@ -6,12 +6,9 @@ use App\Traits\HasDefaultScopes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class IndexAbout extends Model
+class Offer extends Model
 {
     use HasFactory;
+    use HasDefaultScopes;
 
-
-    public function scopeOrdered($query, $d){
-        $query->orderby('created_at', $d);
-    }
 }

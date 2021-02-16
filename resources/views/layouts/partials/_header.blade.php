@@ -1,6 +1,4 @@
 <div class="main_page">
-
-
     <!-- Header *******************************  -->
     <header>
         <div class="top_header">
@@ -13,7 +11,6 @@
                 </div>
             </div> <!-- End of .container -->
         </div> <!-- End of .top_header -->
-
         <div class="bottom_header">
             <div class="container">
                 <div class="row">
@@ -31,19 +28,11 @@
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-7 col-xs-6 pdt-14">
-
                     </div>
-
                 </div>
-
             </div>
         </div> <!-- End of .bottom_header -->
     </header>
-
-
-
-
-
     <!-- Menu ******************************* -->
     <div class="theme_menu color1_bg">
         <div class="container">
@@ -58,8 +47,6 @@
                     <li><a href="{{route('cart')}}">Cart</a></li>
                 </ul> <!-- End of .menuzord-menu -->
             </nav> <!-- End of #main_menu -->
-
-
             <!-- ******* Cart And Search Option ******** -->
             <div class="nav_side_content pull-right">
                 <ul class="icon_header">
@@ -69,7 +56,6 @@
                     <li class="border_round tran3s"><a href="#"><i class="fa fa-pinterest"></i></a></li>
                 </ul>
             </div> <!-- End of .nav_side_content -->
-
         </div> <!-- End of .conatiner -->
     </div> <!-- End of .theme_menu -->
-
+</div>

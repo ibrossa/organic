@@ -18,6 +18,7 @@ class CreateWhyCoosesTable extends Migration
             $table->string('title');
             $table->string('image');
             $table->text('description');
+            $table->tinyInteger('status')->nullable()->default(0);
             $table->timestamps();
         });
     }

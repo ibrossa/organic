@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-lg-9 col-md-8 col-sm-12 col-sx-12">
                 <div class="row">
-                @foreach($products as $product)
+                @forelse($products as $product)
                     <!--Default Item-->
                         <div class="col-md-4 col-sm-6 col-xs-12 default-item" style="display: inline-block;">
                             <div class="inner-box">
@@ -43,7 +43,9 @@
                                 </div>
                             </div>
                         </div>
-                    @endforeach
+                    @empty
+                    <h2>Не найдено</h2>
+                    @endforelse
                 </div>
             </div>
 
@@ -51,10 +53,9 @@
             <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 sidebar_styleTwo">
                 <div class="wrapper">
                     <div class="sidebar_search">
-                        <form action="#">
-                            <input type="text">
-                            <button class="tran3s color1_bg"><i class="fa fa-search" aria-hidden="true"></i>
-                            </button>
+                        <form action="{{route('store')}}" method="get">
+                            <input type="text" placeholder="Search..." id="search" name="search_product">
+                            <button class="tran3s color1_bg"><i class="fa fa-search" aria-hidden="true"></i></button>
                         </form>
                     </div> <!-- End of .sidebar_styleOne -->
 
@@ -64,8 +65,9 @@
                         </div>
                         @foreach($categories as $cat)
                             <ul>
-                                <li><a href="/store?catId={{$cat->id}}" class="tran3s">{{$cat->title}}
-                                        ( {{$cat->products()->count()}} )</a></li>
+                                <li>
+                                    <a href="{{route('store_category',$cat->id)}}" class="tran3s">{{$cat->title}}({{$cat->products()->count()}} )</a>
+                                </li>
                             </ul>
                         @endforeach
                     </div> <!-- End of .sidebar_categories -->

@@ -33,5 +33,11 @@
 </div>
 
 @include('layouts.partials._footer')
+<script>
+    let button = document.querySelector('#subscription_button');
+    button.addEventListener('click', function () {
+        alert('click')
+    })
+</script>
 </body>
 </html>

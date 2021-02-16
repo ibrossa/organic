@@ -14,7 +14,6 @@
                     <div class="blogList_single_post clear_fix wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
                         <div class="img_holder">
                             <img src="{{Voyager::image($blog->image)}}" alt="News" class="img-responsive">
-
                             <div class="opacity tran3s">
                                 <div class="icon">
                                     <span><a href="{{route('news.blog_details', $blog->id)}}" class="border_round">+</a></span>
@@ -23,16 +22,15 @@
                         </div> <!-- End of .img_holder -->
                         <div class="post">
                             <ul>
-                                <li><a href="blog-details.html" class="tran3s"><i class="fa fa-tag" aria-hidden="true"></i> Healthy</a></li>
-                                 <li><a href="blog-details.html" class="tran3s"><i class="fa fa-comments" aria-hidden="true"></i> {{$blog->blog_comments->count()}}</a></li>
+                                <li><a href="{{route('news.blog_details', $blog->id)}}" class="tran3s"><i class="fa fa-user" aria-hidden="true"></i> {!! $blog->author_name !!}</a></li>
+                                <li><a href="{{route('news.blog_details', $blog->id)}}" class="tran3s"><i class="fa fa-clock-o" aria-hidden="true"></i>{{$blog->created_at}}</a></li>
+                                <li><a href="{{route('news.blog_details', $blog->id)}}" class="tran3s"><i class="fa fa-comments" aria-hidden="true"></i>Comments({{$blog->blog_comments->count()}})</a></li>
                             </ul>
                             <div class="text">
-                                <h4><a href="{{route('news.blog_details', $blog->id)}}}">{{$blog->title}}</a></h4>
-                                <p>{!! $blog->description !!}</p>
+                                <h4><a href="{{route('news.blog_details', $blog->id)}}">{{$blog->title}}</a></h4>
+                                <p>{!! $blog->small_description !!}</p>
                                 <div class="link"><a href="{{route('news.blog_details', $blog->id)}}" class="tran3s">READ MORE<span class="fa fa-sort-desc"></span></a></div>
-
                             </div>
-
                         </div> <!-- End of .post -->
                     </div>
                 </div>
@@ -58,7 +56,7 @@
                         <div class="single-item center">
                             <figure class="image-box"><img src="{{Voyager::image($product->image)}}" alt=""><div class="product-model {{$product->flag}}">{{$product->flag}}</div></figure>
                             <div class="content">
-                                <h3><a href="shop-single.html">{{$product->title}}</a></h3>
+                                <h3><a href="{{route('store.product_details',$product->id)}}">{{$product->title}}</a></h3>
                                 <div class="rating"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></div>
                                 <div class="price">${{$product->price}} <span class="prev-rate">${{$product->old_price}}</span></div>
                             </div>
@@ -90,10 +88,4 @@
         @endif
     </div>
 </section>
-
-
-
-
-
-
 @endsection

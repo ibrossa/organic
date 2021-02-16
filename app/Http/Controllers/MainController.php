@@ -18,7 +18,7 @@ use App\Models\DeliveryProcess;
 use App\Models\Faq;
 use App\Models\Farmer;
 use App\Models\GetInTouch;
-use App\Models\IndexAbout;
+use App\Models\Offer;
 use App\Models\ParthnersLogo;
 use App\Models\Product;
 use App\Models\ProductReview;
@@ -42,11 +42,11 @@ class MainController extends Controller
      */
     public function index()
     {
-        $sections = IndexAbout::ordered('desc')->get();
-        $products = Product::active()->get();
+        $offers = Offer::latest()->get();
+        $latest_products = Product::active()->get();
         $categories = Category::active()->get();
-        $blogs = Blog::active()->orderBy('created_at', 'desc')->limit(3)->get();
-        $whychoose = WhyChoose::all();
+        $latest_posts = Blog::active()->latest()->limit(3)->get();
+        $why_choose = WhyChoose::active()->get();
         $farmers = Farmer::active()->get();
         $testimonials = Testimonial::active()->get();
         $partners_logo = ParthnersLogo::active()->get();
@@ -56,7 +56,7 @@ class MainController extends Controller
 
         return view('index',
             compact(
-                'sections', 'products', 'categories', 'blogs', 'whychoose',
+                'offers', 'latest_products', 'categories', 'latest_posts', 'why_choose',
                 'farmers', 'testimonials', 'partners_logo', 'slaider_first',
                 'slaider_second', 'slaider_third')
         );
@@ -97,15 +97,14 @@ class MainController extends Controller
      */
     public function about()
     {
-        $aboutstories = AboutStory::first();
-        $three_colums = ThreeColum::all();
-        $deliveries = DeliveryProcess::all();
-        $award_images = AwardImage::all();
+        $category_description = ThreeColum::latest()->get();
+        $deliveries = DeliveryProcess::oldest()->get();
+        $award_images = AwardImage::latest()->get();
         $categories = Category::active()->get();
-        $products = Product::active()->orderBy('created_at', 'desc')->limit(5)->get();
+        $products = Product::active()->latest()->limit(5)->get();
         $second_header = SecondHeader::where('title','about us')->get();
 
-        return view('about', compact('aboutstories', 'three_colums', 'deliveries',
+        return view('about', compact('category_description', 'deliveries',
             'award_images', 'categories', 'products','second_header'
         ));
 
@@ -149,6 +148,12 @@ class MainController extends Controller
             $max = $request->get('max');
             $products = Product::query()->whereBetween('price', [$min, $max])->get();
         }
+        $search = $request->search_product;
+        $products = Product::query()
+            ->where('title', 'LIKE', '%' . $search . '%')
+            ->active()
+            ->get();
+
 
         $hot_products = Product::active()->where('flag', 'hot')->orderby('created_at', 'desc')->limit(3)->get();
         $second_header = SecondHeader::where('title','our store')->get();
@@ -174,8 +179,6 @@ class MainController extends Controller
     {
         $blog = Blog::find($id);
         $comments = Blog::find($id)->blog_comments;
-        /*dd($comments);*/
-        /* $comments = BlogComment::orderby('created_at','desc')->get();*/
 
         return view('blogs.blogdetails', compact('blog', 'comments'));
     }
@@ -187,7 +190,7 @@ class MainController extends Controller
     {
         $data = $request->validated();
         $data['blog_id'] = $id;
-        $blog_comment = BlogComment::create($data);
+        BlogComment::create($data);
 
         return redirect()->back();
     }
@@ -215,7 +218,7 @@ class MainController extends Controller
     {
         $data = $request->validated();
         $data['product_id'] = $id;
-        $product_review = ProductReview::create($data);
+        ProductReview::create($data);
 
         return redirect()->back();
     }
@@ -225,7 +228,7 @@ class MainController extends Controller
      */
     public function faq()
     {
-        $faqs = Faq::active()->get();
+        $faqs = Faq::active()->latest()->get();
         $second_header = SecondHeader::where('title','faq\'s')->get();
 
         return view('faq', compact('faqs','second_header'));

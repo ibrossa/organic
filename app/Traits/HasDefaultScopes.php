@@ -17,4 +17,6 @@ trait HasDefaultScopes
     {
         $query->where('status', 1);
     }
+
+
 }

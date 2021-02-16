@@ -40,6 +40,7 @@ Route::post('/', [
 Route::get('/store', [
     MainController::class, 'store'
 ])->name('store');
+
 Route::get('/store?catId={id}', [
     MainController::class, 'store'
 ])->name('store_category');
@@ -47,10 +48,10 @@ Route::get('/store?catId={id}', [
 Route::get('/news', [
     MainController::class, 'news'
 ])->name('news');
+
 Route::post('/news/{news:id}', [
     MainController::class, 'blog_comment'
-]);
-
+])->name('blog_comment');
 
 Route::get('/faq', [
     MainController::class, 'faq'

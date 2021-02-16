@@ -10,7 +10,6 @@
             <div class="col-md-12">
                 <div class="about-autocare-faq">
                     <div class="accordion-box">
-
                         <!--Start single accordion box-->
                         @foreach($faqs as $faq)
                         <div class="accordion animated out" data-delay="0" data-animation="fadeInUp">
@@ -29,7 +28,6 @@
                         </div>
                         @endforeach
                         <!--End single accordion box-->
-
                     </div>
                 </div>
             </div>

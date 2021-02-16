@@ -166,28 +166,23 @@
                             </div> <!-- End of #tab2 -->
                          </div> <!-- End of .tab-content -->
                     </div> <!-- End of .product-review-tab -->
-
-
                     <div class="related_product">
                         <div class="theme_title">
                             <h3>Related Products</h3>
                         </div>
-
-
                         <!-- Shop Page Content************************ -->
                         <div class="shop_page featured-product">
-
                             <div class="row">
-                                @foreach($related as $relat)
+                                @foreach($related as $item)
                                 <!--Default Item-->
                                      <div class="col-md-4 col-sm-6 col-xs-12 default-item" style="display: inline-block;">
                                     <div class="inner-box">
                                         <div class="single-item center">
-                                            <figure class="image-box"><img src="{{Voyager::image($relat->image)}}" alt=""><div class="product-model {{$relat->flag}}">{{$relat->flag}}</div></figure>
+                                            <figure class="image-box"><img src="{{Voyager::image($item->image)}}" alt=""><div class="product-model {{$item->flag}}">{{$item->flag}}</div></figure>
                                             <div class="content">
-                                                <h3><a href="shop-single.html">{{$relat->title}}</a></h3>
+                                                <h3><a href="{{route('store.product_details',$product->id)}}">{{$item->title}}</a></h3>
                                                 <div class="rating"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></div>
-                                                <div class="price">{{$relat->price}} <span class="prev-rate">{{$relat->old_price}}</span></div>
+                                                <div class="price">{{$item->price}} <span class="prev-rate">{{$item->old_price}}</span></div>
                                             </div>
                                             <div class="overlay-box">
                                                 <div class="inner">
@@ -197,12 +192,12 @@
                                                             <li class="tultip-op"><span class="tultip"><i class="fa fa-sort-desc"></i>ADD TO CART</span><a href="#"><span class="icon-icon-32846"></span></a>
 
                                                             </li>
-                                                            <li><a href="#"><span class="fa fa-heart-o"></span></a></li>
+                                                            <li><a href="{{route('store.product_details',$product->id)}}><span class="fa fa-heart-o"></span></a></li>
                                                         </ul>
                                                     </div>
                                                     <div class="bottom-content">
-                                                        <h4><a href="#">It Contains:</a></h4>
-                                                        <p>{!! $relat->contains !!}</p>
+                                                        <h4><a href="{{route('store.product_details',$product->id)}}">It Contains:</a></h4>
+                                                        <p>{!! $item->contains !!}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -210,16 +205,11 @@
                                     </div>
                                 </div>
                                 @endforeach
-
-
                             </div> <!-- End of .row -->
-
                         </div> <!-- End of .shop_page -->
                     </div> <!-- End of .related_product -->
                 </div> <!-- End of .wrapper -->
             </div> <!-- End of .col -->
-
-
         </div> <!-- End of .row -->
     </div> <!-- End of .container -->
 </div> <!-- End of .shop_single_page -->

@@ -26,7 +26,7 @@
 
 
                         <div class="form-group">
-                            <button type="submit"  class="btn-style-one center">Submit now</button>
+                            <button type="submit" id="subscription_button" class="btn-style-one center">Submit now</button>
                         </div>
                     </div>
                 </form>
@@ -34,6 +34,12 @@
         </div>
     </div>
 </section>
+
+<script>
+    $(document).ready(function () {
+        console.log('hi');
+    })
+</script>
 <!-- Footer************************* -->
 <footer>
     <div class="main_footer">
