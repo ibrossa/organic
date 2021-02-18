@@ -38,7 +38,7 @@
         <div class="container">
             <nav class="menuzord pull-left" id="main_menu">
                 <ul class="menuzord-menu">
-                    <li class="current_page"><a href="\">Home</a></li>
+                    <li class="current_page"><a href="{{route('index')}}">Home</a></li>
                     <li><a href="{{route('about')}}">About us</a></li>
                     <li><a href="{{route('store')}}">store</a></li>
                     <li><a href="{{route('news')}}">News</a></li>

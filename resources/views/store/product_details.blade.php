@@ -60,7 +60,7 @@
                         </div> <!-- End of .item_description -->
                     </div> <!-- End of .product_top_section -->
 
-                    <!-- __________________ Product review ___________________ -->
+                    <!-- __________________ Email review ___________________ -->
                     <div class="product-review-tab">
                         <ul class="nav nav-pills">
                             <li><a data-toggle="pill" href="#tab1">Description</a></li>

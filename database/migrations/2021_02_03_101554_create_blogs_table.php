@@ -23,6 +23,8 @@ class CreateBlogsTable extends Migration
             $table->string('author_image');
             $table->text('author_text');
             $table->tinyInteger('status')->nullable()->default(0);
+            $table->text('meta_title')->nullable();
+            $table->text('meta_descriptions')->nullable();
             $table->timestamps();
         });
     }

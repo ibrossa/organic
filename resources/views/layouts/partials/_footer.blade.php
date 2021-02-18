@@ -11,22 +11,16 @@
                     @csrf
                     <div class="row clearfix">
                         <div class="form-group">
-                            <input type="text" name="name"  placeholder="Your Name*"><i class="fa fa-user" ></i>
-                            @error('name')
-                                <div class="alert alert-danger">{{$message}} </div>
-                            @enderror
+                            <input type="text" name="name" id="subscribe_name"  placeholder="Your Name*"><i class="fa fa-user" ></i>
+                            <div id="name_error_wrapper" class="alert alert-danger error_wrapper hidden"></div>
                         </div>
 
                         <div class="form-group">
-                            <input type="email" name="email"  placeholder="Email Address*"><i class="fa fa-envelope" ></i>
-                            @error('email')
-                                <div class="alert alert-danger">{{$message}} </div>
-                            @enderror
+                            <input type="email" name="email" id="subscribe_email" placeholder="Email Address*"><i class="fa fa-envelope" ></i>
+                            <div id="email_error_wrapper" class="alert alert-danger error_wrapper hidden"></div>
                         </div>
-
-
                         <div class="form-group">
-                            <button type="submit" id="subscription_button" class="btn-style-one center">Submit now</button>
+                            <button type="button" id="subscription_button" class="btn-style-one center">Submit now</button>
                         </div>
                     </div>
                 </form>
@@ -35,11 +29,7 @@
     </div>
 </section>
 
-<script>
-    $(document).ready(function () {
-        console.log('hi');
-    })
-</script>
+
 <!-- Footer************************* -->
 <footer>
     <div class="main_footer">

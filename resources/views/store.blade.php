@@ -78,7 +78,7 @@
                         </div>
                         <div class="single-sidebar price-ranger">
                             <div id="slider-range"></div>
-                            <form method="get" action="/store">
+                            <form method="get" action="{{route('store')}}">
                                 <div class="ranger-min-max-block">
                                     <input type="submit" value="Filter">
                                     <span>Price:</span>

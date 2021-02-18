@@ -19,6 +19,8 @@ class CreateProductReviewsTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('review');
+            $table->text('meta_title')->nullable();
+            $table->text('meta_descriptions')->nullable();
             $table->timestamps();
         });
     }

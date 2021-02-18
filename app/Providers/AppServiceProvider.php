@@ -4,6 +4,8 @@ namespace App\Providers;
 
 
 use App\Models\Category;
+use App\Models\Page;
+use App\Observers\BlogObserver;
 use http\Env\Request;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
@@ -34,6 +36,7 @@ class AppServiceProvider extends ServiceProvider
         View::share('footer_blog', Blog::orderby('created_at', 'desc')->limit(3)->get());
         View::share('footer_category', Category::active()->get());
         Paginator::useBootstrap();
+        Blog::observe(BlogObserver::class);
 
     }
 }
