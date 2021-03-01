@@ -33,6 +33,7 @@ class BlogController extends Controller
         $comments = Blog::find($id)->blog_comments;
         $og = $this->returnOGPost($blog);
         $page = $blog;
+
         return view('blogs.blogdetails', compact('blog', 'comments','og','page'));
     }
 

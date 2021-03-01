@@ -91,6 +91,10 @@ Route::post('/store/{product:id}', [
     ProductController::class, 'product_review'
 ])->name('store.product_review');
 
+Route::post('/cart/add/{product:id}', [
+    CartController::class, 'cart_add'
+])->name('cart_add');
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

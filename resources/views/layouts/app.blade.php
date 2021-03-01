@@ -3,17 +3,16 @@
 
 <!-- Mirrored from st.ourhtmldemo.com/template/organic_store/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 Jul 2020 10:04:37 GMT -->
 <head>
-    {!! $og->renderTags() !!}
+  {{--  {!! $og->renderTags() !!}--}}
 
-    <meta name="title" content="{{$page->meta_title}}">
-    <meta name="description" content="{{ $page->meta_descriptions }}">
+   {{-- <meta name="description" content="{{ $page->meta_descriptions }}">--}}
     <meta charset="UTF-8">
     <!-- For IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- For Resposive Device -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>{{$page->title}}</title>
+  {{--  <title>{{$page->meta_title ?? ''}}</title>--}}
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="images/fav-icon/apple-icon-57x57.png">
 

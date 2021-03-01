@@ -7,18 +7,18 @@
             <div class="theme_title center">
                 <h3>Cart</h3>
             </div>
-          {{--  @if(count($products))
+            @if(!is_null($cart_items))
                 <div class="row filter-list clearfix" id="MixItUp717B05">
-                @foreach($products as $product)
+                @foreach($cart_items as $item)
                     <!--Default Item-->
-                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mix mix_all default-item all {{$product->category_id}} " style="display: inline-block;">
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mix mix_all default-item all {{$item->product->category_id}} " style="display: inline-block;">
                             <div class="inner-box">
                                 <div class="single-item center">
-                                    <figure class="image-box"><img src="{{Voyager::image($product->image)}}" alt=""><div class="product-model {{$product->flag}}">{{$product->flag}}</div></figure>
+                                    <figure class="image-box"><img src="{{Voyager::image($item->product->image)}}" alt=""><div class="product-model {{$item->product->flag}}">{{$item->product->flag}}</div></figure>
                                     <div class="content">
-                                        <h3><a href="shop-single.html">{{$product->title}}</a></h3>
+                                        <h3><a href="shop-single.html">{{$item->product->title}}</a></h3>
                                         <div class="rating"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></div>
-                                        <div class="price">${{$product->price}} <span class="prev-rate">${{$product->old_price}}</span></div>
+                                        <div class="price">${{$item->product->price}} <span class="prev-rate">${{$item->product->old_price}}</span></div>
                                     </div>
                                     <div class="overlay-box">
                                         <div class="inner">
@@ -32,8 +32,8 @@
                                                 </ul>
                                             </div>
                                             <div class="bottom-content">
-                                                <h4><a href="{{route('store.product_details', $product->id)}}">It Contains:</a></h4>
-                                                <p>{!! $product->contains !!} </p>
+                                                <h4><a href="{{route('store.product_details', $item->product->id)}}">It Contains:</a></h4>
+                                                <p>{!! $item->product->contains !!} </p>
                                             </div>
                                         </div>
                                     </div>
@@ -44,8 +44,8 @@
                 <!--Default Item-->
                 </div>
             @else
-                <h2>Таких продуктов не найдено</h2>
-            @endif--}}
+                <h1>Корзина пустая</h1>
+            @endif
         </div>
     </section>
 @endsection

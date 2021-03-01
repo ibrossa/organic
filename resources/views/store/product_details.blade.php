@@ -47,6 +47,10 @@
                         </div> <!-- End of .img_holder -->
                         <div class="item_description float_left">
                             <h4>{{$product->title}}</h4>
+                            <form action="{{route('cart_add',$product->id)}}" method="post">
+                                @csrf
+                                <button type="add_product"><span class="icon-icon-32846"></span></button>
+                            </form>
                             <ul>
                                 <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                 <li><i class="fa fa-star" aria-hidden="true"></i></li>
@@ -65,8 +69,7 @@
                         <ul class="nav nav-pills">
                             <li><a data-toggle="pill" href="#tab1">Description</a></li>
                             <li class="active"><a data-toggle="pill" href="#tab2">Reviews({{$product->product_review->count()}})</a></li>
-                            <li class="button cart_button"><a href="#"><span class="icon-icon-32846"></span></a></li>
-                        </ul>
+                         </ul>
 
                          <div class="tab-content">
                             <div id="tab1" class="tab-pane fade">
@@ -213,26 +216,6 @@
         </div> <!-- End of .row -->
     </div> <!-- End of .container -->
 </div> <!-- End of .shop_single_page -->
-<script>
-    $(document).ready(function () {
-        $('.cart_button').click(function () {
-            addToCard()
-        })
-    })
-    function addToCard() {
-        $.ajax({
-            url:"{{route('addToCart')}}",
-            type:"POST",
-            data:{
-                id:100
-            },
-            success: (data)=>{
-                console.log(data)
-            }
 
-        })
-
-    }
-</script>
 @endsection
 
